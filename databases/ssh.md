@@ -10,9 +10,9 @@ then go to Overview > Server Details and find your **SSH port**. An example SSH 
 
 
 ```bash
-ssh -i &lt;id_rsa&gt; -p &lt;your ssh port&gt;  \
+ssh -i <id_rsa> -p <your ssh port>  \
     -L 3306:127.0.0.1:3306 \
-    -N deployer@&lt;internalDomain&gt;lb2.amezmo.co
+    -N deployer@<internalDomain>lb2.amezmo.co
 ```
 
 **Important**: When you connect to your instance with the SSH command, you'll be able to access
