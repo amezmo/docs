@@ -9,7 +9,7 @@ Validating domain names on Amezmo has one requirement. One of the following requ
 - CNAME record to your [development subdomain](/docs/domains/development-subdomain)
 
 <div class="alert alert-info">
-    **Note**: To find the public IP address that you'll need for your DNS A records, go to the Domains, then click on your domain the domain name table.
+    <b>Note</b>: To find the public IP address that you'll need for your DNS A records, go to the Domains, then click on your domain the domain name table.
 </div>
 
 After validation succeeds, a new SSL certificate is requested from LetsEncrypt. This certificate
