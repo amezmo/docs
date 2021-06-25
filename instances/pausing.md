@@ -11,5 +11,5 @@ same state as it was when you Paused it.
 To bring your Instance back up, press the Start button on the instance Overview page.
 
 <p class="alert alert-info">
-    **Note:** Instances in a Paused state will still incur the hourly charge.
+   <b>Note</b>: Instances in a Paused state will still incur the hourly charge.
 </p>
