@@ -17,7 +17,7 @@ This HTTP response header must **not** be present
 - Expires
 This HTTP response header must **not** be present
 - 2XX HTTP response code
-Amezmo will only consider 200 level responses as canidates to be cached
+Amezmo will only consider 200 level responses as candidates to be cached
 
 It is important that sensitive pages such as admin portals and password reset forms are not cached.
 By default `POST` requests are never cached.
@@ -31,7 +31,7 @@ To disable cookies, see the documentation for your framework.
 -  When a page is cached, the cached version will served for up to 24 hours.
     See ways of [purging the cache](/docs/caching/purging) for more information.
 - Caching has an aggregate size limit of 256MB.
-- Only `GET` requests are canidates for caching.
+- Only `GET` requests are candidates for caching.
 
 ## Use cases
 
