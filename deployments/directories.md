@@ -42,7 +42,6 @@ All of the following conditions must be met for a deployment to be considered su
     - [after.deploy](/docs/deployments/hooks/after-deploy)
     - [deploy.success](/docs/deployments/deploy-success)
 
-
 As a final step in the deployment process, the symbolic link located at `/webroot/current`
 is atomically updated to point the new release directory.
 
@@ -60,7 +59,6 @@ For a deployment to enter the Failed state, any of the following conditions must
         <a href="/docs/deployments/hooks/after-deploy">after.deploy</a>, and
         <a href="/docs/deployments/hooks/deploy-success">deploy.success</a>
         exits with a non-zero status.
-
 
 When a deployment step fails, the process will be aborted. This means that your 
 **current release will not be   affected** by a failed deployment, as Amezmo only updates your symbolic link as a final step in the process.

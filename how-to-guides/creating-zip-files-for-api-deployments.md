@@ -18,3 +18,6 @@ This command **includes** hidden files such as `.git`
     cd my-application;
     zip -x \*.git\* --recurse-paths ../my-application.zip .
 ```
+
+## See also
+- [Amezmo API Docs](/docs/api)
