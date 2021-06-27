@@ -18,7 +18,7 @@ worker_id     | The Worker ID
 ```bash
 {
     "id": 838,
-    "name": "aaa",
+    "name": "Laravel queue",
     "command": "php artisan queue:work --sleep=3 --tries=3 -vvv",
     "stop_wait_seconds": 10,
     "auto_restart": 1,
