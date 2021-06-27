@@ -7,7 +7,7 @@
 Parameter     |  Description       
 ------------- | ------------- 
 site_id       | The Site ID
-worker_id     | The Worker ID
+worker_id     | The Worker ID.
 
 
 ## Response

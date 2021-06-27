@@ -1,10 +1,11 @@
-# Platform API
+# Amezmo REST API
 
 The Amezmo API gives you programmatic access to Amezmo which empowers you to create deployments,
 launch instances, and manage resources. Please see the Endpoints link below for more information 
 on accessing the Amezmo API.
 
 
-- [Endpoints](/docs/api/endpoints)
+- [API endpoint](/docs/api/endpoints)
 - [Authentication](/docs/api/authentication)
+- [Workers](/docs/api/workers)
 - [Deployments](/docs/api/deployments)
