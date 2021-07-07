@@ -4,7 +4,7 @@ Terminating, or deleting an application completely removes the application from 
 permanent and cannot be undone.
 
 <p class="alert alert-info">
-    **Note:** As soon as you terminate an application, you will no longer be charged for it.
+   <b>Note</b>: As soon as you terminate an application, you will no longer be charged for it.
 </p>
 
 When you delete an application, your final charge for the application will be rounded to end of the current hour.
