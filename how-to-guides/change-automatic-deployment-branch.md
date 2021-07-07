@@ -10,7 +10,7 @@ You may change the default automatic deployment branch at anytime. The default b
 - In the horizontal tab navigation menu, choose the **Git** tab.
 - Find the **Git repository details**, island and click &nbsp;<i style="color:#586f90" class="fas fa-ellipsis-h"></i>&nbsp;&nbsp;
 <i style="color:#586f90" class="fas fa-small fa-chevron-right"></i> **Change repository**
-- Edit the Branch form field in the modal and confirm by clicking Save.
+- Edit the "Automatic deployment branch" form field in the modal and confirm by clicking Save.
 
  <img src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/change-automatic-deployment-branch.png	" />
 
