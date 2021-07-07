@@ -7,7 +7,8 @@ pricing on the Amezmo page, you are always billed hourly "behind the scenes." Th
 Your card is charged on the first day of the month for every hour that you had an active [instance](/docs/instances) during the **prior** month. For example,  Let's say you launched a single instance on Amezmo for the first time on July 6th. With this example, you will be billed on August 1st for all usage between the period July 6th - July 31st.
 
 ## Usage
-"Usage" is defined as a unit of 60 minutes (1 hour) that an [instance](/docs/instances) is active. An active instance is defined as an instance that was launched. An instance becomes *inactive* after [terminating](/docs/instances/terminating) it.
+"Usage" is defined as a unit of 60 minutes (1 hour) that an [instance](/docs/instances) is active. 
+An active instance is defined as an instance that was launched, but not terminated (deleted). An instance becomes *inactive* after [terminating](/docs/instances/terminating) it. On Amezmo, you are charged hourly, for each active instance. 
 
 ## Organized invoices
 Always pay for your services on the first of every month, never in the middle of the month, or sparsely
