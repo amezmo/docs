@@ -18,7 +18,7 @@ throughout the month.
 If you only use an instance, for example, to test out a new PHP application, then you don’t have to pay
 for a full month of service if you only require the instance for a few days.
 
-## Hourly billing use case
+## How it works
 
 If you terminate an instance, you will only pay for the total number of hours the instance was active during the
 month. Let's go through an example. Alice launches an instance on January 6th, 2021. She then
