@@ -1,11 +1,15 @@
 # Git repositories on Amezmo
 
-Application instances on Amezmo, or "sites" become associated with a Git repository after 
-connecting a repository after launchin an [instance](/docs/instances). You may associate a repository from GitHub, BitBucket, or GitLab with the Git wizard. 
-To learn more about connecting a repository, see the Git tab within your Amezmo dashboard.
+All deployments on Amezmo are made with a Git repository. Often times, a `git push` will trigger 
+an [automated deployment](/docs/deployments).
+
+Application instances on Amezmo, are associated with a Git repository after 
+connecting one from your chosen Git provider.
+You may associate a repository from GitHub, BitBucket, or GitLab with the Git wizard. Additionally, 
+automatic deployments are started when commits are made to the [automatic deployment branch](/docs/git/branches).
 
 ## Git providers
-Amezmo supports the 3 Git providers. 
+Amezmo supports the following Git integrations: 
 
 - GitHub 
 - BitBucket
