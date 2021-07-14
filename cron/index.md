@@ -18,5 +18,9 @@ the complex and often times confusing cron expression syntax.
 ## Scripts
 
 A cron *script* is a bash script where you define your task logic. In this script, you may call into other
-services such as PHP, Node.js and anything you'd normally do from the command line.
+services such as PHP, Node.js and anything you'd normally do from the command line. Scripts run on your instance and in the current working 
+directory as your most recent [release](/docs/releases). 
+
+## Best practices
+It's best to use a Cron job as a means to invoke another script. Don't put any logic into your Cron Job. Keep your business logic in your [git](/docs/git) repository so that way any updates won't require an update to your Cron Job.
 
