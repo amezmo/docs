@@ -22,5 +22,5 @@ services such as PHP, Node.js and anything you'd normally do from the command li
 directory as your most recent [release](/docs/releases). 
 
 ## Best practices
-It's best to use a Cron job as a means to invoke another script. Don't put any logic into your Cron Job. Keep your business logic in your [git](/docs/git) repository so that way any updates won't require an update to your Cron Job.
+It's best to use a Cron job as a means to invoke another script. Don't put any logic into your Cron job. Keep your business logic in your [git](/docs/git) repository so that any updates won't require an update to your Cron job as well.
 
