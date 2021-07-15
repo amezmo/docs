@@ -5,9 +5,7 @@ then MySQL will available to any instance that has been shared with a database i
 Amezmo dashboard, you can backup, restore, and check the status of your database.
 
 ## Configuration
-We recommend using the hostname for your accessing your database from code. The hostname can be found
-on the Database tab as seen below.
-
+You must use the **Internal host** for accessing the database server from your application. The Internal host is the name for the hostname of the server that is running with your applications network. It can be found on the Database overview tab. Using the IP address of the database host is not recommended because the IP address may change.
 
 ## Features
 - **Remote access**
