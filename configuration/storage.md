@@ -4,6 +4,7 @@ The `/webroot/storage` directory is available for your **production** persistent
 this directory is created for you when you launch an instance. You should configure your application to
 write files to this directory if you need to persist user uploaded content, or other files across deployments. For staging environements, the persistent storage directory follows the same pattern but it's located under `/webroot/$stagingRootDirectory/storage`. To find the value of `$stagingRootDirectory`, search for "Storage directory" under the Git tab.
 
+To automatically link a deployment to persistent storage, create an `after.pull` [deployment hook](/docs/deployments/hooks) and copy the contents from [here](https://raw.githubusercontent.com/amezmo/craftcms-demo/master/.amezmo/before.deploy).
 
 ## Directory layout
 ```bash
@@ -91,4 +92,5 @@ and new files.
 - [How to Persist Storage Across PHP Deployments on Amezmo Part 1](https://www.youtube.com/watch?v=A-iBIfch6Bw)  <span class="badge bg-info">Video</span>
 - [How to Change the Default Storage Path in Laravel](https://www.amezmo.com/blog/how-to-change-the-default-storage-path-in-laravel/)
 - [Laravel deployment hook for persistent storage](https://github.com/amezmo/demo.amezmo.com/blob/master/.amezmo/before.deploy)
+- [Craft CMS deployment hook for persistent storage](https://github.com/amezmo/craftcms-demo/blob/master/.amezmo/before.deploy)
 
