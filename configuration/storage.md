@@ -1,8 +1,9 @@
 # Persistent storage
 
-The `/webroot/storage` directory is available for your persistent storage needs. By default,
+The `/webroot/storage` directory is available for your **production** persistent storage needs. By default,
 this directory is created for you when you launch an instance. You should configure your application to
-write files to this directory if you need to persist user uploaded content, or other files across deployments.
+write files to this directory if you need to persist user uploaded content, or other files across deployments. For staging environements, the persistent storage directory follows the same pattern but it's located under `/webroot/$stagingRootDirectory/storage`. To find the value of `$stagingRootDirectory`, search for "Storage directory" under the Git tab.
+
 
 ## Directory layout
 ```bash
