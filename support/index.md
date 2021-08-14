@@ -12,7 +12,7 @@ please send your request.
 --------|--------------|------------
 Free | Free | Best effort application support, and infrastructure support with 24-48 hours.
 Business | Business tier instance, or $30 per month spend. | Max 8-hour response time for non-priority requests.  4-hour response time for Priority* requests.
-Premium | $99 per month | 3 live support sessions per month along with a 1-hour response time.                                                        
+Premium | $99 per month | 3 live chat sessions (Slack) per month along with a 1-hour response time.                                                        
 
 
 *Priority is defined by you. Please include the severity (high, low) with your support request.
