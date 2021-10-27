@@ -6,7 +6,7 @@ upload a complete version of your application without having to use Git. A commo
 See the [Amezmo GitHub Actions](https://github.com/amezmo/github-actions-demo) repository for a complete working example of using GitHub actions to deploy an application.
 
 Deployments with an [archive file](/docs/how-to-guides/creating-zip-files-for-api-deployments) work exactly
-like Git deployments, but they don't have any commit information associated with them.
+like regular Git deployments.
 
 When deploying with the Amezmo API, The `after.pull` 
 [deployment hook](/docs/deployments/hooks) will not be run.
