@@ -13,7 +13,7 @@ When deploying with the Amezmo API, The `after.pull`
 Instead, use the [after.extract](/docs/deployments/hooks/after-extract) hook to run code after extracting your archive. 
 
 ```bash
-POST /api/sites/{site_id}/deployments
+POST /v1/sites/{site_id}/deployments
 ```
 
 ## Parameters
@@ -36,7 +36,7 @@ tag            | string | body | The git tag
 
 ```bash
 curl --request POST \
-    --url https://api.amezmo.com/api/sites/{site_id}/deployments \
+    --url https://api.amezmo.com/v1/sites/{site_id}/deployments \
     --header 'Authorization: Bearer {api_key}' \
     --header 'Content-Type: multipart/form-data' \
     --form environment=production \

@@ -1,7 +1,7 @@
 # Get a deployment
 
 
-`GET` /api/deployments/{deployment_id}
+`GET` /v1/deployments/{deployment_id}
 
 ## Parameters
 Parameter     |  Description       

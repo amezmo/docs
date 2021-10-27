@@ -1,6 +1,6 @@
 # Cancel Deployment
 
-`POST` /api/deployments/{deployment_id}/cancel
+`POST` /v1/deployments/{deployment_id}/cancel
 
 ## Parameters
 Parameter     |  Description       
