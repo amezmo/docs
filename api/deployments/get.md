@@ -1,12 +1,14 @@
 # Get a deployment
 
-
-`GET` /v1/deployments/{deployment_id}
+```bash
+GET /v1/instances/{instance_id}/deployments/{deployment_id}
+```
 
 ## Parameters
-Parameter     |  Description       
-------------- | ------------- 
-deployment_id | The deployment ID
+Parameter     |  Type | In    | Description     
+------------- | ------|------ |------------------
+instance_id   |  string | uri  | The instance id of the environment
+deployment_id | string | uri   | The deployment ID
 
 ## Response
 

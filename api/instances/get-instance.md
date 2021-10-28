@@ -1,13 +1,13 @@
 
 # Get an instance
 
-`GET` /v1/instances/{instanceId}
+`GET` /v1/instances/{instance_id}
 
 
 ## Parameters
 Parameter     |  Type | In    | Description     
 ------------- | ------|------ |------------------
-instanceId    |  string | uri  | The instance id of the environment
+instance_id   |  string | uri  | The instance id of the environment
 
 
 ## Response

@@ -1,13 +1,13 @@
 
 # Get a Worker
 
-`GET` /api/sites/{site_id}/workers/{worker_id}
+`GET` /v1/instances/{instance_id}/workers/{worker_id}
 
 ## Parameters
-Parameter     |  Description       
-------------- | ------------- 
-site_id       | The Site ID
-worker_id     | The Worker ID.
+Parameter     |  Type | In     | Description     
+--------------|------|---------|------------------
+instance_id   |  string | uri  | The instance ID
+worker_id     | string | uri   | The woker ID
 
 
 ## Response

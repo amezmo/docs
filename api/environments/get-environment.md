@@ -1,12 +1,12 @@
 
 # Get an environment
 
-`GET` /v1/{instanceId}/environments/{name}
+`GET` /v1/{instance_id}/environments/{name}
 
 ## Parameters
 Parameter     |  Type | In    | Description     
 ------------- | ------|------ |------------------
-instanceId    |  string | uri  | The instance id of the environment
+instance_id    |  string | uri  | The instance id of the environment
 name          |  string | uri | The name of the environment
 
 

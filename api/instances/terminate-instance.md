@@ -1,14 +1,14 @@
 # Terminate an instance
 
-`DELETE` /v1/instances/{instanceId}
+`DELETE` /v1/instances/{instance_id}
 
 Queues an instance for termination. The `state` property on the instance is updated to reflect the new state. Once the instance is terminated,
 API requests for this instance will respond with 404 not found.
  
 ## Parameters
-Parameter     |  Type | In    | Description     
-------------- | ------|------ |------------------
-instanceId    |  string | uri  | The instance id of the environment
+Parameter     |  Type | In     | Description     
+--------------|------|----------|------------------
+instance_id   |  string | uri  | The instance id
 
 
 ## Response

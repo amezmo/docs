@@ -1,12 +1,14 @@
 # Stop a Worker
 
-`POST` /api/sites/{site_id}/workers/{worker_id}/stop
+`POST` /v1/instances/{instance_id}/workers/{worker_id}/stop
+
 
 ## Parameters
-Parameter     |  Description       
-------------- | ------------- 
-site_id       | The Site ID
-worker_id     | The Worker ID
+Parameter     |  Type | In     | Description     
+--------------|------|---------|------------------
+instance_id   |  string | uri  | The instance ID
+worker_id     | string | uri   | The woker ID
+
 
 
 ## Response

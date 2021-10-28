@@ -13,7 +13,7 @@ When deploying with the Amezmo API, The `after.pull`
 Instead, use the [after.extract](/docs/deployments/hooks/after-extract) hook to run code after extracting your archive. 
 
 ```bash
-POST /v1/sites/{site_id}/deployments
+POST /v1/instances/{instance_id}/deployments
 ```
 
 ## Parameters
@@ -21,8 +21,8 @@ POST /v1/sites/{site_id}/deployments
 Parameter      |  Type | In | Description       
 -------------  | ------------- 
 api_key        | string  | header | **Required**. Your [API key](/docs/api/authentication).
-environment    | string  | body | **Required**. The [environment](/docs/environments) for this deployment. This can be `production` or `staging`.
-site_id        | integer | uri | **Required**. The ID of the instance that this deployment will be executed on.
+environment    | string  | body | **Required**. The [environment](/docs/api/environments) name for this deployment. This can be `production` or `staging`.
+instance_id    | string | uri | **Required**. The ID of the instance that this deployment will be executed on.
 archive        | body    | uri | **Required**. The archive file that contains the source code of your application. This can be a zip or a tar archive. The maximum size of an archive file is 512MB.
 repo_owner     | string | body | The repository owner. Required if `repo_name` is provided.
 repo_name      | string | body | The repository name. Required if `repo_owner` is provided.
@@ -36,7 +36,7 @@ tag            | string | body | The git tag
 
 ```bash
 curl --request POST \
-    --url https://api.amezmo.com/v1/sites/{site_id}/deployments \
+    --url https://api.amezmo.com/v1/instances/{instance_id}/deployments \
     --header 'Authorization: Bearer {api_key}' \
     --header 'Content-Type: multipart/form-data' \
     --form environment=production \

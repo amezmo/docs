@@ -1,12 +1,12 @@
 
 # List environments
 
-`GET` /v1/{instanceId}/environments
+`GET` /v1/{instance_id}/environments
 
 ## Parameters
 Parameter     |  Type | In    | Description     
 ------------- | ------|------ |------------------
-instanceId    |  string | uri  | The instance id
+instance_id    |  string | uri  | The instance id
 
 ## Response
 

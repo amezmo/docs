@@ -2,21 +2,21 @@
 
 # Restart a Worker
 
-`POST` /api/sites/{site_id}/workers/{worker_id}/restart
+`POST` /v1/instances/{instance_id}/workers/{worker_id}/restart
 
 ## Parameters
-Parameter     |  Description   
-------------- | -------------   
-api_key       | Your [API key](/docs/api/authentication)
-site_id       | The Site ID
-worker_id     | The Worker ID
+Parameter     |  Type | In     | Description     
+--------------|------|---------|------------------
+instance_id   |  string | uri  | The instance ID
+worker_id     | string | uri   | The woker ID
+
 
 
 ## Code samples
 
 ```bash
 curl --request POST \
-    --url https://api.amezmo.com/api/sites/{site_id}/workers/{worker_id}/restart \
+    --url https://api.amezmo.com/v1/instances/{instance_id}/workers/{worker_id}/restart \
     --header 'Authorization: Bearer {api_key}'
 ```
 
