@@ -11,6 +11,13 @@ name          |  string | uri | The name of the environment. See [environments](
 auto_deploy_tag_patterns | array | body | An array of regular expressions to match a git tag
 auto_deploy_branch_patterns | array | body | An array of of regular expressions to match a git branch.
 
+## Code samples
+```bash
+curl https://api.amezmo.com/v1/instances/{instanceId}/environments/production -X PATCH \
+    -H 'Authorization: Bearer {api_key}' \
+    --data auto_deploy_tag_patterns[]='v\d+\.\d+\.\d+$'
+```
+
 ## Response
 
 `200 OK`

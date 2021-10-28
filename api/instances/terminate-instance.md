@@ -10,6 +10,11 @@ Parameter     |  Type | In     | Description
 --------------|------|----------|------------------
 instance_id   |  string | uri  | The instance id
 
+## Code samples
+```bash
+curl https://api.amezmo.com/v1/instances/1087 -X DELETE \
+    -H 'Authorization: Bearer {api_key}' \
+```
 
 ## Response
 
