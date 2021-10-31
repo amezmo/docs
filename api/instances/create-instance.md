@@ -18,7 +18,7 @@ mysql          | dictionary | body | MySQL configuration
 mysql.version  | string  | mysql | `5.7` or `8`
 mysql.enabled  | boolean | mysql | Enables or disables the MySQL server for this instance.
 mysql.database    | dictionary | mysql | Initial database configuration
-mysql.database.database | string | mysql.database | Initial database name
+mysql.database.name | string | mysql.database | Initial database name
 mysql.database.user | string | mysql.database | Initial database user
 mysql.database.password | string | mysql.database | Initial database password
 

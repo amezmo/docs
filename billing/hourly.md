@@ -33,3 +33,20 @@ To calculate the total price, take the instance type and divide it by 744.
 Since there are only ever a maximum of 31 days per month (and often less than that), 744 hours is the maximum
 number of hours you're billed for during any given month. But it’s less than this during the months of
 February, April, June, July, September, October, and November.
+
+## Hours per month
+Month     | Hours
+----------|--------
+January   | 744
+February  | 672
+March     | 744
+April     | 720
+May       | 744
+June      | 720
+July      | 744
+August    | 744
+September | 720
+October   | 744
+November  | 720
+December  | 744
+
