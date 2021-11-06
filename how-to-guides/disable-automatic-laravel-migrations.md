@@ -1,4 +1,4 @@
-## Disable automatic Laravel migrations
+# Disable automatic Laravel migrations
 
 Database migrations are run on each deployment if an `artisan` file is found in the root directory
 of your application. You can disable automatic database migrations for Laravel applications.
