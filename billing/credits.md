@@ -1,4 +1,4 @@
-## Amezmo billing credits
+# Amezmo billing credits
 
 Amezmo credits are applied to invoices and reduce the total amount due. Credits are applied 
 until the credit amount is completely spent, or it expires. 
