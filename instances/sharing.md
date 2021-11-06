@@ -1,4 +1,4 @@
-## Instance sharing
+# Instance sharing
 
 Applications may be shared with other [instances](/docs/instances) on Amezmo. This means that
 the instance will be joined with another instances private network. 
