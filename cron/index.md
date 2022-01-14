@@ -1,6 +1,6 @@
 # Scheduled tasks with Cron
 
-Use [Cron jobs](https://stackoverflow.com/questions/21615673/difference-between-cron-crontab-and-cronjob)
+Use [Cron](https://man7.org/linux/man-pages/man8/cron.8.html)
 as a way to schedule recurring tasks for your application. When working with Cron, Amezmo manages the
 creation of the crontab file that is required to execute your task, and the logging of the task output so you can
 see the results in your Amezmo dashboard. Crons are executed from your applications [current release](/docs/deployments/directories) directory.

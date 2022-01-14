@@ -8,6 +8,9 @@ Team member roles limit what a team member may do. Amezmo provides two different
 Allows for complete management of instances. Similar to the permissions and capabilities that the Team Owner
 has except this role cannot manage billing, view security logs, or manage the team.
 
+### Developer
+Allows access to everything except billing.
+
 ### Client
 
 Allows managing billing, viewing invoices and estimated bill. This role is intended for your non-technical client
