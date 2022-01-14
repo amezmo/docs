@@ -10,7 +10,6 @@ The following command is the recommended way to portably decrypt your backup fil
 file, this command should be run on your local machine.
 
 ```bash
-openssl enc -aes-256-cbc -md sha256 -d \
-    -pass pass:$YOUR_ENCRYPTION_KEY \
-    -in $DATABASE_BACKUP_FILE
+openssl enc -aes-256-cbc -md sha256 -d -pass pass:$KEY \
+    -in $BACKUP_FILE | gzip -d
 ```
