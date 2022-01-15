@@ -19,7 +19,7 @@ The actual subdomain that you are assigned will be based on the
 | Region | Domain
 ---------|--------
 London   | uk3.amezmo.co
-United States | lb2.amezmo.co, us2.amezmo.co
+United States | lb2.amezmo.co, us1.amezmo.co
 Australia | au2.amezmo.co
 Canada | ca.amezmo.co
 
