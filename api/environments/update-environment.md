@@ -1,7 +1,9 @@
 
 # Update an environment
 
-`PATCH` /v1/{instance_id}/environments/{name}/production
+```bash
+PATCH /v1/{instance_id}/environments/{name}/production
+```
 
 ## Parameters
 Parameter     |  Type | In    | Description     
@@ -10,6 +12,7 @@ instance_id    |  string | uri  | The instance id of the environment
 name          |  string | uri | The name of the environment. See [environments](/docs/api/environments/list-environments)
 auto_deploy_tag_patterns | array | body | An array of regular expressions to match a git tag
 auto_deploy_branch_patterns | array | body | An array of of regular expressions to match a git branch.
+newrelic_license_key | string | body | [New Relic API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
 
 ## Code samples
 ```bash
@@ -24,7 +27,7 @@ curl https://api.amezmo.com/v1/instances/{instanceId}/environments/production -X
 
 ```bash
 {
-    "id": 24242424242424,
+    "name": "production",
     "environment_name": "production",
     "state": "pending",
     "storage_directory": "/webroot/98b69b41fe1b8991/storage",

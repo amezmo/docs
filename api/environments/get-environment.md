@@ -6,7 +6,7 @@
 ## Parameters
 Parameter     |  Type | In    | Description     
 ------------- | ------|------ |------------------
-instance_id    |  string | uri  | The instance id of the environment
+instance_id   |  string | uri  | The instance id of the environment
 name          |  string | uri | The name of the environment
 
 
@@ -17,6 +17,7 @@ name          |  string | uri | The name of the environment
 ```bash
 {
     "id": 24242424242424,
+    "name": "production",
     "environment_name": "production",
     "state": "pending",
     "storage_directory": "/webroot/98b69b41fe1b8991/storage",

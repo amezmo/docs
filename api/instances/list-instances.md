@@ -1,8 +1,14 @@
 
 # List instances
 
-`GET` /v1/instances
+```bash
+GET /v1/instances
+```
 
+## Parameters
+Parameter        |  Type   | In     | Description     
+---------------- | --------|------- |------------------
+instance_type    |  string | query  | [instance type](/docs/api/instances/list-instance-types) filter
 
 ## Response
 
@@ -40,6 +46,7 @@
         "environments": [
             {
                 "id": 1,
+                "name": "production",
                 "environment_name": "production",
                 "state": "pending",
                 "storage_directory": "/webroot/storage",
@@ -73,6 +80,7 @@
             },
             {
                 "id": 2,
+                "name": "staging",
                 "environment_name": "staging",
                 "state": "pending",
                 "storage_directory": "/webroot/3ee35a7060676b6d/storage",

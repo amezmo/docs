@@ -63,10 +63,11 @@ curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_
     "state": "Launching",
     "trusted_ssh_ips": [],
     "created_at": "2021-10-27T22:20:29.000000Z",
-    "region": "x-us",
+    "region": "lb2-us",
     "environments": [
         {
             "id": 1,
+            "name": "production",
             "environment_name": "production",
             "state": "pending",
             "storage_directory": "/webroot/storage",

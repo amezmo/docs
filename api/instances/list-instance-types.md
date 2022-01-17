@@ -1,8 +1,9 @@
 
-# List regions
+# List instance types
 
-`GET` /v1/instance-types
-
+```bash
+GET /v1/instance-types
+```
 
 ## Response
 

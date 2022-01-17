@@ -45,6 +45,7 @@ instance_id   |  string | uri  | The instance id of the environment
     "environments": [
         {
             "id": 1,
+            "name": "production",
             "environment_name": "production",
             "state": "pending",
             "storage_directory": "/webroot/storage",
@@ -78,6 +79,7 @@ instance_id   |  string | uri  | The instance id of the environment
         },
         {
             "id": 2,
+            "name": "staging",
             "environment_name": "staging",
             "state": "pending",
             "storage_directory": "/webroot/3ee35a7060676b6d/storage",
