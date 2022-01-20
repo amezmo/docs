@@ -14,6 +14,10 @@ auto_deploy_tag_patterns | array | body | An array of regular expressions to mat
 auto_deploy_branch_patterns | array | body | An array of of regular expressions to match a git branch.
 newrelic_license_key | string | body | [New Relic API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
 
+When updating `newrelic_license_key`, the change takes effect on the next [deployment](/docs/api/deployments). Providing a `null` value disables 
+the New Relic APM integration. When you provide your New Relic API key, Amezmo encrypts the value at rest. The value is decrypted upon instance creation and is stored in the `newrelic.ini` PHP configuration file. You may see the value by running `php --ri newrelic | grep newrelic.license`
+
+
 ## Code samples
 ```bash
 curl https://api.amezmo.com/v1/instances/{instanceId}/environments/production -X PATCH \
@@ -23,7 +27,9 @@ curl https://api.amezmo.com/v1/instances/{instanceId}/environments/production -X
 
 ## Response
 
-`200 OK`
+```bash
+200 OK
+```
 
 ```bash
 {
@@ -61,6 +67,7 @@ curl https://api.amezmo.com/v1/instances/{instanceId}/environments/production -X
     ],
     "auto_deploy_branch_patterns": [
         "feature/*"
-    ]
+    ],
+    "newrelic_license_key": "YES"
 }
 ```
