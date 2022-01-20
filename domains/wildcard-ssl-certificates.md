@@ -18,4 +18,4 @@ to get instructions on how to get an API key.
 - [LuaDNS](https://www.luadns.com)
 - [NS1](https://ns1.com)
 - [OVH](https://api.ovh.com)
-- [Amezmo Route 53](https://docs.aws.amazon.com/route53/index.html)
+- [Amazon Route 53](https://docs.aws.amazon.com/route53/index.html)
