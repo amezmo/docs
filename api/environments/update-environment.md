@@ -17,6 +17,7 @@ newrelic_license_key | string | body | [New Relic API key](https://docs.newrelic
 When updating `newrelic_license_key`, the change takes effect on the next [deployment](/docs/api/deployments). Providing a `null` value disables 
 the New Relic APM integration. When you provide your New Relic API key, Amezmo encrypts the value at rest. The value is decrypted upon instance creation and is stored in the `newrelic.ini` PHP configuration file. You may see the value by running `php --ri newrelic | grep newrelic.license`
 
+Note that New Relic is only supported with Advanced instances. See [instance types](/docs/api/instances/list-instance-types).
 
 ## Code samples
 ```bash
