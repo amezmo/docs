@@ -1,7 +1,7 @@
 
 # Get an environment
 
-`GET` /v1/{instance_id}/environments/{name}
+`GET` /v1/instances/{instance_id}/environments/{name}
 
 ## Parameters
 Parameter     |  Type | In    | Description     

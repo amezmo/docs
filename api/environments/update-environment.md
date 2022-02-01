@@ -2,7 +2,7 @@
 # Update an environment
 
 ```bash
-PATCH /v1/{instance_id}/environments/{name}/production
+PATCH /v1/instances/{instance_id}/environments/{name}/production
 ```
 
 ## Parameters

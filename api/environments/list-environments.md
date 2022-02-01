@@ -1,7 +1,7 @@
 
 # List environments
 
-`GET` /v1/{instance_id}/environments
+`GET` /v1/instances/{instance_id}/environments
 
 ## Parameters
 Parameter     |  Type | In    | Description     
