@@ -7,3 +7,4 @@ that you've launched during the prior month.
 
 
 - [Hourly billing](/docs/billing/hourly)
+- [Evaluation period](/docs/billing/evaluation-period)
