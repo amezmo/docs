@@ -6,14 +6,12 @@ with automatic deployments and a suite of
 Each time you push, Amezmo will start a new deployment. Optionally,
 you may disable automatic deployments and deploy branches of your choice.
 
-## Repos
-[Learn more](/docs/git/repos) about how Amezmo works with your favorite Git provider.
+- [Branches](/docs/git/branches)
+- [Git providers](/docs/git/providers)
+- [Repos](/docs/git/repos)
+- [Tag-based deployments](/docs/git/tag-based-deployments)
 
-## Branches
-[Learn more](/docs/git/branches) about how Amezmo works with Git branches.
-
-
-### Automation
+## Automation
 [Learn more](/docs/deployments/automatic-composer-installs) about automatically
 installing composer packages and running migrations without having to write a custom
 script.

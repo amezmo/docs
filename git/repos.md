@@ -6,7 +6,8 @@ an [automated deployment](/docs/deployments).
 Application instances on Amezmo, are associated with a Git repository after 
 connecting one from your chosen Git provider.
 You may associate a repository from GitHub, BitBucket, or GitLab with the Git wizard. Additionally, 
-automatic deployments are started when commits are made to the [automatic deployment branch](/docs/git/branches).
+automatic deployments are started when commits are made to the [automatic deployment branch](/docs/git/branches), or when a tag is created and one of your
+ [tag-based deployment](/docs/git/tag-based-deployments) patterns is matched against the tag.
 
 ## Git providers
 Amezmo supports the following Git integrations: 
