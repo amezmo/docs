@@ -12,3 +12,11 @@ you may view the this file within your instance with the `cat` command line util
 For advanced applications, you may view and modify the default Nginx `location` directives that Amezmo generates for you. 
 Amezmo supports adding and editing Nginx [location directives](https://nginx.org/en/docs/http/ngx_http_core_module.html#location).
 
+
+## Nginx location directives
+Nginx `location` directives are related to your environment. These directives are automatically created for you, and they're based on the application type that
+you choose in the Git repository wizard. You may see your app type by going to the Git tab within your Amezmo dashboard. Because the directives are generated 
+based on the application type, changing your application type will reset the Nginx location directives to the Amezmo default set. 
+
+The Drupal application type is the only application type that has a specialized set of configurations for Nginx. Laravel, Craft CMS, WordPress, and standard PHP 
+applications all use the same configuration set. 
