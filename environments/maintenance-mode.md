@@ -7,4 +7,6 @@ While in Maintenance Mode, the HTTP status code 503 is returned to your visitors
 not be paused, and any [Cron](/docs/cron) jobs will also not be paused.
 Maintenance Mode effects inbound HTTP requests to your application only.
 
+MySQL is placed in read-only mode during the time your application is in Maintenance Mode. 
+
 While Maintenance Mode prevents your application from responding to HTTP requests, the instance is still active. To shut down the instance completely, see the section on [pausing instances](/docs/instances/pausing). 
