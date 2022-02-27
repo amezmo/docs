@@ -6,7 +6,7 @@
 ## Parameters
 Parameter     |  Type   | In    | Description     
 ---------------| --------|------ |------------------
-runtime        | string     | body  | **Required** One of `php`, `mysql`, `dotnet`
+runtime        | string     | body  | **Required** One of `php`, `mysql`
 instance_type  | string     | body  | **Required**  One of `hobby`, `developer`, `business`. See [Instance types](/docs/api/instances/list-instance-types)
 region         | string     | body  | **Required**  The region id. See [Regions](/docs/api/regions/list-regions)
 name           | string     | body | The identifier for this instance.
