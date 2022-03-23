@@ -6,14 +6,16 @@ creation of the crontab file that is required to execute your task, and the logg
 see the results in your Amezmo dashboard. Crons are executed from your applications [current release](/docs/deployments/directories) directory.
 
 ## Schedules
-A cron schedule represents when the task will be executed. Amezmo provides a simple representation of
-the complex and often times confusing cron expression syntax.
+A cron schedule represents when the task will be executed. You may use an alias for the following cron expressions. 
 
 - @minutely &mdash; Execute the task once every minute
 - @yearly &mdash; Execute the task once every year
 - @monthly &mdash; Execute the task once every month
 - @weekly &mdash; Execute the task once every week
 - @hourly &mdash; Execute the task once every hour
+
+For advanced use cases,
+Amezmo supports [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07).
 
 ## Scripts
 
