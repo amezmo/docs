@@ -20,3 +20,6 @@ based on the application type, changing your application type will reset the Ngi
 
 The Drupal application type is the only application type that has a specialized set of configurations for Nginx. Laravel, Craft CMS, WordPress, and standard PHP 
 applications all use the same configuration set. 
+
+## Editing locations
+You may edit, delete, and add new Nginx location blocks for your PHP application. By default, Amezmo generates a set of rules for your based on your application type. To help with debugging custom location blocks, you may look at the Nginx error log from the Log tab.
