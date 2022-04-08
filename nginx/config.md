@@ -23,3 +23,5 @@ applications all use the same configuration set.
 
 ## Editing locations
 You may edit, delete, and add new Nginx location blocks for your PHP application. By default, Amezmo generates a set of rules for your based on your application type. To help with debugging custom location blocks, you may look at the Nginx error log from the Log tab.
+
+When editing a location, the body portion of the location block is the only editable region. The location part of a block is immutable. To recreate a location, you must delete it, and then create another one.
