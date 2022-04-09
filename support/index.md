@@ -8,14 +8,11 @@ You may request application support, or infrastructure support. Amezmo has 3 sup
 time. If you're not sure if your support request would be within the scope of the levels defined below,
 please send your request.
 
-| Level | Availability | Description
---------|--------------|------------
-Free | Free | Best effort application support, and infrastructure support with 24-48 hours.
-Business | Business tier instance, or $30 per month spend. | Max 8-hour response time for non-priority requests.  4-hour response time for Priority* requests.
-Premium | $99 per month | 3 live chat sessions (Slack) per month along with a 1-hour response time.                                                        
-
-
-*Priority is defined by you. Please include the severity (high, low) with your support request.
+| Level  | Availability    | Description   | Medium |
+---------|-----------------|---------------|---------|
+Free      | Free           | Best effort application support and infrastructure support with 24-72 hours. | Email
+Business  | $50 per month. | 24 hour email response time for non-priority requests. | Email
+Premium   | $99 per month  | Real time responses for priority requests. | Email, Slack                                                        
 
 
 ## Resources
