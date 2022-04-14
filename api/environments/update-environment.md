@@ -22,6 +22,9 @@ the New Relic APM integration. When you provide your New Relic API key, Amezmo e
 
 Note that New Relic is only supported with Advanced instances. See [instance types](/docs/api/instances/list-instance-types).
 
+When patching `ssh_enabled` to be false, `trusted_ssh_ips` is reset to an emtpy array.
+
+
 ## Code samples
 ```bash
 curl https://api.amezmo.com/v1/instances/{instanceId}/environments/production -X PATCH \
