@@ -27,7 +27,7 @@ When patching `ssh_enabled` to be false, `trusted_ssh_ips` is reset to an emtpy 
 
 ## Code samples
 ```bash
-curl https://api.amezmo.com/v1/instances/{instanceId}/environments/production -X PATCH \
+curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production -X PATCH \
     -H 'Authorization: Bearer {api_key}' \
     --data auto_deploy_tag_patterns[]='v\d+\.\d+\.\d+$'
 ```
