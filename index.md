@@ -1,7 +1,7 @@
 # Amezmo Documentation
 
 Get details about setting up your PHP applications and server infrastructure on Amezmo. Learn about 
-automated deployments, and more.
+automated deployments, and more. For specific questions that are not answered here, we encourage you to join us on [Slack](/goslack).
 
 ## Instances
 Launch a dedicated service instance, or a full stack instance. Scale up or down at anytime.
@@ -17,3 +17,4 @@ into your private network and let your other instances connect to it.
 ## Deployments
 Automatically deploy your PHP application with zero-downtime using Git.
 [Learn more](/docs/deployments)
+

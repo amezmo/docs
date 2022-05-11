@@ -17,3 +17,4 @@ Premium   | $99 per month  | Real time responses for priority requests. | Email,
 
 ## Resources
 - [Contact support](/support)
+- [Slack](/goslack)
