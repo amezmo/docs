@@ -21,6 +21,9 @@ Amezmo will send a HTTP request to your domain name and inspect the response. Up
 Amezmo will follow 301 or 302 redirects only 4 times. A domain name is successfully validated once
 the system confirms that the DNS entry is pointed to the Amezmo server.
 
+Amezmo sends an HTTP/HTTPS request to your domain name from a US IP address. In order to validate your domain name, all firewall rules that would block standard HTTP/HTTPS requests to your site must be disabled. After validation succeeds, you may enable your firewall rules again.
+
+
 ## Limits
 
 - When validating your DNS A record for, Amezmo will follow only four 301 redirects
