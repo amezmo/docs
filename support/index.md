@@ -14,6 +14,14 @@ Free      | Free           | Best effort application support and infrastructure 
 Business  | $50 per month. | 24 hour email response time for non-priority requests. | Email
 Premium   | $99 per month  | Real time responses for priority requests. | Email, Slack                                                        
 
+## Migration
+Amezmo provides up to 2 hours of free migration assistance. Migration assistance consists of live chat and hands-on 
+support for you bringing your application to Amezmo. Included tasks include:
+
+- Code changes and direct pull requests on GitHub
+- Techincal assistance
+- Live chat
+- Consultations and advice
 
 ## Resources
 - [Contact support](/support)
