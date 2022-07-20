@@ -16,6 +16,7 @@ The choice of PHP version applies to both FPM and the PHP command line interface
 - PHP 7.3
 - PHP 7.4
 - PHP 8.0
+- PHP 8.1
 
 ## Changing PHP versions
 After an instance is launched, the PHP version may be viewed from the Overview tab. The PHP version may be changed at anytime. See [changing PHP versions](/docs/how-to-guides/changing-php-versions) for more details.
