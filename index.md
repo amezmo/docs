@@ -17,4 +17,3 @@ into your private network and let your other instances connect to it.
 ## Deployments
 Automatically deploy your PHP application with zero-downtime using Git.
 [Learn more](/docs/deployments)
-
