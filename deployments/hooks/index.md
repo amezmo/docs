@@ -75,16 +75,24 @@ Secrets will never be written to disk and only decrypted to execute hooks.
 
 ## Environment variables
 Your hook script has access to the following pre-defined environment variables.
+In addition to these enviroment variables, Amezmo injects your secret variables as well. For more 
+information about secrets, see the [Secrets Overview](/docs/secrets) page. 
+
 
 | Variable | Description
 -----------|------------
-APPLICATION_ROOT | This is where your code is located on the server in the form of `/webroot/release/${TIMESTAMP}.${COMMIT_ID}`
-REPO_NAME | The name of the repository currently being deployed
-DEPLOY_BRANCH | The name of the branch currently being deployed
-TARGET_HOOK | The name of hook being executed. This is one of the values listed in the [Hook list](/docs/deployments/hooks/#hook-list)
-RELEASE_NUMBER | The generated release number. The value is in the form of `${TIMESTAMP}.${COMMIT_ID}`.
-DEPLOYMENT_DIRECTORY | The fully qualified path to the current in progress deployment. This is in the form of `${TIMESTAMP}.${COMMIT_ID}` for git deployments. See [deployment directories](/docs/deployments/directories) for more information about directories.
-
+APPLICATION_ROOT      | This is where your code is located on the server in the form of `deployment_${sequence_number}.${short_commit_id}`
+COMMIT_ID             | Git commit hash
+NODE_PATH             | The path to the global node.js package binaries
+COMPOSER_MEMORY_LIMIT | set to `-1`
+PERSISTENT_STORAGE_DIRECTORY   | Path to the [persistent storage](/docs/configuration/storage) directory 
+APP_DOMAIN           | Internal domain name for the environmnt
+REPO_NAME            | The name of the repository currently being deployed
+DEPLOY_BRANCH        | The name of the branch currently being deployed
+TARGET_HOOK          | The name of hook being executed. This is one of the values listed in the [Hook list](/docs/deployments/hooks/#hook-list)
+RELEASE_NUMBER       | The generated release number. The value is in the form of `deployment_${sequence_number}.${short_commit_id}`
+DEPLOYMENT_DIRECTORY | The fully qualified path to the current in progress deployment. 
+APP_TYPE             | The application type ID such as `drupal`, `laravel`, or `crafctms`
 
 ## Hook Monitoring
 

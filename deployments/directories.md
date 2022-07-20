@@ -7,13 +7,12 @@ If the deployment succeeds, Amezmo updates the `/webroot/current` symbolic link 
 new deployment directory that was created.
 
 ```bash
-/webroot/release/${TIMESTAMP}.${COMMIT_ID}
+/webroot/release/deployment_${sequence_number}.${short_commit_id}
 ```
 
 ## Directories
 
-The timestamp variable above is in the form of `YYYY-MM-DDTHH:MM:SS.mmmmmm`, and the commit ID is
-short form version of the SHA1 Git commit hash.
+The `$sequence_number` variable above resolves to the environments current deployment sequence. The `$short_commit_id` resolves to short form Git SHA1 hash. 
 
 Amezmo maintains an [environment directory](/docs/environments/environment-directory) per environment
 inside your instance to implement atomic deployments and to separate staging and production.
@@ -26,10 +25,10 @@ we refer to the "current release directory" as the directory that was created as
     |----storage
     |----node_modules
     |----vendor
-    |----current -> /webroot/release/${TIMESTAMP}.${COMMIT_ID}
+    |----current -> /webroot/release/deployment_${sequence_number}.${short_commit_id}
     |----release
-    |-------${TIMESTAMP}.${COMMIT_ID}
-    |-------${TIMESTAMP}.${COMMIT_ID}
+    |-------deployment_${sequence_number}.${short_commit_id}
+    |-------deployment_${sequence_number}.${short_commit_id}
 ```
 
 ## Successful deployments

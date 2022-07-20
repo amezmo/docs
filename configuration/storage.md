@@ -13,10 +13,10 @@ To automatically link a deployment your persistent storage directory, see
     |----logs
     |----storage
     |-------public
-    |----current -> /webroot/release/${TIMESTAMP}.${COMMIT_ID}
+    |----current -> /webroot/release/deployment_${sequence_number}.${short_commit_id}
     |----release
-    |-------${TIMESTAMP}.${COMMIT_ID}
-    |-------${TIMESTAMP}.${COMMIT_ID}
+    |-------deployment_${sequence_number}.${short_commit_id}
+    |-------deployment_${sequence_number}.${short_commit_id}
 ```
 
 By default, `/webroot/storage` is owned by user `deployer` and group `www-data`.
