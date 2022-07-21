@@ -82,7 +82,7 @@ information about secrets, see the [Secrets Overview](/docs/secrets) page.
 | Variable | Description
 -----------|------------
 APPLICATION_ROOT      | This is where your code is located on the server in the form of `deployment_${sequence_number}.${short_commit_id}`
-COMMIT_ID             | Git commit hash
+COMMIT_ID             | Git commit hash of the currently executing deployment 
 NODE_PATH             | The path to the global node.js package binaries
 COMPOSER_MEMORY_LIMIT | set to `-1`
 PERSISTENT_STORAGE_DIRECTORY   | Path to the [persistent storage](/docs/configuration/storage) directory 
@@ -93,6 +93,7 @@ TARGET_HOOK          | The name of hook being executed. This is one of the value
 RELEASE_NUMBER       | The generated release number. The value is in the form of `deployment_${sequence_number}.${short_commit_id}`
 DEPLOYMENT_DIRECTORY | The fully qualified path to the current in progress deployment. 
 APP_TYPE             | The application type ID such as `drupal`, `laravel`, or `crafctms`
+ENVIRONMENT_NAME     | The name of the [application environment](/docs/environments)
 
 ## Hook Monitoring
 
