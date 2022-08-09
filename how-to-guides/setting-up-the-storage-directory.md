@@ -10,8 +10,12 @@ To create a persistent storage directory, copy the script from one of the links 
 - [Github Script](https://github.com/amezmo/demo.amezmo.com/blob/master/.amezmo/before.deploy)
 
 
-
 ### Craft CMS
 
 - [Github Script](https://github.com/amezmo/craftcms-demo/blob/master/.amezmo/before.deploy)
 
+### Drupal
+
+- [Github Script](https://github.com/amezmo/drupal-demo/blob/master/.amezmo/after.pull)
+
+For Drupal websites, you should use the [amezmo-drupal-integrations](https://github.com/sdubois/amezmo-drupal-integrations) Composer package.
