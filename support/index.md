@@ -11,8 +11,7 @@ please send your request.
 | Level  | Availability    | Description   | Medium |
 ---------|-----------------|---------------|---------|
 Free      | Free           | Best effort application support and infrastructure support with 24-72 hours. | Email
-Business  | $50 per month. | 24 hour email response time for non-priority requests. | Email
-Premium   | $99 per month  | Real time responses for priority requests. | Email, Slack                                                        
+Premium   | $499 per month  | Real time responses for priority requests. | Email, Slack                                                        
 
 ## Migration
 Amezmo provides up to 2 hours of free migration assistance. Migration assistance consists of live chat and hands-on 
