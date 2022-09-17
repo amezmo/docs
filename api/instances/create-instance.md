@@ -6,7 +6,7 @@
 ## Parameters
 Parameter     |  Type   | In    | Description     
 ---------------| --------|------ |------------------
-runtime        | string     | body  | **Required** One of `php`, `mysql`
+runtime        | string     | body  | **Required** One of `php`
 instance_type  | string     | body  | **Required**  One of `hobby`, `developer`, `business`. See [Instance types](/docs/api/instances/list-instance-types)
 region         | string     | body  | **Required**  The region id. See [Regions](/docs/api/regions/list-regions)
 name           | string     | body | The identifier for this instance.
@@ -21,6 +21,7 @@ mysql.database    | dictionary | mysql | Initial database configuration
 mysql.database.name | string | mysql.database | Initial database name
 mysql.database.user | string | mysql.database | Initial database user
 mysql.database.password | string | mysql.database | Initial database password
+app_type | string | body | One of 'laravel', 'octane', 'other', 'symfony', 'craftcms', 'drupal', 'wordpress', 'bedrock'
 
 
 ## Code samples
@@ -30,6 +31,7 @@ curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_
     --data runtime=php
     --data instance_type=business
     --data region=lb2-us
+    --data app_type=other
 ```
 
 ## Response
@@ -77,7 +79,7 @@ curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_
             "app_domain": "564192df9c.lb2.example.com",
             "current_deployment_id": null,
             "container_root_directory": "/webroot",
-            "app_type": null,
+            "app_type": "other",
             "auto_deploy_enabled": 1,
             "repo_owner": null,
             "repo_name": null,
@@ -110,7 +112,7 @@ curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_
             "app_domain": "3ee35a7060676b6d.lb2.example.com",
             "current_deployment_id": null,
             "container_root_directory": "/webroot/3ee35a7060676b6d",
-            "app_type": null,
+            "app_type": "other",
             "auto_deploy_enabled": 1,
             "repo_owner": null,
             "repo_name": null,
