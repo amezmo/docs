@@ -63,3 +63,5 @@ When a deployment step fails, the process will be aborted. This means that your
 **current release will not be   affected** by a failed deployment, as Amezmo only updates your symbolic link as a final step in the process.
 
 
+## Resources
+- [Storage directory](/docs/storage)
