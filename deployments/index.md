@@ -15,7 +15,7 @@ The deployment directory section describes the layout for zero-downtime deployme
 [Learn more](/docs/deployments/directories).
 
 ## Hooks
-Amezmo's extensibible deployment systems provides you the capability to run your own code at
+Amezmo's extensible deployment systems provides you the capability to run your own code at
 any step of the deployment process. [Learn more](/docs/deployments/hooks).
 
 ## Releases
