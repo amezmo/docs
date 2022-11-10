@@ -10,7 +10,7 @@ generates.
 | `SOLR_HOST` | _See your Application details panel*_
 | `SOLR_CORE` | drupal                                  |
 
-\* To access your Application details panel go to Overivew > Application details.
+\* To access your Application details panel go to Overview > Application details.
 
 
 The `SOLR_HOST` value is what you will provide to your Drupal configuration form. 
