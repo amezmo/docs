@@ -14,7 +14,7 @@ the instance is terminated. Adding or removing trusted IP addresses won't change
 ## SSL Certificate Files
 Get your SSL certificate files by going to Database Settings.
 
-<img alt="Image of Database > Settings" src="/assets/cert-files.png" class="img-fluid" />
+<img class="img-enlargable" alt="Image of Database > Settings" src="/assets/cert-files.png" class="img-fluid" />
 
 ## Resources
 -  <span class="badge bg-info">Video</span> [How to Connect to MySQL remotely with SSL](https://www.youtube.com/watch?v=EyRZ-fjLxIA)
