@@ -17,5 +17,13 @@ The `SOLR_HOST` value is what you will provide to your Drupal configuration form
 This is where your actual Solr server lives. This is unique to your instance and is only 
 available after you launch it. See below for an example host name.
 
+This screenshot highlights the Solr host which gets generated after your instance is launched.
+The Solr host value exist only after the instance is created.
 
 <img class="img-enlargable img-fluid" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/app-details-solr-host.png" />
+
+To view your automatic dotenv variable set for Solr, see the screenshot below. This example shows 
+which variable set Amezmo generates. 
+
+<img class="img-enlargable img-fluid" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/solr-dotenv-vars.png" />
+
