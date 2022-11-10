@@ -8,6 +8,6 @@ When disabling SSH, all your trusted IP addresses will be deleted.
 
 To set trusted IP addresses, navigate to Overview > SSH > Edit trusted IPs
 
-<img class="img-fluid" src="/assets/ssh-trusted-ips.png" alt="Edit trusted IP address">
+<img class="img-fluid img-enlargable" src="/assets/ssh-trusted-ips.png" alt="Edit trusted IP address">
 
 

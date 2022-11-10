@@ -12,7 +12,7 @@ of your application. You can disable automatic database migrations for Laravel a
 - Scroll down to the **Settings** section.
 - Find the "Database migrations" switch
 
-    <img src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/laravel-migrations-switch.png" />
+    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/laravel-migrations-switch.png" />
 - Toggle the switch
     
 After turning off Database migrations, your next deployment will not automatically run

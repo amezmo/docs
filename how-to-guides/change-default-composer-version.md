@@ -11,7 +11,7 @@ You may change the default Composer version that is used for automatic deploymen
 - Scroll down to the **Settings** section.
 - Find the "Composer packages" switch.
 
-    <img src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/composer-settings-switch.png" />
+    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/composer-settings-switch.png" />
 - Click the **Settings** button on the far right
 - Choose your desired Composer version from the dropdown
 - Click **Save**

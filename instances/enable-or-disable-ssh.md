@@ -3,7 +3,7 @@
 From the Overview tab, you can enable or disable SSH access to your instance by switching the green knob. When SSH
 is turned off, your instance will not respond to SSH requests.
 
-<img src="/assets/SSHKeyList.png" />
+<img src="/assets/SSHKeyList.png" class="img-enlargable" />
 
 ## SSH port
 
@@ -16,7 +16,7 @@ go to Overview > Server Details > SSH Port.
 Add a public key to your server by clicking the Add public key button. After being presented with the modal,
 give your key a name and paste your public key into the text area.
 
-<img src="/assets/SSHKeyForm.png" />
+<img src="/assets/SSHKeyForm.png" class="img-enlargable" />
 
 ## Limits
 - 3 public keys per instance

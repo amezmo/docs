@@ -12,7 +12,7 @@ scratch on every deployment.
 - Scroll down to the **Settings** section.
 - Find the NPM toggle switch.
     
-    <img src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/npm-caching.png" />
+    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/npm-caching.png" />
 - Click the switch
 
 After turning off NPM package caching, your next deployment will not use the cached
