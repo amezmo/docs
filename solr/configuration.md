@@ -11,7 +11,7 @@ generates.
 | `SOLR_CORE` | drupal                                  |
 | `SOLR_PORT` | 8983
 
-\* To access your Application details panel go to Overivew > Application details.
+\* To access your Application details panel go to Overview > Application details.
 
 
 The `SOLR_HOST` value is what you will provide to your Drupal configuration form. 
