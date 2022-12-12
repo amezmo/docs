@@ -9,6 +9,7 @@ generates.
 --------------|------------------------------------------
 | `SOLR_HOST` | _See your Application details panel*_
 | `SOLR_CORE` | drupal                                  |
+| `SOLR_PORT` | 8983
 
 \* To access your Application details panel go to Overivew > Application details.
 

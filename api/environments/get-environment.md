@@ -31,6 +31,28 @@ name          |  string | uri | The name of the environment
     "ssh_port": 14462,
     "app_domain": "b9cb804b63.x.vioengine.com",
     "current_deployment_id": 10840,
+    "current_deployment": {
+        "id": 10840,
+        "repo_id": 1608,
+        "site_id": 1934,
+        "status": "succeeded",
+        "created_at": "2022-12-12T18:14:34.000000Z",
+        "total_time": 11.61,
+        "pusher": "example@example.com",
+        "repo": "amezmo/demo.amezmo.com",
+        "branch": "main",
+        "commit": "df30171f",
+        "tag": null,
+        "sequence_number": 1,
+        "trigger": "web attach",
+        "healthcheck": {
+            "healthcheck_url": null,
+            "healthcheck_status_code": null,
+            "healthcheck_sent_at": null
+        },
+        "current_release": true,
+        "directory": "/webroot/release/deployment_1_df30171f"
+    },    
     "container_root_directory": "/webroot",
     "app_type": "laravel",
     "auto_deploy_enabled": 1,
