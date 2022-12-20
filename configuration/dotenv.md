@@ -27,7 +27,8 @@ The following variables are automatically generated for you when you launch an i
 `STORAGE_DIRECTORY` | Path to the [persistent storage](/docs/configuration/storage) directory 
 `LOG_DIRECTORY`     | This path can be used to persist log file across deployments
 `NODE_ENV`          | Contains the application environment name
-
+`AMEZMO_ENVIRONMENT` | The environment name
+ 
 Amezmo provides the following database variables if your instance has MySQL installed.
 
 | Variable      | Description
