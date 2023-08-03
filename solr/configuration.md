@@ -28,3 +28,4 @@ which variable set Amezmo generates.
 
 <img class="img-enlargable img-fluid" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/solr-dotenv-vars.png" />
 
+Currently there is no mechanism to upload a Solr configset to Amezmo. Please reach out to [Support](/support) for assistance with this.
