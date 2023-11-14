@@ -11,7 +11,7 @@ then go to Overview > Server Details and find your **SSH port**. An example SSH 
 
 ```bash
 ssh -i <id_rsa> -p <your ssh port>  \
-    -L 3306:127.0.0.1:3306 \
+    -L 127.0.0.1:3306:127.0.0.1:3306 \
     -N deployer@<internalDomain>lb2.amezmo.co
 ```
 
