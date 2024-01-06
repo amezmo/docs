@@ -22,6 +22,16 @@ sftp -i <path to your private key> $PORT deployer@$DOMAIN.lb3.amezmo.co
 
 The `$DOMAIN` variable above can be found from your dashboard. It is the part before your [internal domain](/docs/domains/development-subdomain). To find your SSH port, please see the [SSH port](/docs/instances/enable-or-disable-ssh#ssh-port) page
 
+## Windows Putty application
+
+#Session
+**Hostname**: $DOMAIN.lb3.amezmo.co  
+**Port**: $PORT  
+**Connection type**: ssh
+
+# Connection -> SSH -> Auth
+**Private key for authentication**: Browse to local file with private key
+
 ## Limits
 - Root access is not implemented
 - Public Key authentication is the only supported method of authentication
