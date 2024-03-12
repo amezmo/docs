@@ -4,7 +4,7 @@ Welcome to Amezmo. This documentation is continuously refined and updated
 by the Amezmo community. With that being said, Amezmo welcomes all
 contributions on the public [Amezmo Docs](https://github.com/amezmo/docs) repo.
 
-# How PHP Hosting Works On Amezmo
+## How PHP Hosting Works On Amezmo
 on Amezmo, your production sites will sustain uninterupted availibility
 at all times. First, you must have be using `Git` with either Github, BitBucket,
 or GitLab. Secondly, your applications must be able to run outside your local
@@ -16,14 +16,15 @@ Your application is deployed with [Atomic Deployments](/docs/deployments).
 Out of the box, your application should run without requiring custom packages.
 Amezmo creates a Docker image based on Ubuntu in advance with the
 most common update-to-date packages. For special requirements, please send us a
-message on [Slack](https://wwwwamezmo.com/goslack), or support,
+message on [Slack](https://www.amezmo.com/goslack), or support,
 and we'll customize your image to install any custom packages with
 [Apt](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html).
 
 ## Next steps
-Get details about setting up your PHP applications and server infrastructure on Amezmo. Learn about
-automated deployments, and more. For specific questions that are not answered here, we encourage you to join us on [Slack](/goslack).
-
+Get details about setting up your PHP applications and server infrastructure on
+Amezmo. Learn about [automated deployments](/docs/deployments), and more.
+For specific questions that are not answered here, we encourage you to join
+us on [Slack](/goslack).
 
 ### Instances
 Launch a dedicated service instance, or a full stack instance. Scale up or down at anytime.

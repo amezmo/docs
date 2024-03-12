@@ -1,25 +1,25 @@
 # Deployments
 
-Amezmo implements atomic, real-time deployments based on your `git push` 
-activity. When your repo has new push events, Amezmo will be notified and 
+Amezmo implements atomic, real-time deployments based on your `git push`
+activity. When your repo has new push events, Amezmo will be notified and
 immediately begin a deployment process.
 
 You can use Amezmo to ensure your PHP application is highly available. Deployments
-on Amezmo combine a series of atomic steps that operate in a pipeline. Pipeline 
-steps have success conditions. Conditions are checked as a prerequisite for 
-advancing to the next step in the pipeline. In the case of a negative 
+on Amezmo combine a series of atomic steps that operate in a pipeline. Pipeline
+steps have success conditions. Conditions are checked as a prerequisite for
+advancing to the next step in the pipeline. In the case of a negative
 success condition evaluation, your deployment pipeline safely terminates leaving
-your active, or live site unaffected. 
+your active, or live site unaffected.
 
-## Deployment pipeline success critera 
-You can keep your production site highly available to your users or 
-customers with Amezmo Atomic Deployments&mark. Amezmo deploys your 
-PHP application with a pipeline Atomicity. This gurantees invariability between 
-your live production site, and a failed deployment. There's no risk in 
-automating your [PHP deployments](/docs/git/).
- 
-Amezmo deploys your PHP application to production in a pipeline comprised of 
-indivisible units of well-defined deployment tasks.   
+## Deployment pipeline success critera
+You can keep your production site highly available to your users or
+customers with Amezmo Atomic Deployments&mark. Amezmo deploys your
+PHP application with a pipeline Atomicity. This gurantees invariability between
+your live production site, and a failed deployment. There's no risk in
+automating your [PHP deployments](/docs/git).
+
+Amezmo deploys your PHP application to production in a pipeline comprised of
+indivisible units of well-defined deployment tasks.
 
 
 
