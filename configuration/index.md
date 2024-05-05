@@ -1,30 +1,41 @@
 # Configuration
 
-Amezmo provides configuration options and recommendations for your application based on your application type.
-Upon [importing a repo](/docs/git), you can choose your application type. The following app types are
-officially supported on Amezmo.
+Amezmo automates configuration for
+your application based on your framework.
+When [connecting a git repo](/docs/git),
+you can choose your application type.
 
-- Laravel
-- Symfony
+## Supported PHP Frameworks
+
+- Backdrop
+- Bedrock
 - Craft CMS
-- Generic PHP
+- Drupal
+- Laravel
+- Laravel Octane
+- PHP
+- Symfony
+- Wordpress
 
-## Public document root
+## Public Document Root
 
-Define where your application should have its files served from and set up a
-symbolic link to a persistant storage directory for publicly accessible file uploads.
-[Learn more](/docs/configuration/public-directory)
+The [webroot](/docs/configuration/public-directory), or public document
+root is a directory within your application in which
+files within it are served directly by the [web server](/docs/nginx).
+This usually has your `index.php` file and static assets.
 
 ## Environment Variables
 
-Modify your Environment Variables from the dashboard. [Learn more](/docs/configuration/dotenv)
+Amezmo generates your server [environment variables](/docs/configuration/dotenv) automatically.
 
 ## Logging
-Logging to a dedicated directory is recommended to keep log files across deployments.
-[Learn more](/docs/configuration/logging)
 
-## Storage
-Keep your user uploaded content available across deployments by configuring your PHP app
-to write to a dedicated storage directory. Amezmo has a set of recommendations on how to configure
+You can use the persistent storage on your instance
+for [logging](/docs/configuration/logging)
+
+## Persistent Storage
+Keep your user uploaded content available between
+[deployments](/docs/deployments) by configuring your PHP app
+to write to a [persistent storage directory](/docs/configuration/storage).
+Amezmo has a set of recommendations on how to configure
 your application settings for best performance.
-[Learn more](/docs/configuration/storage)
