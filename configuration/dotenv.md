@@ -1,34 +1,44 @@
 # Configuration
 
-[DotEnv](https://github.com/vlucas/phpdotenv)
-is a configuration pattern that loads environment variables from a `.env` file. Amezmo generates a
+[PHP dotenv](https://github.com/vlucas/phpdotenv)
+is a library that loads your variables from a `.env` and puts them in your
+PHP runtime environment. These variables are usually read from your
+[`$_SERVER`](https://www.php.net/manual/en/reserved.variables.server.php)
+or [`$_ENV`](https://www.php.net/manual/en/reserved.variables.environment.php)
+[superglobal](https://www.php.net/manual/en/language.variables.superglobals.php)
+variables.
+
+Amezmo generates a
 `.env` file for you at instance creation time.
-This file is automatically available to you from your webroot.
-Depending on the options you've chosen at instance creation time, you will see a set of predefined variables.
+This file is automatically available to you from your [webroot](/docs/deployments/directories). Depending on the options you've chosen at instance creation time,
+you will see a set of predefined variables.
 
-When a new deployment happens, the most recent `.env` file is copied into your deployments
-target release directory.
+When your [deployment] is triggered, the most recent `.env` file is copied
+into your deployment [target release directory](/docs/deployments/directories).
 
-Amezmo automatically generates a `.env` file for you when you launch an instance.
-You can edit this file at anytime from the Configuration page.
-
-Upon updating your configuration from the dashboard, the updates are immediately copied into your
+Upon updating your configuration from the dashboard,
+the updates are immediately copied into your
 [current release directory](/docs/deployments/directories).
-Amezmo does not validate your file before placing it inside the root of your current release directory tree.
+Amezmo does not validate your file before placing it inside
+the root of your current release directory tree.
 
-Your workers are reloaded via SIGHUP after your configuration file is copied into your release directory.
+After your new configuration variables are copied into your
+[release directory](/docs/deployments/releases),
+your [workers are restarted](/docs/workers/reloading) via `SIGHUP`
+automatically.
 
-## Default variables
-The following variables are automatically generated for you when you launch an instance.
+## Amezmo Generated Variables
+The following variables are automatically generated for you whenever you
+[create a site](/docs/instances).
 
 | Variable      | Description
 ----------------|-------------
 `APP_HOSTNAME`      | The hostname of the application environment
-`STORAGE_DIRECTORY` | Path to the [persistent storage](/docs/configuration/storage) directory 
+`STORAGE_DIRECTORY` | Path to the [persistent storage](/docs/configuration/storage) directory
 `LOG_DIRECTORY`     | This path can be used to persist log file across deployments
 `NODE_ENV`          | Contains the application environment name
 `AMEZMO_ENVIRONMENT` | The environment name
- 
+
 Amezmo provides the following database variables if your instance has MySQL installed.
 
 | Variable      | Description
@@ -41,7 +51,8 @@ Amezmo provides the following database variables if your instance has MySQL inst
 `DB_VENDOR`         | Always MySQL
 `DB_VERSION`        | The version number of MySQL in major.minor.patch form
 
-Amezmo provides the following Redis variables if your instance has Redis installed.
+Amezmo provides the following [Redis](https://redis.io) variables
+if your instance has Redis installed.
 
 | Variable      | Description
 ----------------|-------------
@@ -49,9 +60,9 @@ Amezmo provides the following Redis variables if your instance has Redis install
 `REDIS_PORT`        | Always 6379
 
 
-
-## Hooks
-Upon updating your configuration file, Amezmo will optionally execute a script on your behalf.
+## Environment Variable Hooks
+Upon updating your DotEnv Configuration file,
+Amezmo will search for hooks
 
 | Hook | Description
 -------|------------
