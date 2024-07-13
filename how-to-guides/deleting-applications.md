@@ -7,11 +7,11 @@ you've terminated your application, you will no longer be charged for it. Termin
 
 You can terminate an application using the Amezmo dashboard. **To terminate an application**:
 
-- Open the Amezmo dashboard at [https://www.amezmo.com/sites](/sites)
-- Choose the name of the application.
-- In the horizontal tab navigation menu, choose **Overview**.
-- Scroll down to the **Application details** section.
-- Click **Show advanced settings**
-- Click **Show more actions**
-- Click the red **Terminate** button.
-- Confirm your action by choosing **Terminate** from the prompt.
+1. Open the Amezmo dashboard at [https://www.amezmo.com/sites](/sites)
+2. Choose the name of the application.
+3. In the horizontal tab navigation menu, choose **Overview**.
+4. Scroll down to the **Application details** section.
+5. Click **Show advanced settings**
+6. Click **Show more actions**
+7. Click the red **Terminate** button.
+8. Confirm your action by choosing **Terminate** from the prompt.

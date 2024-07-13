@@ -12,7 +12,7 @@ machine. That is, your application should not be hardcoded to depend on
 a personal file or directory.
 
 Your PHP applications on Amezmo execute in a homogeneous server environment.
-Your application is deployed with [Atomic Deployments](/docs/deployments).
+Your application is deployed with [Atomic PHP Deployments](/docs/deployments).
 Out of the box, your application should run without requiring custom packages.
 Amezmo creates a Docker image based on Ubuntu in advance with the
 most common update-to-date packages. For special requirements, please send us a
