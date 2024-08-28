@@ -4,7 +4,7 @@ Trusted IP addresses for Nginx is an optional security feature on Amezmo that yo
 By default, your web server is available to everyone.
 
 <div class="alert alert-info">
-    <b>Note</b>: To ensure you can access SSH, see <a href="/docs/instances/trusted-ip-addresses">SSH Trused IP Addresses</a>
+    <b>Note</b>: To ensure you can access SSH, see <a href="/docs/instances/trusted-ip-addresses">SSH Trusted IP Addresses</a>
 </div>
 
 
