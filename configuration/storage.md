@@ -2,12 +2,18 @@
 
 The `/webroot/storage` directory is available for your **production** persistent storage needs. By default,
 this directory is created for you when you launch an instance. You should configure your application to
-write files to this directory if you need to persist user uploaded content, or other files across deployments. For staging environements, the persistent storage directory follows the same pattern but it's located under `/webroot/$stagingRootDirectory/storage`. To find the value of `$stagingRootDirectory`, search for "Storage directory" under the Git tab.
+write files to this directory if you need to persist user uploaded content, or other files across deployments.
+
+For your staging environments, the persistent storage directory follows the same pattern
+and it's located under `/webroot/$stagingRootDirectory/storage`.
+To find the value of `$stagingRootDirectory`, search for "Storage directory"
+under your Git tab in the Amezmo Dashboard
 
 To automatically link a deployment your persistent storage directory, see
 [Setting up the storage directory](/docs/how-to-guides/setting-up-the-storage-directory).
 
 ## Directory layout
+
 ```bash
 /webroot
     |----logs
@@ -28,20 +34,19 @@ any files created from your hooks will have correct and expected permissions. Am
 
 The `/webroot/storage/public` is created for [public file uploads](/docs/configuration/public-directory). Files uploaded to
 this directory can be accessible from your domain by creating a symbolic link
-from  `/webroot/storage/public` to `/webroot/current/public`. See the [public directory documentation](/docs/configuration/public-directory) for more details.
+from  `/webroot/storage/public` to `/webroot/current/public`.
+See the [public directory documentation](/docs/configuration/public-directory) for more details.
 
 When uploading files from your PHP app, the default owner and group is `www-data`. At this time,
 Amezmo has chosen not to modify the default PHP FPM configuration in an effort to run
 the FPM daemon as a non-shell capable access user. We recommend the following file system permissions when
 writing and uploading new files to your instance.
 
-
 ## Recommend file permissions settings
 
 The following permission configuration is Amezmo's recommendation for PHP applications hosted on Amezmo. Note that
 the example shows a Laravel based configuration array, but these permissions are not specific to Laravel. Any PHP
 application hosted on Amezmo should use these permissions and settings.
-
 
 This file is located at `app/config/filesystems.php`. The
 
@@ -85,13 +90,13 @@ return [
 ];
 ```
 
-The above permissions provide expected behavior across all application areas. With the above file permissions,
-your depoyment hooks may read and write existing and new files and your workers may read and write existing
-and new files.
+The above permissions provide expected behavior across all application areas.
+With the above file permissions, your deployment hooks may read and write existing and
+new files and your workers may read and write existing and new files.
 
 ## Resources
+
 - [How to Persist Storage Across PHP Deployments on Amezmo Part 1](https://www.youtube.com/watch?v=A-iBIfch6Bw)  <span class="badge bg-info">Video</span>
 - [How to Change the Default Storage Path in Laravel](https://www.amezmo.com/blog/how-to-change-the-default-storage-path-in-laravel/)
 - [Laravel deployment hook for persistent storage](https://github.com/amezmo/demo.amezmo.com/blob/master/.amezmo/before.deploy)
 - [Craft CMS deployment hook for persistent storage](https://github.com/amezmo/craftcms-demo/blob/master/.amezmo/before.deploy)
-
