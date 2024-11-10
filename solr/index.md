@@ -10,6 +10,8 @@ this command
 
 ```curl
 curl http://localhost:${SOLR_PORT:-8983}/solr/admin/cores
+curl http://localhost:8983/solr/drupal/config
+curl http://localhost:8983/solr/drupal/schema
 ```
 
 ## Resources
