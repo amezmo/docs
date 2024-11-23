@@ -1,6 +1,6 @@
 # Instances
 
-Applications on Amezmo are backed by an optimzed Docker container instance. Each "instance" of an application
+Applications on Amezmo are backed by an optimized Docker container instance. Each "instance" of an application
 is a isolated container running on reserved hardware resources. Amezmo was designed to run PHP apps. Launching an instance
 on Amezmo creates a single container instance with two environments
 
