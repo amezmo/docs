@@ -13,7 +13,7 @@ Amezmo generates a
 This file is automatically available to you from your [webroot](/docs/deployments/directories). Depending on the options you've chosen at instance creation time,
 you will see a set of predefined variables.
 
-When your [deployment] is triggered, the most recent `.env` file is copied
+When your [deployment](/docs/deployments) is triggered, the most recent `.env` file is copied
 into your deployment [target release directory](/docs/deployments/directories).
 
 Upon updating your configuration from the dashboard,
@@ -28,6 +28,7 @@ your [workers are restarted](/docs/workers/reloading) via `SIGHUP`
 automatically.
 
 ## Amezmo Generated Variables
+
 The following variables are automatically generated for you whenever you
 [create a site](/docs/instances).
 
