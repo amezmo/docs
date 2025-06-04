@@ -32,8 +32,8 @@ automatically.
 The following variables are automatically generated for you whenever you
 [create a site](/docs/instances).
 
-| Variable      | Description
-----------------|-------------
+Variable      | Description
+--------------|-------------
 `APP_HOSTNAME`      | The hostname of the application environment
 `STORAGE_DIRECTORY` | Path to the [persistent storage](/docs/configuration/storage) directory
 `LOG_DIRECTORY`     | This path can be used to persist log file across deployments
@@ -42,8 +42,8 @@ The following variables are automatically generated for you whenever you
 
 Amezmo provides the following database variables if your instance has MySQL installed.
 
-| Variable      | Description
-----------------|-------------
+Variable      | Description
+--------------|-------------
 `DB_PORT`           | Always 3306
 `DB_USERNAME`       | Database username that was provided during instance creation
 `DB_HOST`           | Contains the hostname of your MySQL server
@@ -55,21 +55,20 @@ Amezmo provides the following database variables if your instance has MySQL inst
 Amezmo provides the following [Redis](https://redis.io) variables
 if your instance has Redis installed.
 
-| Variable      | Description
-----------------|-------------
+Variable      | Description
+--------------|-------------
 `REDIS_HOST`        | The redis server IP address or hostname
 `REDIS_PORT`        | Always 6379
 
-
 ## Environment Variable Hooks
+
 Upon updating your DotEnv Configuration file,
 Amezmo will search for hooks
 
-| Hook | Description
+Hook | Description
 -------|------------
 `.amezmo/config/before-change` | This script is executed before Amezmo places the updated configuration file into your current release directory
 `.amezmo/config/after-change`  | This script is executed after the file was successfully copied to your current release directory, but before your workers are reloaded.
-
 
 ## Limits
 

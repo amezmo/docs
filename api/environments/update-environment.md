@@ -6,18 +6,18 @@ PATCH /v1/instances/{instance_id}/environments/{name}/production
 ```
 
 ## Parameters
-Parameter     |  Type | In    | Description     
+Parameter     |  Type | In    | Description
 ------------- | ------|------ |------------------
 instance_id    |  string | uri  | The instance id of the environment
 name          |  string | uri | The name of the environment. See [environments](/docs/api/environments/list-environments)
 auto_deploy_tag_patterns | array | body | An array of regular expressions to match a git tag
 auto_deploy_branch_patterns | array | body | An array of of regular expressions to match a git branch.
 newrelic_license_key | string | body | [New Relic API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
-ssh_enabled | bool | body | 
+ssh_enabled | bool | body |
 trusted_ssh_ips | array | body | an array of IPv4 addresses
 
 
-When updating `newrelic_license_key`, the change takes effect on the next [deployment](/docs/api/deployments). Providing a `null` value disables 
+When updating `newrelic_license_key`, the change takes effect on the next [deployment](/docs/api/deployments). Providing a `null` value disables
 the New Relic APM integration. When you provide your New Relic API key, Amezmo encrypts the value at rest. The value is decrypted upon instance creation and is stored in the `newrelic.ini` PHP configuration file. You may see the value by running `php --ri newrelic | grep newrelic.license`
 
 Note that New Relic is only supported with Advanced instances. See [instance types](/docs/api/instances/list-instance-types).
@@ -26,6 +26,7 @@ When patching `ssh_enabled` to be false, `trusted_ssh_ips` is reset to an emtpy 
 
 
 ## Code samples
+
 ```bash
 curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production -X PATCH \
     -H 'Authorization: Bearer {api_key}' \
@@ -38,7 +39,7 @@ curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production -
 200 OK
 ```
 
-```bash
+```javascript
 {
     "id": 1608,
     "log_export_schedule": null,
