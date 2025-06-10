@@ -44,7 +44,7 @@ Automatically deploy your PHP application with zero-downtime using Git.
 
 ## See Also
 
-- [YouTube](https://www.youtube.com/@amezmo6464)
+- [YouTube](https://www.youtube.com/@AmezmoPHP)
 - [GitHub](https://www.github.com/amezmo)
 - [PHP hosting Guides](https://www.amezmo.com/guides)
 - [Drupal hosting guide](https://www.amezmo.com/guides/deploy-a-drupal-site-on-amezmo)

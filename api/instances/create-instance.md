@@ -3,8 +3,9 @@
 
 `POST` /v1/instances
 
-## Parameters
-Parameter     |  Type   | In    | Description     
+## Parameters for "Create an instance"
+
+Parameter     |  Type   | In    | Description
 ---------------| --------|------ |------------------
 runtime        | string     | body  | **Required** One of `php`
 instance_type  | string     | body  | **Required**  One of `hobby`, `developer`, `business`. See [Instance types](/docs/api/instances/list-instance-types)
@@ -23,9 +24,12 @@ mysql.database.user | string | mysql.database | Initial database user
 mysql.database.password | string | mysql.database | Initial database password
 app_type | string | body | One of 'laravel', 'octane', 'other', 'symfony', 'craftcms', 'drupal', 'wordpress', 'bedrock'
 
+## Code samples for "Create an instance"
 
-## Code samples
 
+### Request example
+
+{title="`POST` /v1/instances"}
 ```bash
 curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_key}' \
     --data runtime=php
@@ -34,11 +38,11 @@ curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_
     --data app_type=other
 ```
 
-## Response
+### Response
 
-`201 Created`
 
-```bash
+{title="201 Created"}
+```javascript
 {
     "id": 1,
     "name": "engage-plugandplay-564192df9c",
