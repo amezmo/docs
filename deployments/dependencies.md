@@ -3,7 +3,7 @@
 Hooks on Amezmo
 are simply bash script files located in the top level `.amezmo` directory.
 Use the [.amezmo/after.pull](/docs/deployments/hooks/after-pull) hook to install Composer dependencies.
-Be sure to commit your `composer.lock` files to source control in order to speed up package installation.
+Be sure to [commit](https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control) your `composer.lock` files to source control in order to speed up package installation.
 
 Your application directory should have the `.amezmo` directory created as shown below.
 
