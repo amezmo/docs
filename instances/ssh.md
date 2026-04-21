@@ -24,12 +24,14 @@ The `$DOMAIN` variable above can be found from your dashboard. It is the part be
 
 ## Windows Putty application
 
-#Session
-**Hostname**: $DOMAIN.lb3.amezmo.co
-**Port**: $PORT
+### Session
+**Hostname**: `$DOMAIN`.lb3.amezmo.co
+
+**Port**: `$PORT`
+
 **Connection type**: ssh
 
-## Connection -> SSH -> Auth
+### Connection -> SSH -> Auth
 **Private key for authentication**: Browse to local file with private key
 
 ## Limits
