@@ -39,7 +39,7 @@ All of the following conditions must be met for a deployment to be considered su
 -  No non-zero exit status codes from any of your hooks. However, the exit statuses of the following hooks will not affect the deployment outcome.
     - [before.pull](/docs/deployments/hooks/before-pull)
     - [after.deploy](/docs/deployments/hooks/after-deploy)
-    - [deploy.success](/docs/deployments/deploy-success)
+    - [deploy.success](/docs/deployments/hooks/deploy-success)
 
 As a final step in the deployment process, the symbolic link located at `/webroot/current`
 is atomically updated to point the new release directory.
