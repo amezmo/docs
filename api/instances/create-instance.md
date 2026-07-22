@@ -29,7 +29,7 @@ app_type | string | body | One of 'laravel', 'octane', 'other', 'symfony', 'craf
 
 ### Request example
 
-{title="`POST` /v1/instances"}
+{title="POST /v1/instances"}
 ```bash
 curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_key}' \
     --data runtime=php
