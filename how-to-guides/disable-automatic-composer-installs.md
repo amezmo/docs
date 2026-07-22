@@ -10,7 +10,7 @@ You can disable automatic Composer installations if you'd like more control over
 5. Scroll down to the **Settings** section.
 6. Find the "Composer packages" switch
 
-    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/composer-settings-switch.png" />
+    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/composer-settings-switch.png" alt="Deployments Settings section with the Composer packages switch" />
 7. Toggle the switch
 
 After turning off Automatic Composer installs, your next deployment will not automatically install Composer packages.

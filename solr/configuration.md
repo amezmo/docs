@@ -20,12 +20,12 @@ available after you launch it. See below for an example host name.
 This screenshot highlights the Solr host which gets generated after your instance is launched.
 The Solr host value exist only after the instance is created.
 
-<img class="img-enlargable img-fluid" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/app-details-solr-host.png" />
+<img class="img-enlargable img-fluid" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/app-details-solr-host.png" alt="Amezmo dashboard Application Details panel with the generated SOLR_HOST value highlighted" />
 
 To view your automatic dotenv variable set for Solr, see the screenshot below. This example shows
 which variable set Amezmo generates.
 
-<img class="img-enlargable img-fluid" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/solr-dotenv-vars.png" />
+<img class="img-enlargable img-fluid" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/solr-dotenv-vars.png" alt="dotenv file listing the Solr variables Amezmo generates automatically" />
 
 Currently there is no mechanism to upload a Solr
 `configset` to Amezmo.

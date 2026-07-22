@@ -11,7 +11,7 @@ your automatic deployments.
 4. In the horizontal tab navigation menu, choose the **Deployments** tab.
 5. Scroll down to the **Settings** section.
 6. Find the "Composer packages" switch.
-    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/composer-settings-switch.png" />
+    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/composer-settings-switch.png" alt="Deployments Settings section with the Composer packages switch" />
 7. Click the **Settings** button on the far right
 8. Choose your desired Composer version from the dropdown
 9. Click **Save**

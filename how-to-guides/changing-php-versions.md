@@ -16,7 +16,7 @@ PHP version restarts the instance.
 7. Choose a PHP version
 8. Click "Change PHP version"
 
- <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/change-php-version.png	" />
+ <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/change-php-version.png" alt="Change PHP version dialog with the PHP version selector" />
 
 
 ## See also

@@ -13,7 +13,7 @@ branch is used for [automatic deployments](/docs/deployments).
 <i style="color:#586f90" class="fas fa-small fa-chevron-right"></i> **Change repository**
 6. Edit the "Automatic deployment branch" form field in the modal and confirm by clicking Save.
 
- <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/change-automatic-deployment-branch.png" />
+ <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/change-automatic-deployment-branch.png" alt="Change repository modal with the Automatic deployment branch field" />
 
 
 After making changes to your Git repository settings, a new deployment will begin.
