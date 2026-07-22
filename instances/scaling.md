@@ -7,7 +7,7 @@ You can also downgrade your instance
 to a lower instance configuration. This can be useful for when you do not need the computing power offered by a higher instance
 type.
 
-# How to upgrade/downgrade
+## How to upgrade/downgrade
 
 Upgrading or downgrading your instance can be done in one click. Upgrade by going to the Overview page.
 Once you've decided which instance type you'd like to have, click the blue "Next" button.
