@@ -19,5 +19,5 @@ For example, if you've terminated
 an application 5:58PM, but Amezmo has a delay in processing the termination,
 then you will only be charged up until 5:58PM.
 
-# See also
+## See also
 - [How to delete an application](/docs/how-to-guides/deleting-applications)
