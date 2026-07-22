@@ -2,7 +2,7 @@
 
 By default, Amezmo does not change the default ports for common services such as Nginx, MySQL, and Redis.
 
-# Ports
+## Ports
 The following table maps common services to port numbers.
 
 | Service | Port |
