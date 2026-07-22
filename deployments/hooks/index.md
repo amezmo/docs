@@ -12,6 +12,7 @@ is executed for the event After Pull.
 Hooks are files.
 In the below sample application directory structure, the `.amezmo` directory is where you define your "hook" scripts.
 
+{title="Sample application directory structure"}
 ```bash
 # A sample laravel application root directory.
 # The `tree -a -L 2 .` command was run inside a Laravel app's root directory.
@@ -45,12 +46,14 @@ any files created from your hooks will have correct and expected permissions. Am
 
 For directories, these are the permissions.
 
+{title="Directory permissions"}
 ```sh
 2775/drwxrwxr-x
 ```
 
 For files, these are the permissions.
 
+{title="File permissions"}
 ```sh
 0664/-rw-rw--r--
 ```

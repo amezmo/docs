@@ -1,7 +1,7 @@
 # Scaling
 
 Amezmo provides the ability for you to upgrade your instance configuration at anytime.
-Upgrades can be neccessary for times when you need more memory, or computing power.
+Upgrades can be necessary for times when you need more memory, or computing power.
 
 You can also downgrade your instance
 to a lower instance configuration. This can be useful for when you do not need the computing power offered by a higher instance

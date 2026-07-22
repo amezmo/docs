@@ -14,7 +14,7 @@ You're charged for usage on a per-hour basis, rounded up to the nearest full hou
 
 In some cases, it will take a few minutes for Amezmo to completely terminate your application.
 However, the timestamp
-from when you executed the termination process is used for determing your final charge.
+from when you executed the termination process is used for determining your final charge.
 For example, if you've terminated
 an application 5:58PM, but Amezmo has a delay in processing the termination,
 then you will only be charged up until 5:58PM.

@@ -11,6 +11,8 @@ Parameter     |  Type | In     | Description
 instance_id   |  string | uri  | The instance id
 
 ## Code samples
+
+{title="DELETE /v1/instances/{instance_id}"}
 ```bash
 curl https://api.amezmo.com/v1/instances/1087 -X DELETE \
     -H 'Authorization: Bearer {api_key}' \
@@ -20,6 +22,7 @@ curl https://api.amezmo.com/v1/instances/1087 -X DELETE \
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 {
     "id": 1,

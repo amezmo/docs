@@ -7,6 +7,7 @@
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 {
     "team_context": null,

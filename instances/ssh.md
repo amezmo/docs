@@ -6,6 +6,8 @@ pre-allocated port. Learn more about [enabling ssh](/docs/instances/enable-or-di
 
 
 ## SSH command
+
+{title="SSH command"}
 ```bash
 ssh -i <path to your private key> -p $PORT deployer@$DOMAIN.lb2.amezmo.co
 ```
@@ -16,6 +18,8 @@ ssh -i <path to your private key> -p $PORT deployer@$DOMAIN.lb2.amezmo.co
         This can be found on your instance's Overview page.
 
 ## SFTP command
+
+{title="SFTP command"}
 ```bash
 sftp -i <path to your private key> -P $PORT deployer@$DOMAIN.lb3.amezmo.co
 ```

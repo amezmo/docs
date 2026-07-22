@@ -13,4 +13,4 @@ the newly created instance is attached to the network of the instance you choose
 The user `az_user` is created at instance creation time. The MySQL server will accept **non-ssl** connections **only** from connection requests within your private subnet.
 
 - **Remote connections**: 
-Internet-based connections to your MySQL server require X509 authenticaiton as well as a white-listed IP address.
+Internet-based connections to your MySQL server require X509 authentication as well as a white-listed IP address.

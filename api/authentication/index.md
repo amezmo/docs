@@ -4,6 +4,7 @@ In order to access the Amezmo API, you must authenticate your requests using you
 
 Use the following Authorization HTTP header with requests to the Amezmo API.
 
+{title="Authorization header"}
 ```bash
 Authorization: Bearer {api_key}
 ```

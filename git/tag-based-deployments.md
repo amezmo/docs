@@ -6,7 +6,7 @@ see the [Update Environment](/docs/api/environments/update-environment) API endp
 
 ## Tag patterns
 A tag pattern is a regular expression string. Tag patterns define a dynamic pattern-based rule for automatic deployments.
-When one or more tag pattern is defined in your environment, the tag-based regular expression rules take precendece over 
+When one or more tag pattern is defined in your environment, the tag-based regular expression rules take precedence over 
 your static [automatic deployment branch](/docs/git/branches). 
 
 ## How tag-based deployments work

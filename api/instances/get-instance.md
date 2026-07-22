@@ -14,6 +14,7 @@ instance_id   |  string | uri  | The instance id of the environment
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 {
     "id": 1,

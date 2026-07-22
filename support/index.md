@@ -18,7 +18,7 @@ Amezmo provides up to 2 hours of free migration assistance. Migration assistance
 support for you bringing your application to Amezmo. Included tasks include:
 
 - Code changes and direct pull requests on GitHub
-- Techincal assistance
+- Technical assistance
 - Live chat
 - Consultations and advice
 

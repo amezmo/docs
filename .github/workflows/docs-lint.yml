@@ -1,0 +1,28 @@
+name: Docs lint
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Internal links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check that internal /docs links resolve
+        run: python3 .github/scripts/check_links.py
+
+  spelling:
+    name: Spelling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install codespell
+        run: sudo apt-get update && sudo apt-get install -y codespell
+      - name: Run codespell
+        run: codespell   # configuration lives in .codespellrc

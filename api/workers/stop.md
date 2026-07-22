@@ -7,7 +7,7 @@
 Parameter     |  Type | In     | Description     
 --------------|------|---------|------------------
 instance_id   |  string | uri  | The instance ID
-worker_id     | string | uri   | The woker ID
+worker_id     | string | uri   | The worker ID
 
 
 
@@ -15,6 +15,7 @@ worker_id     | string | uri   | The woker ID
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 {
     "id": 838,

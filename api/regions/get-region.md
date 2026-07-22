@@ -13,6 +13,7 @@ region_id     |  string | uri | The region ID.
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 {
     "id": "au2-au",

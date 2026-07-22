@@ -1,6 +1,6 @@
 # Domain names
 
-Amezmo automatically generates a SSL certiificate for each domain name you add. When creating an instance for the first
+Amezmo automatically generates a SSL certificate for each domain name you add. When creating an instance for the first
 time, you are asked to provide a fully qualified domain name. You can provide any resolvable domain name, including subdomains.
 Each application instance also gets an [Amezmo provided subdomain](/docs/domains/development-subdomain)
 

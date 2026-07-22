@@ -8,6 +8,7 @@ After ensuring that
 [SSH is enabled](/docs/instances/enable-or-disable-ssh) on your instance,
 then go to Overview > Server Details and find your **SSH port**. An example SSH command is provided for you below:
 
+{title="SSH tunnel to MySQL"}
 ```bash
 ssh -i <id_rsa> -p <your ssh port>  \
     -L 127.0.0.1:3306:127.0.0.1:3306 \

@@ -2,7 +2,7 @@
 
 Your applications public path is the entry point to your application. This is typically
 the directory which has your `index.php` file. Other files such as assets, images, CSS, and JavaScript
-files are server from this directory as well.
+files are served from this directory as well.
 Amezmo provides a way to change your public path
 from the dashboard. Go to your instance's Configuration tab to change this setting.
 
@@ -12,7 +12,7 @@ route all requests to an `index.php` file in the public document root that you'v
 ## File uploads
 Publicly accessible files can be served from your public document root.
 By creating a symbolic link from a directory inside your public document root into the
-`/webroot/storage/public` directory, you can perist file uploads across deployments.
+`/webroot/storage/public` directory, you can persist file uploads across deployments.
 [Learn more about persistent storage](/docs/configuration/storage).
 
 Amezmo creates this directory for you at instance launch time and you are encouraged to use it as the persistent public
@@ -26,6 +26,7 @@ directory.
 
 This file should be created in your repo at `.amezmo/after.pull`.
 
+{title=".amezmo/after.pull"}
 ```bash
 #!/bin/bash
 

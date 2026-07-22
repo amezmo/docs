@@ -1,6 +1,7 @@
 
 # Update an environment
 
+{title="PATCH /v1/instances/{instance_id}/environments/{name}/production"}
 ```bash
 PATCH /v1/instances/{instance_id}/environments/{name}/production
 ```
@@ -11,7 +12,7 @@ Parameter     |  Type | In    | Description
 instance_id    |  string | uri  | The instance id of the environment
 name          |  string | uri | The name of the environment. See [environments](/docs/api/environments/list-environments)
 auto_deploy_tag_patterns | array | body | An array of regular expressions to match a git tag
-auto_deploy_branch_patterns | array | body | An array of of regular expressions to match a git branch.
+auto_deploy_branch_patterns | array | body | An array of regular expressions to match a git branch.
 newrelic_license_key | string | body | [New Relic API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
 ssh_enabled | bool | body | 
 trusted_ssh_ips | array | body | an array of IPv4 addresses
@@ -22,10 +23,12 @@ the New Relic APM integration. When you provide your New Relic API key, Amezmo e
 
 Note that New Relic is only supported with Advanced instances. See [instance types](/docs/api/instances/list-instance-types).
 
-When patching `ssh_enabled` to be false, `trusted_ssh_ips` is reset to an emtpy array.
+When patching `ssh_enabled` to be false, `trusted_ssh_ips` is reset to an empty array.
 
 
 ## Code samples
+
+{title="cURL request example"}
 ```bash
 curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production -X PATCH \
     -H 'Authorization: Bearer {api_key}' \
@@ -34,10 +37,12 @@ curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production -
 
 ## Response
 
+{title="Response status"}
 ```bash
 200 OK
 ```
 
+{title="200 OK"}
 ```bash
 {
     "id": 1608,

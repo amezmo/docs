@@ -1,0 +1,9 @@
+# Shared config for codespell — used by CI (.github/workflows/docs-lint.yml)
+# and by `codespell` run locally, so both behave identically.
+[codespell]
+# Binary/generated paths and the link-checker script (code, not prose).
+skip = ./.git,*.png,*.jpg,*.jpeg,*.gif,*.svg,*.py
+# Words codespell flags that are correct in this repo:
+#   cachable   - accepted variant of "cacheable" (caching/index.md)
+#   enlargable - the site's CSS class name (img-enlargable), not prose
+ignore-words-list = cachable,enlargable

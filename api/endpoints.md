@@ -2,6 +2,7 @@
 
 Amezmo's API is hosted at the following URL
 
+{title="API base URL"}
 ```bash
 https://api.amezmo.com/v1
 ```

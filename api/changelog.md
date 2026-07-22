@@ -1,7 +1,7 @@
 
 # API changelog
 
-The changelog lists forward-comptabile changes to the API.
+The changelog lists forward-compatible changes to the API.
 
 ## 2022-12-12
 - Added `current_deployment` to [Get Environment](/docs/api/environments/get-environment)

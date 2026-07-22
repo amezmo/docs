@@ -8,6 +8,7 @@ this with the Advanced instance type. See below for some resources for getting s
 From your [SSH](/docs/instances/ssh) session, you can check which cores are created with
 this command
 
+{title="Check Solr cores"}
 ```curl
 curl http://localhost:${SOLR_PORT:-8983}/solr/admin/cores
 curl http://localhost:8983/solr/drupal/config

@@ -17,7 +17,7 @@ Your application is deployed with [Atomic PHP Deployments](/docs/deployments).
 Out of the box, your application should run without requiring custom packages.
 Amezmo creates a Docker image based on Ubuntu in advance with the
 most common update-to-date packages. For special requirements, please send us a
-message on [Slack](https://wwww.amezmo.com/goslack), or support,
+message on [Slack](https://www.amezmo.com/goslack), or support,
 and we'll customize your image to install any custom packages with
 [Apt](https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html).
 

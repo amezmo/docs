@@ -1,8 +1,8 @@
 # Workers
-Workers are long running proccesses that are intended to always be running. Amezmo manages the logging,
+Workers are long running processes that are intended to always be running. Amezmo manages the logging,
 stopping, restarting, and monitoring of your workers. 
 
-Common use cases for workers are background processing queues, email queues, and othe asynchronous processing activities.
+Common use cases for workers are background processing queues, email queues, and other asynchronous processing activities.
 
 For PHP applications, Amezmo can automatically create the queue command for
 [Laravel queues](https://laravel.com/docs/queues)
@@ -22,7 +22,7 @@ Workers can be categorized into 2 groups. The first group, is an *isolated worke
 accept inbound HTTP traffic. For example, a worker that processes async email sending jobs would not need to accept inbound HTTP requests.
 
 The second type,
-is a *routable worker*, which means HTTP requests are forwared into the worker process. The most common example of this would be a
+is a *routable worker*, which means HTTP requests are forwarded into the worker process. The most common example of this would be a
 Node.js process that runs a Websocket server. Inbound HTTP requests on your domain would be routed into the worker.
 
 ## Supported Runtimes

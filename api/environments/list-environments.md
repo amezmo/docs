@@ -12,6 +12,7 @@ instance_id    |  string | uri  | The instance id
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 [
     {

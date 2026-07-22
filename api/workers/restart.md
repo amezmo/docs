@@ -8,12 +8,13 @@
 Parameter     |  Type | In     | Description     
 --------------|------|---------|------------------
 instance_id   |  string | uri  | The instance ID
-worker_id     | string | uri   | The woker ID
+worker_id     | string | uri   | The worker ID
 
 
 
 ## Code samples
 
+{title="POST /v1/instances/{instance_id}/workers/{worker_id}/restart"}
 ```bash
 curl --request POST \
     --url https://api.amezmo.com/v1/instances/{instance_id}/workers/{worker_id}/restart \
@@ -24,6 +25,7 @@ curl --request POST \
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 {
     "id": 838,

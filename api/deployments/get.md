@@ -1,5 +1,6 @@
 # Get a deployment
 
+{title="GET /v1/instances/{instance_id}/deployments/{deployment_id}"}
 ```http
 GET /v1/instances/{instance_id}/deployments/{deployment_id}
 ```
@@ -15,6 +16,7 @@ deployment_id | string | uri   | The deployment ID
 
 `200 OK`
 
+{title="200 OK"}
 ```json
 {
     "id": 838,

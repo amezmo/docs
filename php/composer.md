@@ -2,7 +2,7 @@
 
 Composer 1.x and Composer 2.x are installed on Amezmo PHP instances by default.
 To use Composer 2.x use the `composer2` alias
-when running commnands inside [deployment hooks](/docs/deployments/hooks) or via [SSH](/docs/instances/ssh)
+when running commands inside [deployment hooks](/docs/deployments/hooks) or via [SSH](/docs/instances/ssh)
 
 ## How-to Guides
 

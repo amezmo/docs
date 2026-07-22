@@ -1,6 +1,7 @@
 
 # List instances
 
+{title="GET /v1/instances"}
 ```bash
 GET /v1/instances
 ```
@@ -14,6 +15,7 @@ instance_type    |  string | query  | [instance type](/docs/api/instances/list-i
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 [
     {

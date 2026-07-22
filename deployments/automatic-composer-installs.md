@@ -7,6 +7,7 @@ listed below:
 
 By default, Composer 1.x is used for automatic Composer installations. However, you may [change the default Composer version](/docs/how-to-guides/change-default-composer-version) for automatic composer installations.
 
+{title="Composer autoloader dump"}
 ```bash
 composer --no-dev --no-ansi --no-interaction --optimize dump-autoload
 ```
@@ -14,6 +15,7 @@ composer --no-dev --no-ansi --no-interaction --optimize dump-autoload
 Next, Amezmo determines if an `artisan` file exists in the root directory of the application. If it exists, then the following command 
 is executed automatically. However, you may disable automatic Laravel migrations.
 
+{title="Laravel migration command"}
 ```bash 
 php artisan migrate --no-interaction --no-ansi --force
 ```

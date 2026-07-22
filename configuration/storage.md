@@ -14,6 +14,7 @@ To automatically link a deployment your persistent storage directory, see
 
 ## Directory layout
 
+{title="/webroot directory layout"}
 ```bash
 /webroot
     |----logs
@@ -50,6 +51,7 @@ application hosted on Amezmo should use these permissions and settings.
 
 This file is located at `app/config/filesystems.php`. The
 
+{title="app/config/filesystems.php"}
 ```php
 return [
     // Other code omitted

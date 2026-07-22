@@ -1,7 +1,7 @@
 # Logging
 
 Your application code should be configured for writing logs to `/webroot/logs`. Because each deployment/release creates a new directory, your log files should be located outside of the application deployment directory. 
-Logging to a directory outside of your deployment tree is the recommended way to peristent log files across deployments on Amezmo.
+Logging to a directory outside of your deployment tree is the recommended way to persist log files across deployments on Amezmo.
 
 Recall the [deployment directory](/docs/deployments/directories) tree layout on Amezmo. By default,
 the directory `/webroot/logs` is created for you when you launch an instance. We recommend using this directory
@@ -20,6 +20,7 @@ See below for the recommended directory to use on Amezmo.
 
 This following file is located at `app/config/logging.php`.
 
+{title="app/config/logging.php"}
 ```php
 return [
     'default' => 'stack',

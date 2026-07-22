@@ -7,6 +7,7 @@ Be sure to [commit](https://getcomposer.org/doc/01-basic-usage.md#commit-your-co
 
 Your application directory should have the `.amezmo` directory created as shown below.
 
+{title="Application directory structure"}
 ```bash
 # This is your application directory structure.
 .
@@ -18,6 +19,7 @@ Your application directory should have the `.amezmo` directory created as shown 
 ├── .env
 ```
 
+{title=".amezmo/after.pull"}
 ```bash
 #!/bin/bash
 
@@ -80,7 +82,7 @@ directory inside your root directory of your application. You must create
 this directory and create deployment scripts inside this directory.
 
 It's important that your script runs in non-interactive mode in order to prevent your deployment from failing.
-Deployment hooks currerntly have an execution [limit](/docs/deployments/hooks#limits).
+Deployment hooks currently have an execution [limit](/docs/deployments/hooks#limits).
 We recommend using the following script for installing dependencies with Composer. See below for a working deployment hook example.
 
 ## Resources

@@ -5,7 +5,7 @@ choose to have Amezmo run a post-deployment health check to your desired endpoin
 attempts to make an HTTP request to your specified endpoint and checks the HTTP response status. If the response status
 is not 200, then the post deployment health check will fail and you will be notified via email.
 
-The post-deployment health check runs after a deployment meets the critera to be considered a successful deployment
+The post-deployment health check runs after a deployment meets the criteria to be considered a successful deployment
 and after the <a href="/docs/deployments/directories">deployment release directory</a> has been promoted to the current release.
 
 If any problems with your

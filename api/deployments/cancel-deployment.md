@@ -1,5 +1,6 @@
 # Cancel Deployment
 
+{title="POST /v1/instances/{instance_id}/deployments/{deployment_id}/cancel"}
 ```http
 POST /v1/instances/{instance_id}/deployments/{deployment_id}/cancel
 ```
@@ -15,6 +16,7 @@ deployment_id | string | uri   | The deployment ID
 
 `200 OK`
 
+{title="200 OK"}
 ```json
 {
     "id": 838,

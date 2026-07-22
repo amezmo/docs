@@ -8,12 +8,15 @@ the ZIP file to be created without a parent directory.
 
 This command **includes** hidden files such as `.git`
 
+{title="Create a ZIP including hidden files"}
 ```bash
     cd my-application;
     zip --recurse-paths ../my-application.zip .
 ```
 
 ## Create a ZIP file from the command line excluding the Git directory
+
+{title="Create a ZIP excluding the .git directory"}
 ```bash
     cd my-application;
     zip -x \*.git\* --recurse-paths ../my-application.zip .

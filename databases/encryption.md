@@ -12,6 +12,7 @@ the same way that [Secrets](/docs/secrets) are encrypted.
 The following command is the recommended way to portably decrypt your backup files. After downloading your backup
 file, this command should be run on your local machine.
 
+{title="Decrypt a backup file"}
 ```bash
 openssl enc -aes-256-cbc -md sha256 -d -pass pass:$KEY \
     -in $BACKUP_FILE | gzip -d

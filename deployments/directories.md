@@ -6,6 +6,7 @@ are effectively the results of running `git pull` at the time the deployment was
 If the deployment succeeds, Amezmo updates the `/webroot/current` symbolic link to point to the
 new deployment directory that was created.
 
+{title="Release directory path"}
 ```bash
 /webroot/release/deployment_${sequence_number}.${short_commit_id}
 ```
@@ -17,8 +18,9 @@ The `$sequence_number` variable above resolves to the environments current deplo
 Amezmo maintains an [environment directory](/docs/environments/environment-directory) per environment
 inside your instance to implement atomic deployments and to separate staging and production.
 Throughout this documentation,
-we refer to the "current release directory" as the directory that was created as a result of a succesfull deployment.
+we refer to the "current release directory" as the directory that was created as a result of a successful deployment.
 
+{title="/webroot directory layout"}
 ```bash
 /webroot
     |----logs

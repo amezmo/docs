@@ -5,16 +5,16 @@ to run a [before.deploy](/docs/deployments/hooks/after-pull) script to setup you
 
 To create a persistent storage directory, copy the script from one of the links below.
 
-### Laravel
+## Laravel
 
 - [Github Script](https://github.com/amezmo/demo.amezmo.com/blob/master/.amezmo/before.deploy)
 
 
-### Craft CMS
+## Craft CMS
 
 - [Github Script](https://github.com/amezmo/craftcms-demo/blob/master/.amezmo/before.deploy)
 
-### Drupal
+## Drupal
 
 - [Github Script](https://github.com/amezmo/drupal-demo/blob/master/.amezmo/after.pull)
 

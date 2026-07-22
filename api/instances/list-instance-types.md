@@ -1,6 +1,7 @@
 
 # List instance types
 
+{title="GET /v1/instance-types"}
 ```bash
 GET /v1/instance-types
 ```
@@ -9,6 +10,7 @@ GET /v1/instance-types
 
 `200 OK`
 
+{title="200 OK"}
 ```bash
 [
     {
