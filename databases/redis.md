@@ -8,8 +8,7 @@ should not be stored in Redis, as it will be lost upon restarting your instance.
 for persistent storage.
 
 
-<div class="alert alert-info">
-    <b>Note</b>: If you chose Redis in the application creation wizard, then Redis is installed
-    and listening on the default port. See
-    <a href="/docs/instances/ports-and-ip-addresses">ports and IP addresses</a> for more information.
-</div>
+> [!NOTE]
+> If you chose Redis in the application creation wizard, then Redis is installed
+> and listening on the default port. See
+> [ports and IP addresses](../instances/ports-and-ip-addresses.md) for more information.

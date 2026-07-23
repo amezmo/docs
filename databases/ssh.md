@@ -5,7 +5,7 @@ then MySQL will available directly, and with any instance on the shared network.
 Amezmo dashboard, you can backup, restore, and check the status of your database.
 
 After ensuring that
-[SSH is enabled](/docs/instances/enable-or-disable-ssh) on your instance,
+[SSH is enabled](../instances/enable-or-disable-ssh.md) on your instance,
 then go to Overview > Server Details and find your **SSH port**. An example SSH command is provided for you below:
 
 {title="SSH tunnel to MySQL"}
@@ -25,4 +25,8 @@ be sure to change the port in the command to something else, such as 3307.
 ## Requirements
 
 Before you can access your MySQL database via SSH, you must upload your public SSH key to your instance.
-[Learn more](/docs/instances/ssh) about accessing your instances resources through SSH.
+[Learn more](../instances/ssh.md) about accessing your instances resources through SSH.
+
+## See Also
+
+- [Remote database access](remote-access.md)

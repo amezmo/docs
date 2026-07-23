@@ -3,9 +3,8 @@
 Trusted IP addresses for Nginx is an optional security feature on Amezmo that you can enable or disable at anytime. 
 By default, your web server is available to everyone.
 
-<div class="alert alert-info">
-    <b>Note</b>: To ensure you can access SSH, see <a href="/docs/instances/trusted-ip-addresses">SSH Trusted IP Addresses</a>
-</div>
+> [!NOTE]
+> To ensure you can access SSH, see [SSH Trusted IP Addresses](../instances/trusted-ip-addresses.md)
 
 
 ## How Trusted IP Addresses Work
@@ -19,7 +18,7 @@ by providing an IP safelist. Amezmo refers to these as Trusted IP Addresses.
 
 ## Site Behavior When Trusted IP Addresses are Set
 
-Commonly, this feature is used to limit access to [staging environments](/docs/environments) Setting
+Commonly, this feature is used to limit access to [staging environments](index.md) Setting
 a Trusted IP Address limits who can access your application from the Internet. When enabled and a request arrives
 to your application from an untrusted IP address, your application will respond with 403 (Forbidden).
 
@@ -28,7 +27,5 @@ at this time.
 
 ## Limits
 
-<dl>
-    <dt>IP address limit</dt>
-    <dd>Maximum of 4 Trusted IP addresses may be provided.</dd>
-</dl>
+IP address limit
+: Maximum of 4 Trusted IP addresses may be provided.

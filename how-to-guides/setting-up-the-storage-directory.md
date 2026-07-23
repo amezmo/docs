@@ -1,9 +1,9 @@
 # Setting up the storage directory
 
 The storage directory must persist between deployments. Storage directories commonly store user uploaded data. You may configure your application
-to run a [before.deploy](/docs/deployments/hooks/after-pull) script to setup your storage directory. See below for complete example scripts.
+to run a [before.deploy](../deployments/hooks/after-pull.md) script to setup your storage directory. See below for complete example scripts.
 
-To create a persistent storage directory, copy the script from one of the links below.
+To create a [persistent storage directory](../configuration/storage.md), copy the script from one of the links below.
 
 ## Laravel
 

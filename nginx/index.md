@@ -1,8 +1,9 @@
 # Nginx
 
-Nginx on Amezmo is production-ready, out-of-the box for running dynamic web applications. For the PHP runtime,
-FPM is setup by default.
+Nginx on Amezmo is production-ready out of the box for dynamic web apps, with
+PHP-FPM set up by default.
 
-- [Password-protection](/docs/nginx/http-authentication):
-    Restrict access to environments by requiring a username/password combination.
-- [Nginx.conf](/docs/nginx/config)
+- [Configuration](config.md)
+- [Location blocks](location-blocks.md)
+- [Compression and caching](compression-and-caching.md)
+- [HTTP authentication](http-authentication.md)

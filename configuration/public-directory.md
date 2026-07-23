@@ -13,11 +13,11 @@ route all requests to an `index.php` file in the public document root that you'v
 Publicly accessible files can be served from your public document root.
 By creating a symbolic link from a directory inside your public document root into the
 `/webroot/storage/public` directory, you can persist file uploads across deployments.
-[Learn more about persistent storage](/docs/configuration/storage).
+[Learn more about persistent storage](storage.md).
 
 Amezmo creates this directory for you at instance launch time and you are encouraged to use it as the persistent public
 storage area for your app. Amezmo has tested a set of
-[recommended file permissions](/docs/configuration/storage)
+[recommended file permissions](storage.md)
 
 
 ## Public directory symbolic link

@@ -4,5 +4,5 @@ The file deploy.failure is executed after Amezmo encounters a non-zero exit stat
 or with the deployment process in general.
 
 Relative to your application root directory, the
-[full path](/docs/deployments/hooks#hook-files)
+[full path](index.md#hook-files)
 of this hook is `.amezmo/deploy.failure`

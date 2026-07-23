@@ -14,3 +14,5 @@ than one worker process. Upon adding a domain name, ensure that the option "Rout
 
 - Domains must be validated for Worker routing
 - Domains can be attached to 1 worker process only
+
+To mark a path for WebSocket connections, add a [domain rule](rules.md).

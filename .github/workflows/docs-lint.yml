@@ -26,3 +26,19 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y codespell
       - name: Run codespell
         run: codespell   # configuration lives in .codespellrc
+
+  images:
+    name: Image paths
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check that all Markdown images use absolute URLs
+        run: python3 .github/scripts/check_image_paths.py
+
+  backlinks:
+    name: Backlinks (warn-only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Report one-directional internal links (never fails)
+        run: python3 .github/scripts/check_backlinks.py

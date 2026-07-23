@@ -22,5 +22,5 @@ and for all the domains associated with it.
 
 
 ## See also
-- [PHP Caching Overview](/docs/caching)
-- [Purging cached pages](/docs/caching/purging)
+- [PHP Caching Overview](index.md)
+- [Purging cached pages](purging.md)

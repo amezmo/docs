@@ -14,8 +14,8 @@ the instance is terminated. Adding or removing trusted IP addresses won't change
 ## SSL Certificate Files
 Get your SSL certificate files by going to Database Settings.
 
-<img class="img-enlargable" alt="Image of Database > Settings" src="/assets/cert-files.png" class="img-fluid" />
+![Image of Database > Settings](https://s3.us-east-2.amazonaws.com/static.amezmo.net/cert-files.png){.img-enlargable}
 
 ## Resources
--  <span class="badge bg-info">Video</span> [How to Connect to MySQL remotely with SSL](https://www.youtube.com/watch?v=EyRZ-fjLxIA)
+- **Video** [How to Connect to MySQL remotely with SSL](https://www.youtube.com/watch?v=EyRZ-fjLxIA)
 - [Laravel Configuration for MySQL Connections over SSL](https://github.com/amezmo/demo.amezmo.com/blob/master/config/database.php#L61)
