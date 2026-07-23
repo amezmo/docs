@@ -80,3 +80,6 @@
 /docs/deployments/triggers -> /docs/git/repos
 /docs/instances/ports-and-ip-addresses -> /docs/instances/enable-or-disable-ssh
 /docs/databases/redis -> /docs/instances/ports-and-ip-addresses
+
+# SSH troubleshooting points at the MySQL-over-SSH page for the tunnel use case.
+/docs/instances/ssh-troubleshooting -> /docs/databases/ssh

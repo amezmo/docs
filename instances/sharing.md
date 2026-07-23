@@ -1,10 +1,11 @@
-# Instance sharing
+# Instance Sharing
 
-Applications may be shared with other [instances](index.md) on Amezmo. This means that
-the instance will be joined with another instances private network. 
+You can share an application with other [instances](index.md) on Amezmo, which
+joins your instance to another instance's private network.
 
-Instances are shared with another instance. The instance in which sharing is configured will get a 
-new IP address that will be within the range of network of the peer instance. Once two instances are shared, they become peers on one network. The **requester** of sharing is the instance that will have its IP changed, not the receiver.
+When you share, the instance you configure gets a new IP address inside the peer
+instance's network range. The two instances then become peers on one network.
+The requester, the instance you configure sharing on, is the one whose IP
+changes, not the receiver.
 
 A shared instance must run in the same [region](regions.md) as its peer.
- 

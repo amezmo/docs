@@ -1,6 +1,6 @@
 # Git Providers
 
-Amezmo is a Git-native deployment platform. You can deploy from GitHub, GitLab,
+Amezmo is a Git-native deployment platform. You can deploy from GitHub, GitLab
 and Bitbucket.
 
 You connect a provider from the Git tab. Amezmo asks you to authorize with the

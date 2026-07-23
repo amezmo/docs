@@ -21,7 +21,7 @@ apps run without extra setup. There is no per-app install step for extensions.
 - intl
 - imap
 
-Redis is available too, through the phpredis extension. So imagick, sqlite, and
+Redis is available too, through the phpredis extension. So imagick, sqlite and
 Redis are ready to use with nothing to install.
 
 ## Something Not in the List

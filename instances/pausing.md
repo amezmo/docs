@@ -1,21 +1,21 @@
 # Pausing
 
-Pausing an instance takes it offline, but doesn't [terminate](terminating.md) it.
-The instance is shutdown and inbound requests
-to the instance will not be possible. Pausing is similar to shutting down your own computer.
+Pausing an instance takes it offline without [terminating](terminating.md) it.
+The instance shuts down and stops accepting inbound requests, similar to
+shutting down your own computer.
 
-Of course, upon pausing
-your instance on Amezmo, your data will be persisted. Then, when you start your instance, your data will be in the
-same state as it was when you paused it.
+When you pause an instance, Amezmo keeps your data. When you start it again,
+your data is in the same state as when you paused it.
 
-When an instance enters the paused state, database backups will not be attempted, 
-and no automated database backup record will be created during the time that the instance is paused.
+While an instance is paused, Amezmo does not attempt database backups and does
+not create an automated backup record.
 
-To bring your instance back up, press the Start button on the instance Overview page.
+To bring your instance back up, press the Start button on the instance Overview
+page.
 
 > [!IMPORTANT]
-> Instances in a Paused state will still incur the hourly charge.
+> A paused instance still incurs the hourly charge.
 
-## See also
+## See Also
 
 - [Maintenance mode](../environments/maintenance-mode.md)

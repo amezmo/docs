@@ -33,6 +33,7 @@ list. Add your current public IP under the SSH trusted addresses.
 ## Where to Find the Command
 
 The SSH panel on the Overview tab shows the exact command to run, including your
-port and host. The Server details section also shows the SSH port. See
-[Remote MySQL access with SSH](ssh.md) to connect a database client through the
-same tunnel.
+port and host, and the Server details section shows the SSH port. See
+[SSH access](ssh.md) for the command format, or
+[Remote MySQL access with SSH](../databases/ssh.md) to connect a database client
+through the same tunnel.

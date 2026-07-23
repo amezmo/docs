@@ -3,7 +3,7 @@
 This page covers what to do when an instance won't launch or the launch seems to
 stall.
 
-## A Launch is Refused
+## A Launch Is Refused
 
 Amezmo checks a few things before it builds an instance. If one fails, the
 launch stops with a message that tells you what to fix:

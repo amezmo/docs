@@ -1,18 +1,19 @@
 # Domain Routing
 
-The first domain you add to Amezmo is automatically put into the validation queue. This first domain
-name is assumed to be your primary application domain name.
+The first domain you add to Amezmo goes into the validation queue automatically,
+and Amezmo treats it as your primary application domain.
 
-The domain you provide when you launch an instance is routed to your Nginx server by default.
-However, you can add and remove domain names
-at anytime, before, or after they are validated.
+The domain you provide when you launch an instance routes to your Nginx server
+by default. You can add and remove domains at any time, before or after they are
+validated.
 
 ## Routing Domains to Workers
 
-You may also route a domain to one of your worker processes. Domain names cannot be used for more
-than one worker process. Upon adding a domain name, ensure that the option "Route to Nginx" is left unchecked.
+You can also route a domain to one of your worker processes. A domain can serve
+only one worker process. When you add the domain, leave the "Route to Nginx"
+option unchecked.
 
-- Domains must be validated for Worker routing
-- Domains can be attached to 1 worker process only
+- Domains must be validated for worker routing.
+- A domain can be attached to one worker process only.
 
 To mark a path for WebSocket connections, add a [domain rule](rules.md).

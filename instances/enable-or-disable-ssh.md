@@ -1,30 +1,34 @@
-# Enable/Disable SSH
+# Enable or Disable SSH
 
-From the Overview tab, you can enable or disable SSH access to your instance by switching the green knob. When SSH
-is turned off, your instance will not respond to SSH requests.
+From the Overview tab, you can enable or disable SSH access to your instance
+with the green toggle. When SSH is off, your instance does not respond to SSH
+requests.
 
-Once SSH is enabled, see [connecting over SSH](ssh.md) for the login command and SFTP details.
+Once SSH is on, see [connecting over SSH](ssh.md) for the login command and SFTP
+details.
 
-![Instance Overview tab showing the SSH access toggle and the list of added public keys](https://s3.us-east-2.amazonaws.com/static.amezmo.net/SSHKeyList.png){.img-enlargable}
+![Instance Overview tab showing the SSH access toggle and the list of added public keys.](https://s3.us-east-2.amazonaws.com/static.amezmo.net/SSHKeyList.png){.img-enlargable}
 
-## SSH port
+## SSH Port
 
-Each instance on Amezmo is allocated a dedicated port that's used for routing inbound requests into your container.
-Containers aren't exposed directly to the Internet. Amezmo proxies known requests into your container securely based on a set of trusted IP addresses. To view your SSH port,
-go to Overview > Server Details > SSH Port.
+Each instance gets a dedicated port for routing inbound requests into your
+container. Containers are not exposed directly to the internet. Amezmo proxies
+known requests into your container based on a set of trusted IP addresses. To
+view your SSH port, go to Overview, then Server Details, then SSH Port.
 
-## Public keys
+## Public Keys
 
-Add a public key to your server by clicking the Add public key button. After being presented with the modal,
-give your key a name and paste your public key into the text area.
+Add a public key from the Add public key button. In the modal, give your key a
+name and paste the public key into the text area.
 
-![Add public key modal with fields for a key name and the public key text](https://s3.us-east-2.amazonaws.com/static.amezmo.net/SSHKeyForm.png){.img-enlargable}
+![Add public key modal with fields for a key name and the public key text.](https://s3.us-east-2.amazonaws.com/static.amezmo.net/SSHKeyForm.png){.img-enlargable}
 
 ## Limits
-- 3 public keys per instance
-- Public/Private Key authentication is the only allowed authorization method
-- Root access is not implemented
 
-## See also
+- 3 public keys per instance.
+- Public-key authentication is the only allowed method.
+- Root access is not available.
+
+## See Also
 
 - [Remote MySQL access with SSH](../databases/ssh.md)
