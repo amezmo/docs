@@ -25,7 +25,7 @@ $ ssh -i <path to your private key> -p $PORT deployer@$DOMAIN.lb2.amezmo.co
 $ sftp -i <path to your private key> -P $PORT deployer@$DOMAIN.lb3.amezmo.co
 ```
 
-The ``$DOMAIN`` variable is shown in your dashboard. It is the part before your
+Your dashboard shows the ``$DOMAIN`` variable. It is the part before your
 [internal domain](../domains/development-subdomain.md). To find your SSH port,
 see the [SSH port](enable-or-disable-ssh.md#ssh-port) page.
 

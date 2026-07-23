@@ -9,9 +9,8 @@ validated.
 
 ## Routing Domains to Workers
 
-You can also route a domain to one of your worker processes. A domain can serve
-only one worker process. When you add the domain, leave the "Route to Nginx"
-option unchecked.
+You can also route a domain to one of your worker processes. When you add the
+domain, leave the "Route to Nginx" option unchecked.
 
 - Domains must be validated for worker routing.
 - A domain can be attached to one worker process only.

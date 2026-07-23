@@ -1,31 +1,28 @@
-#  Nginx Trusted IP Addresses
+# Nginx Trusted IP Addresses
 
-Trusted IP addresses for Nginx is an optional security feature on Amezmo that you can enable or disable at anytime. 
-By default, your web server is available to everyone.
+Trusted IP addresses are an optional security feature you can turn on or off at
+any time. By default, your web server is available to everyone.
 
 > [!NOTE]
-> To ensure you can access SSH, see [SSH Trusted IP Addresses](../instances/trusted-ip-addresses.md)
-
+> To keep your SSH access working, see
+> [SSH trusted IP addresses](../instances/trusted-ip-addresses.md).
 
 ## How Trusted IP Addresses Work
 
-To lock down your site, Amezmo lets you block all access to Nginx by default 
-if the incoming ip address does not match a trusted ip. 
-Trusted IP addresses. are a set of known IP addresses which you provide. 
-By default, your application is available to the entire Internet.
-However, you may optionally limit which computers may access your application
-by providing an IP safelist. Amezmo refers to these as Trusted IP Addresses. 
+Trusted IP addresses are a set of known IP addresses you provide. By default,
+your application is open to the entire internet. When you set a safelist, Amezmo
+blocks any request whose IP address is not on it.
 
-## Site Behavior When Trusted IP Addresses are Set
+## Site Behavior When Trusted IP Addresses Are Set
 
-Commonly, this feature is used to limit access to [staging environments](index.md) Setting
-a Trusted IP Address limits who can access your application from the Internet. When enabled and a request arrives
-to your application from an untrusted IP address, your application will respond with 403 (Forbidden).
+This feature is often used to lock down [staging environments](index.md). When a
+request arrives from an untrusted IP address, your application responds with a
+403 Forbidden.
 
-Trusted IP addresses apply to every domain in your environment. Per-path trusted IP addresses are not supported
-at this time.
+Trusted IP addresses apply to every domain in your environment. Per-path trusted
+IP addresses are not supported.
 
 ## Limits
 
 IP address limit
-: Maximum of 4 Trusted IP addresses may be provided.
+: You can provide a maximum of 4 trusted IP addresses.

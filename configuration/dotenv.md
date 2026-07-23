@@ -1,4 +1,4 @@
-# Configuration
+# The .env File
 
 [PHP dotenv](https://github.com/vlucas/phpdotenv) loads your variables from a
 ``.env`` file into the PHP runtime, where your code reads them from the
@@ -61,7 +61,7 @@ When you update your ``.env`` configuration, Amezmo looks for these hooks:
 | Hook                           | Description |
 | ------------------------------ | ----------- |
 | `.amezmo/config/before-change` | Runs before Amezmo places the updated file into your current release directory |
-| `.amezmo/config/after-change`  | Runs after the file is copied to your current release directory, before your workers reload |
+| `.amezmo/config/after-change`  | Runs after Amezmo copies the file to your current release directory, before your workers reload |
 
 ## Limits
 

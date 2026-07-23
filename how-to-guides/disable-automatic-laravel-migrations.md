@@ -13,7 +13,6 @@ automatic migrations for Laravel applications.
 4. In the horizontal tab navigation menu, choose the **Deployments** tab.
 5. Scroll down to the **Settings** section.
 6. Find the "Database migrations" switch.
-
     ![Deployments Settings section with the Database migrations switch.](https://s3.us-east-2.amazonaws.com/static.amezmo.net/laravel-migrations-switch.png){.img-enlargable}
 7. Toggle the switch.
 

@@ -12,7 +12,6 @@ scratch on every deployment.
 4. In the horizontal tab navigation menu, choose the **Deployments** tab.
 5. Scroll down to the **Settings** section.
 6. Find the NPM toggle switch.
-
     ![Deployments Settings section with the NPM package caching toggle switch](https://s3.us-east-2.amazonaws.com/static.amezmo.net/npm-caching.png){.img-enlargable}
 7. Click the switch
 
