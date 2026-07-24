@@ -13,7 +13,7 @@ jobs:
     name: Internal links
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Check that internal /docs links resolve
         run: python3 .github/scripts/check_links.py
 
@@ -21,7 +21,7 @@ jobs:
     name: Spelling
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Install codespell
         run: sudo apt-get update && sudo apt-get install -y codespell
       - name: Run codespell
@@ -31,7 +31,7 @@ jobs:
     name: Image paths
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Check that all Markdown images use absolute URLs
         run: python3 .github/scripts/check_image_paths.py
 
@@ -39,6 +39,6 @@ jobs:
     name: Backlinks (warn-only)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Report one-directional internal links (never fails)
         run: python3 .github/scripts/check_backlinks.py
