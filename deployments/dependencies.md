@@ -64,7 +64,7 @@ fi
 ```
 
 Composer and NPM are setup for you out of the box when you launch an instance.
-If you're not commiting your vendor or node_modules directory to source control, then you can install your dependencies
+If you're not committing your vendor or node_modules directory to source control, then you can install your dependencies
 with a deployment hook.
 
 To make deployments fast and to not require a fresh install of Composer/NPM packages for each deployment,
