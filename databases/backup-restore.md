@@ -1,24 +1,47 @@
 # Backup and Restore
 
-By default, Amezmo installs MySQL 5.7 on your instance. This installation is optimized for security and performance. Backups are user-initiated.
+Amezmo takes logical backups of your MySQL database, the kind you'd get from
+``mysqldump``: a file of SQL statements you can restore anywhere. Use a backup
+to copy production to your machine, to archive or to move data between
+environments.
 
-Amezmo offers logical backups to be taken from user-initiated process.
-This type of backup is commonly known as a "Database dump" which is a file consisting of
-SQL statements such as `CREATE TABLE`, `INSERT` and `CREATE DATABASE`.
-This backup can be used to replicate your production environment on your local machine and for archiving purposes.
+## On-Demand Backups
 
+Create a backup any time from the Database tab. Amezmo produces a compressed
+``.sql.gz`` file that you can download, or restore later from the dashboard.
 
-## Restoring from a local backup
+## Automated Backups
 
-You may restore a database from a local backup file into your Amezmo instance by providing a backup file.
-The file should be the same type of file you would use to restore the database on your local machine. 
+On plans that include them, schedule automated backups from the Database tab
+under automation settings. You choose:
 
-Amezmo supports
-`.sql` files that you'd produce with a command line utility such as [mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html). This .sql file may optionally be compressed into a .zip or .tar.gz archive.
-From the Amezmo dashboard you may provide a `.zip`, `tar.gz`, or a `.sql` file.
+- Which databases to back up. Backing up more than one needs a plan that
+  supports multiple databases.
+- The time of day the backup runs.
+- How long to keep backups. Your plan sets the maximum retention, and the form
+  tells you the limit.
+- An optional encryption key, on plans that support
+  [encrypted backups](encryption.md).
 
+You can also get an email when a scheduled backup succeeds or fails.
 
-## Encrypted backups
+> [!NOTE]
+> If scheduled backups don't seem to run, check that your plan includes
+> automated backups, that you selected at least one database, and that retention
+> isn't set to zero.
 
-You may optionally have your backups encrypted with an encryption key of your choice.
-[Learn more](/docs/databases/encryption).
+## Restoring
+
+Restore from a backup on the Database tab. You can:
+
+- Upload a local ``.sql`` file, optionally compressed as ``.zip`` or
+  ``.tar.gz``.
+- Restore from a backup Amezmo already has.
+
+When you restore, you can choose to overwrite the existing database or create a
+new one.
+
+## Cloning between Environments
+
+To copy a database from one environment to another, such as production to
+staging, see [environment cloning](../environments/cloning.md).

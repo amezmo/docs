@@ -8,8 +8,8 @@
 Parameter     |  Type   | In    | Description
 ---------------| --------|------ |------------------
 runtime        | string     | body  | **Required** One of `php`
-instance_type  | string     | body  | **Required**  One of `hobby`, `developer`, `business`. See [Instance types](/docs/api/instances/list-instance-types)
-region         | string     | body  | **Required**  The region id. See [Regions](/docs/api/regions/list-regions)
+instance_type  | string     | body  | **Required**  One of `hobby`, `developer`, `business`. See [Instance types](list-instance-types.md)
+region         | string     | body  | **Required**  The region id. See [Regions](../regions/list-regions.md)
 name           | string     | body | The identifier for this instance.
 domain         | string     | body | An initial domain name for the production environment
 php            | dictionary | body | PHP configuration. Only valid if `runtime` is `php`

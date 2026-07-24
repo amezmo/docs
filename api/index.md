@@ -5,12 +5,12 @@ launch instances, and manage resources. Please see the Endpoints link below for 
 on accessing the Amezmo API.
 
 
-- [API endpoint](/docs/api/endpoints)
-- [Authentication](/docs/api/authentication)
+- [API endpoint](endpoints.md)
+- [Authentication](authentication/index.md)
 
 ## Core resources
-- [Workers](/docs/api/workers)
-- [Instances](/docs/api/instances)
-- [Environments](/docs/api/environments)
-- [Deployments](/docs/api/deployments)
-- [Regions](/docs/api/regions)
+- [Workers](workers/index.md)
+- [Instances](instances/index.md)
+- [Environments](environments/index.md)
+- [Deployments](deployments/index.md)
+- [Regions](regions/index.md)

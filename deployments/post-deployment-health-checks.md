@@ -1,24 +1,35 @@
-# Post deployment health checks
+# Post-Deployment Health Checks
 
-Upon a [successful deployment](/docs/deployments/directories#successful-deployments), you may
-choose to have Amezmo run a post-deployment health check to your desired endpoint. The post-deployment healthcheck
-attempts to make an HTTP request to your specified endpoint and checks the HTTP response status. If the response status
-is not 200, then the post deployment health check will fail and you will be notified via email.
+After a [successful deployment](directories.md#successful-deployments), Amezmo
+can run a health check against an endpoint you choose. Amezmo makes an HTTP
+request to that endpoint and checks the response status. Only a 200 passes.
+Any other status fails the health check and Amezmo emails you.
 
-The post-deployment health check runs after a deployment meets the criteria to be considered a successful deployment
-and after the <a href="/docs/deployments/directories">deployment release directory</a> has been promoted to the current release.
+The health check runs after a deployment meets the criteria to be considered
+successful and after the [release directory](directories.md) is promoted to the
+current release.
 
-If any problems with your
-deployment was not detected by a [deployment hook](/docs/deployments/hooks),
-then Amezmo would not have known that your deployment should be considered a failure. Post-deployment health checks
-solve the problem of ensuring your application remains stable. By using a post-deployment health check, you can
-be notified immediately of any problems.
+A [deployment hook](hooks/index.md) can miss a problem that only shows up once
+traffic reaches your app. A health check catches those cases, so you hear about
+a broken release right away instead of from your users.
 
+## Configuring a Health Check
 
-## Rolling back a release
+Configure the health check per environment from the Deployments tab, in the
+Settings section:
 
-If you'd like to rollback a release after your post-deployment health check has failed, then you may
-manually execute the rollback from the Deployments tab in your Amezmo dashboard. You may also
-configure your deployments to automatically rollback to the most previous release upon a post-deployment
-health check failing. Automatic rollbacks instruct Amezmo to automatically change your current release to the most
-recent release.
+- Turn the health check on.
+- Enter the endpoint URL to request after each deployment.
+- Add up to four email addresses to notify when a check fails.
+
+Point the check at a route that exercises your real dependencies, and return a
+200 only after your database, Redis and anything else your app needs are
+reachable. A route that returns 200 before its dependencies are ready reports a
+broken release as healthy.
+
+## Rolling Back a Release
+
+When a health check fails, roll back from the Deployments tab in your dashboard.
+Rolling back changes your current release to a previous
+[release](releases.md), so your site serves the last version you know worked
+while you investigate.

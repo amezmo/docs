@@ -1,5 +1,5 @@
 # Regions
 
 
-- `GET` [List regions](/docs/api/regions/list-regions)
-- `GET` [Get a region](/docs/api/regions/get-region)
+- `GET` [List regions](list-regions.md)
+- `GET` [Get a region](get-region.md)

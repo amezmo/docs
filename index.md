@@ -13,7 +13,7 @@ machine. That is, your application should not be hardcoded to depend on
 a personal file or directory.
 
 Your PHP applications on Amezmo execute in a homogeneous server environment.
-Your application is deployed with [Atomic PHP Deployments](/docs/deployments).
+Your application is deployed with [Atomic PHP Deployments](deployments/index.md).
 Out of the box, your application should run without requiring custom packages.
 Amezmo creates a Docker image based on Ubuntu in advance with the
 most common update-to-date packages. For special requirements, please send us a
@@ -29,18 +29,18 @@ automated deployments, and more. For specific questions that are not answered he
 ### Instances
 
 Launch a dedicated service instance, or a full stack instance. Scale up or down at anytime.
-[Learn more](/docs/instances).
+[Learn more](instances/index.md).
 
 ### Databases
 
 Run a fully managed dedicated instance of MySQL on Amezmo. Launch a database instance
 into your private network and let your other instances connect to it.
-[Learn more](/docs/databases).
+[Learn more](databases/index.md).
 
 ### Deployments
 
 Automatically deploy your PHP application with zero-downtime using Git.
-[Learn more](/docs/deployments).
+[Learn more](deployments/index.md).
 
 ## See Also
 

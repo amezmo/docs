@@ -1,27 +1,25 @@
-# Nginx configuration
+# Nginx Configuration
 
-Your application has a default `nginx.conf` file that is generated dynamically based on your Nginx settings. To view all Nginx settings,
-visit the Nginx tab within your Amezmo dashboard.
+Amezmo generates your ``nginx.conf`` from your Nginx settings and writes it to
+``/etc/nginx/nginx.conf``. You can view it from your instance with ``cat``. Most
+apps never need to touch it, because the defaults are tuned for PHP.
 
-Amezmo generates and puts your Nginx configuration file at `/etc/nginx/nginx.conf` and
-you may view the this file within your instance with the `cat` command line utility. 
+For finer control, edit the generated [location blocks](location-blocks.md), or
+replace the whole file with your own.
 
+## Full Custom Configuration
 
-## Customizing the Nginx configuration
+Advanced plans can replace the entire ``nginx.conf`` from the Nginx tab.
+Amezmo saves your config, up to 1 MB, and applies it to your instance. It does
+not check the config for syntax errors first, so a bad directive shows up only
+after it applies. Watch the Nginx error log from the Log tab to debug.
 
-For advanced applications, you may view and modify the default Nginx `location` directives that Amezmo generates for you. 
-Amezmo supports adding and editing Nginx [location directives](https://nginx.org/en/docs/http/ngx_http_core_module.html#location).
+If something goes wrong, restore the default config from the Nginx tab, which
+drops your custom file and regenerates the default. Saving an empty config does
+the same. You can also restart or stop Nginx from the Nginx tab.
 
+## See Also
 
-## Nginx location directives
-Nginx `location` directives are related to your environment. These directives are automatically created for you, and they're based on the application type that
-you choose in the Git repository wizard. You may see your app type by going to the Git tab within your Amezmo dashboard. Because the directives are generated 
-based on the application type, changing your application type will reset the Nginx location directives to the Amezmo default set. 
-
-The Drupal application type is the only application type that has a specialized set of configurations for Nginx. Laravel, Craft CMS, WordPress, and standard PHP 
-applications all use the same configuration set. 
-
-## Editing locations
-You may edit, delete, and add new Nginx location blocks for your PHP application. By default, Amezmo generates a set of rules for your based on your application type. To help with debugging custom location blocks, you may look at the Nginx error log from the Log tab.
-
-When editing a location, the body portion of the location block is the only editable region. The location part of a block is immutable. To recreate a location, you must delete it, and then create another one.
+- [Location blocks](location-blocks.md)
+- [Compression and caching](compression-and-caching.md)
+- [HTTP authentication](http-authentication.md)

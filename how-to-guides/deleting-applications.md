@@ -1,7 +1,7 @@
 # Deleting an application
 
-You can delete your Amezmo [instance](/docs/instances) when you no longer need it. In the UI, the term "terminate" is used. Once
-you've terminated your application, you will no longer be charged for it. Terminating an application is permanent.
+You can delete your Amezmo [instance](../instances/index.md) when you no longer need it. In the UI, the term "terminate" is used. Once
+you've terminated your application, you will no longer be charged for it. [Terminating an application](../instances/terminating.md) is permanent.
 
 ## How to delete an application
 

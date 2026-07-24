@@ -1,0 +1,85 @@
+# Known-intentional one-way internal links, suppressed from the warn-only
+# backlink audit (.github/scripts/check_backlinks.py).
+#
+# Format: one "SRC -> DST" per line, using the /docs URLs the audit reports.
+# It means "SRC links to DST, and DST intentionally does NOT link back."
+# Blank lines and '#' comments are ignored.
+
+# Changelog cites the endpoints that changed; endpoints don't cite the changelog.
+/docs/api/changelog -> /docs/api/deployments/post
+/docs/api/changelog -> /docs/api/environments/get-environment
+/docs/api/changelog -> /docs/api/environments/update-environment
+
+# API endpoints cross-link the lookup endpoints they depend on (see the API
+# convention in CLAUDE.md); those lookups don't link back to every caller.
+/docs/api/environments/update-environment -> /docs/api/environments/list-environments
+/docs/api/environments/update-environment -> /docs/api/instances/list-instance-types
+/docs/api/instances/create-instance -> /docs/api/instances/list-instance-types
+/docs/api/instances/create-instance -> /docs/api/regions/list-regions
+/docs/api/instances/list-instances -> /docs/api/instances/list-instance-types
+/docs/api/deployments/post -> /docs/deployments/hooks/after-extract
+
+# Tag-based deployments references API endpoints for configuring tag patterns.
+/docs/git/tag-based-deployments -> /docs/api/environments/get-environment
+/docs/git/tag-based-deployments -> /docs/api/environments/list-environments
+/docs/git/tag-based-deployments -> /docs/api/environments/update-environment
+
+# Deliberately one-way (backlink pass): a migrations how-to shouldn't cite the
+# composer-installs concept, and one composer backlink is enough.
+/docs/deployments/automatic-composer-installs -> /docs/how-to-guides/disable-automatic-laravel-migrations
+/docs/php/composer -> /docs/how-to-guides/disable-automatic-composer-installs
+
+# Phase A/B docs: troubleshooting and concept pages point at billing, prepay and
+# how-to pages that don't cite them back.
+/docs/instances/limits -> /docs/billing/payment-methods
+/docs/instances/troubleshooting -> /docs/billing/payment-methods
+/docs/instances/troubleshooting -> /docs/instances/sharing
+/docs/billing/credits -> /docs/billing/hourly
+/docs/billing/credits -> /docs/billing/advanced-pay
+/docs/billing/payment-methods -> /docs/billing/hourly
+/docs/billing/payment-methods -> /docs/billing/advanced-pay
+/docs/php/versions -> /docs/how-to-guides/changing-php-versions
+/docs/php/composer -> /docs/instances/ssh
+
+# Nginx location-blocks references the domain routing/rules and http-auth pages;
+# those describe separate features and don't need to point back.
+/docs/nginx/location-blocks -> /docs/domains/routing
+/docs/nginx/location-blocks -> /docs/domains/rules
+/docs/nginx/location-blocks -> /docs/nginx/http-authentication
+
+# The general SSL page points to its wildcard and redirect specializations one way.
+/docs/domains/ssl-certificates -> /docs/domains/wildcard-ssl-certificates
+/docs/domains/redirects -> /docs/domains/ssl-certificates
+
+# The providers "See Also" links the repos page; repos doesn't link back.
+/docs/git/providers -> /docs/git/repos
+
+# The health-check page cites the release-directory concept pages.
+/docs/deployments/post-deployment-health-checks -> /docs/deployments/directories
+/docs/deployments/post-deployment-health-checks -> /docs/deployments/releases
+
+# Pre-existing one-ways (backlink cleanup pass). The deployment directory and
+# release pages are foundational concepts many pages cite; they don't cite back.
+/docs/caching/purging -> /docs/deployments/directories
+/docs/configuration/dotenv -> /docs/deployments/directories
+/docs/configuration/logging -> /docs/deployments/directories
+/docs/npm/package-caching -> /docs/deployments/directories
+/docs/workers/reloading -> /docs/deployments/directories
+/docs/deployments/directories -> /docs/deployments/hooks/deploy-success
+/docs/configuration/dotenv -> /docs/deployments/releases
+/docs/deployments/hooks/before-pull -> /docs/deployments/releases
+/docs/how-to-guides/setting-up-the-storage-directory -> /docs/deployments/hooks/after-pull
+
+# Other pre-existing one-ways: niche or passing references that don't warrant a
+# backlink.
+/docs/solr/configuration -> /docs/configuration/dotenv
+/docs/configuration/dotenv -> /docs/workers/reloading
+/docs/instances/ssh -> /docs/domains/development-subdomain
+/docs/domains/development-subdomain -> /docs/domains/ssl-certificates
+/docs/npm/package-caching -> /docs/environments/environment-directory
+/docs/deployments/triggers -> /docs/git/repos
+/docs/instances/ports-and-ip-addresses -> /docs/instances/enable-or-disable-ssh
+/docs/databases/redis -> /docs/instances/ports-and-ip-addresses
+
+# SSH troubleshooting points at the MySQL-over-SSH page for the tunnel use case.
+/docs/instances/ssh-troubleshooting -> /docs/databases/ssh

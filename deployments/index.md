@@ -14,10 +14,10 @@ your active, or live site unaffected.
 ## Deployment pipeline success criteria
 
 You can keep your production site highly available to your users or
-customers with Amezmo Atomic Deployments&trade; Amezmo deploys your
+customers with Amezmo Atomic Deployments™ Amezmo deploys your
 PHP application with a pipeline Atomicity. Amezmo guarantees invariability between
 your live production site, and a failed deployment. There's no risk in
-automating your [PHP deployments](/docs/git/).
+automating your [PHP deployments](../git/index.md).
 
 Amezmo deploys your PHP application to production in a pipeline comprised of
 indivisible units of well-defined deployment tasks.
@@ -25,23 +25,23 @@ indivisible units of well-defined deployment tasks.
 ## Configuration files
 
 An `.env`, will be placed into your root
-[deployment directory](/docs/deployments/directories) automatically. This will overwrite
+[deployment directory](directories.md) automatically. This will overwrite
 any existing `.env` file your archive may have.
 
 ## Deployment directories
 
 The deployment directory section describes the layout for zero-downtime deployments
-[Learn more](/docs/deployments/directories).
+[Learn more](directories.md).
 
 ## Hooks
 
 Amezmo's extensible deployment systems provides you the capability to run your own code at
-any step of the deployment process. [Learn more](/docs/deployments/hooks).
+any step of the deployment process. [Learn more](hooks/index.md).
 
 ## Releases
 
 After a successful deployment, then the deployment is considered a release. You may rollback to a previous
-release at anytime. [Learn more](/docs/deployments/releases).
+release at anytime. [Learn more](releases.md).
 
 ## Fault tolerance
 

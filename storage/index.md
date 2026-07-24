@@ -6,4 +6,4 @@ is currently [released](https://www.amezmo.com/docs/deployments/directories).
 
 See the below how-to guide for application specific instructions.
 
-- [Setting up storage](/docs/how-to-guides/setting-up-the-storage-directory)
+- [Setting up storage](../how-to-guides/setting-up-the-storage-directory.md)

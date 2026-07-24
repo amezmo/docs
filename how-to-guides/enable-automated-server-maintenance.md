@@ -10,7 +10,6 @@ This is an automated process that Amezmo handles for you.
 3. Above the horizontal tab navigation menu, click the Production **or** Staging tab.
 4. In the horizontal tab navigation menu, choose the **Overview** tab.
 5. Scroll down to the **Application settings** section
-6. At the top right, click &nbsp;<i style="color:#586f90" class="fas fa-ellipsis-h"></i>&nbsp;&nbsp;
-<i style="color:#586f90" class="fas fa-small fa-chevron-right"></i> **Edit maintenance settings**
+6. At the top right, click the more options menu (**⋯**), then **Edit maintenance settings**
 7. Check or uncheck **Enable automatic maintenance**
 8. Click the **Save** button.

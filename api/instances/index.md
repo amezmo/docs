@@ -3,9 +3,9 @@
 
 Instances represent your application including its environments and resources such as databases, logs, and deployments.
 
-- `GET` [List instances](/docs/api/instances/list-instances)
-- `GET` [Get an instance](/docs/api/instances/get-instance)
-- `GET` [List instance types](/docs/api/instances/list-instance-types)
-- `DELETE` [Terminate an instance](/docs/api/instances/terminate-instance)
-- `POST` [Create an instance](/docs/api/instances/create-instance)
+- `GET` [List instances](list-instances.md)
+- `GET` [Get an instance](get-instance.md)
+- `GET` [List instance types](list-instance-types.md)
+- `DELETE` [Terminate an instance](terminate-instance.md)
+- `POST` [Create an instance](create-instance.md)
 

@@ -9,5 +9,5 @@ without logging out. Administrators and Team owners may launch instances under t
 Each team you create has its own payment method.
 Instances that are launched from within a team will be billed to the default payment method for the team.
 
-- [Team owners](/docs/teams/team-owners)
-- [Member roles](/docs/teams/team-member-roles)
+- [Team owners](team-owners.md)
+- [Member roles](team-member-roles.md)
