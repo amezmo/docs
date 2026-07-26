@@ -4,6 +4,6 @@ The file before.deploy is executed before Amezmo updates your web server directo
 If your script returns a non-zero exit status, the deployment fails.
 
 Relative to your application root directory, the
-[full path](/docs/deployments/hooks#hook-files)
+[full path](index.md#hook-files)
 of this hook is `.amezmo/before.deploy`
 

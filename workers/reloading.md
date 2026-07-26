@@ -1,10 +1,10 @@
 # Reloading Workers
 
-After each successful deployment, your workers will be reloaded. Workers are always run from your [/webroot/current](/docs/deployments/directories) directory effectively always running the latest release of your code. Reloading is required because Amezmo has no way to determine if your worker code has changed or not.
+After each successful deployment, your workers will be reloaded. Workers are always run from your [/webroot/current](../deployments/directories.md) directory effectively always running the latest release of your code. Reloading is required because Amezmo has no way to determine if your worker code has changed or not.
 
 ## Configuration
 
-Upon [changing your DotEnv configuration](/docs/configuration),
+Upon [changing your DotEnv configuration](../configuration/index.md),
 your workers will also be reloaded.
 
 ## Signals

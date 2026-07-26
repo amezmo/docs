@@ -1,6 +1,6 @@
 # Releases
 
-After a [successful deployment](/docs/deployments/directories#successful-deployments), the deployment is considered a release.
+After a [successful deployment](directories.md#successful-deployments), the deployment is considered a release.
 A release is promoted to the current release if the deployment has succeeded.
 
 ## Rollbacks
@@ -14,13 +14,12 @@ a rollback operation.
 ## Hooks
 Upon rolling back your current release, Amezmo will execute the following scripts:
 
-| Hook | Description
--------|-------------
-.amezmo/rollback/before | This script is executed before Amezmo updates your [current release directory](/docs/deployments/directories) (Live)
-.amezmo/rollback/after | This script is executed after the symbolic link directory is updated.
+| Hook                    | Description |
+| ----------------------- | ----------- |
+| .amezmo/rollback/before | This script is executed before Amezmo updates your [current release directory](directories.md) (Live) |
+| .amezmo/rollback/after  | This script is executed after the symbolic link directory is updated. |
 
-<p class="alert alert-info">
-    Note: The scripts that are executed are the scripts defined in your **current** release. This means that
-    when you execute a rollback, the scripts that will run are the ones that exist in your current release directory,
-    not the target rollback.
-</p>
+> [!NOTE]
+> The scripts that are executed are the scripts defined in your **current** release. This means that
+> when you execute a rollback, the scripts that will run are the ones that exist in your current release directory,
+> not the target rollback.

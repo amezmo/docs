@@ -1,6 +1,6 @@
 # Turn off NPM package caching
 
-You can disable [NPM package caching](/docs/npm/package-caching) if you're running into problems
+You can disable [NPM package caching](../npm/package-caching.md) if you're running into problems
 with symbolic links, or for other reasons such as wanting to ensure that `node_modules` is built from
 scratch on every deployment.
 
@@ -12,8 +12,7 @@ scratch on every deployment.
 4. In the horizontal tab navigation menu, choose the **Deployments** tab.
 5. Scroll down to the **Settings** section.
 6. Find the NPM toggle switch.
-
-    <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/npm-caching.png" alt="Deployments Settings section with the NPM package caching toggle switch" />
+    ![Deployments Settings section with the NPM package caching toggle switch](https://s3.us-east-2.amazonaws.com/static.amezmo.net/npm-caching.png){.img-enlargable}
 7. Click the switch
 
 After turning off NPM package caching, your next deployment will not use the cached

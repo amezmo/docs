@@ -1,8 +1,8 @@
 # Workers
 
-[Workers](/docs/workers) may be started, stopped, and restarted via the Amezmo API. The following endpoints are supported: 
+[Workers](../../workers/index.md) may be started, stopped, and restarted via the Amezmo API. The following endpoints are supported: 
 
-- `GET` [Get a worker](/docs/api/workers/get)
-- `POST` [Start a worker](/docs/api/workers/start)
-- `POST` [Stop a worker](/docs/api/workers/stop)
-- `POST` [Restart a worker](/docs/api/workers/restart)
+- `GET` [Get a worker](get.md)
+- `POST` [Start a worker](start.md)
+- `POST` [Stop a worker](stop.md)
+- `POST` [Restart a worker](restart.md)

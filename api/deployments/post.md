@@ -11,12 +11,12 @@ See the [Amezmo GitHub Actions](https://github.com/amezmo/github-actions-demo) d
 repository for a guide to Deploying PHP applications
 with [GitHub actions](https://www.amezmo.com/laravel-hosting-guides/deploying-laravel-with-github-actions).
 
-Deployments with an [archive file](/docs/how-to-guides/creating-zip-files-for-api-deployments) work exactly
+Deployments with an [archive file](../../how-to-guides/creating-zip-files-for-api-deployments.md) work exactly
 like regular Git deployments.
 
 When deploying with the Amezmo API, The `after.pull`
-[deployment hook](/docs/deployments/hooks) will not be run.
-Instead, use the [after.extract](/docs/deployments/hooks/after-extract)
+[deployment hook](../../deployments/hooks/index.md) will not be run.
+Instead, use the [after.extract](../../deployments/hooks/after-extract.md)
 hook to run code after extracting your archive.
 
 {title="POST /v1/instances/{instance_id}/deployments"}
@@ -28,8 +28,8 @@ POST /v1/instances/{instance_id}/deployments
 
 Parameter      |  Type | In | Description
 ------------- | ------|------ |------------------
-api_key        | string  | header | **Required**. Your [API key](/docs/api/authentication).
-environment    | string  | body | **Required**. The [environment](/docs/api/environments) name for this deployment. This can be `production` or `staging`.
+api_key        | string  | header | **Required**. Your [API key](../authentication/index.md).
+environment    | string  | body | **Required**. The [environment](../environments/index.md) name for this deployment. This can be `production` or `staging`.
 instance_id    | string | uri | **Required**. The ID of the instance that this deployment will be executed on.
 archive        | body    | uri | **Required**. The archive file that contains the source code of your application. This can be a zip or a tar archive. The maximum size of an archive file is 512MB.
 repo_owner     | string | body | The repository owner. Required if `repo_name` is provided.
@@ -70,4 +70,4 @@ curl --request POST \
 
 ## Resources
 
-- [How to create a ZIP archive for API deployments](/docs/how-to-guides/creating-zip-files-for-api-deployments)
+- [How to create a ZIP archive for API deployments](../../how-to-guides/creating-zip-files-for-api-deployments.md)

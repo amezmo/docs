@@ -29,7 +29,7 @@ To disable cookies, see the documentation for your framework.
 
 ## Helpful information
 -  When a page is cached, the cached version will served for up to 24 hours.
-    See ways of [purging the cache](/docs/caching/purging) for more information.
+    See ways of [purging the cache](purging.md) for more information.
 - Caching has an aggregate size limit of 256MB.
 - Only `GET` requests are candidates for caching.
 
@@ -46,5 +46,5 @@ to have PHP regenerate the page for each requests.
 
 ## See also
 
-- [Purging cached pages](/docs/caching/purging)
-- [URL Patterns](/docs/caching/patterns)
+- [Purging cached pages](purging.md)
+- [URL Patterns](patterns.md)

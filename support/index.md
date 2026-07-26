@@ -8,10 +8,10 @@ You may request application support, or infrastructure support. Amezmo has 3 sup
 time. If you're not sure if your support request would be within the scope of the levels defined below,
 please send your request.
 
-| Level  | Availability    | Description   | Medium |
----------|-----------------|---------------|---------|
-Free      | Free           | Best effort application support and infrastructure support with 24-72 hours. | Email
-Premium   | $499 per month  | Real time responses for priority requests. | Email, Slack                                                        
+| Level   |   Availability | Description                                                                  | Medium       |
+| ------- | -------------: | ---------------------------------------------------------------------------- | ------------ |
+| Free    |           Free | Best effort application support and infrastructure support with 24-72 hours. | Email        |
+| Premium | $499 per month | Real time responses for priority requests.                                   | Email, Slack |
 
 ## Migration
 Amezmo provides up to 2 hours of free migration assistance. Migration assistance consists of live chat and hands-on 

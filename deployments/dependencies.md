@@ -2,7 +2,7 @@
 
 Hooks on Amezmo
 are simply bash script files located in the top level `.amezmo` directory.
-Use the [.amezmo/after.pull](/docs/deployments/hooks/after-pull) hook to install Composer dependencies.
+Use the [.amezmo/after.pull](hooks/after-pull.md) hook to install Composer dependencies.
 Be sure to [commit](https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control) your `composer.lock` files to source control in order to speed up package installation.
 
 Your application directory should have the `.amezmo` directory created as shown below.
@@ -23,7 +23,7 @@ Your application directory should have the `.amezmo` directory created as shown 
 ```bash
 #!/bin/bash
 
-# Path to this script: &lt;your repo&gt;/.amezmo/after.pull
+# Path to this script: <your repo>/.amezmo/after.pull
 #
 # IMPORTANT: set -e is required to instruct Bash to
 # exit if any command
@@ -64,7 +64,7 @@ fi
 ```
 
 Composer and NPM are setup for you out of the box when you launch an instance.
-If you're not commiting your vendor or node_modules directory to source control, then you can install your dependencies
+If you're not committing your vendor or node_modules directory to source control, then you can install your dependencies
 with a deployment hook.
 
 To make deployments fast and to not require a fresh install of Composer/NPM packages for each deployment,
@@ -77,12 +77,12 @@ directory so a fresh install
 is not required for each deployment.
 
 ## Using Hooks to Install Dependencies
-[Deployment hooks](/docs/deployments/hooks) are files defined under the `.amezmo`
+[Deployment hooks](hooks/index.md) are files defined under the `.amezmo`
 directory inside your root directory of your application. You must create
 this directory and create deployment scripts inside this directory.
 
 It's important that your script runs in non-interactive mode in order to prevent your deployment from failing.
-Deployment hooks currently have an execution [limit](/docs/deployments/hooks#limits).
+Deployment hooks currently have an execution [limit](hooks/index.md#limits).
 We recommend using the following script for installing dependencies with Composer. See below for a working deployment hook example.
 
 ## Resources

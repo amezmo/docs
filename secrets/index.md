@@ -1,11 +1,13 @@
-# Encrypted environment variables (Secrets)
+# Encrypted Environment Variables (Secrets)
 
-Secrets, or encrypted environment variables, let you store sensitive information such as API keys, license keys, and other strings that should not be stored in plain-text. 
+Secrets are encrypted environment variables for sensitive strings like API keys
+and license keys that shouldn't be stored in plain text. Your browser encrypts a
+secret before it reaches Amezmo, and your instance decrypts it in memory with a
+private key that Amezmo can't read.
 
-Secrets are encrypted on the client-side before sending them to Amezmo, and are decrypted in-memory using a private key. Secrets are automatically
-injected into [deployment hooks](/docs/deployments/hooks)
-Secrets are defined in the Configuration section
-within your Amezmo dashboard.
+Amezmo injects secrets into your
+[deployment hooks](../deployments/hooks/index.md), and they take effect on your
+next deployment, not while your app is running. You manage them from the
+Configuration section of your dashboard.
 
-
-- [How secrets work](/docs/secrets/how-secrets-work)
+- [How secrets work](how-secrets-work.md)

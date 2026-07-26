@@ -9,7 +9,7 @@ GET /v1/instances
 ## Parameters
 Parameter        |  Type   | In     | Description     
 ---------------- | --------|------- |------------------
-instance_type    |  string | query  | [instance type](/docs/api/instances/list-instance-types) filter
+instance_type    |  string | query  | [instance type](list-instance-types.md) filter
 
 ## Response
 

@@ -1,12 +1,37 @@
-# Amezmo billing credits
+# Amezmo Billing Credits
 
-Amezmo credits are applied to invoices and reduce the total amount due. Credits are applied 
-until the credit amount is completely spent, or it expires. 
+Amezmo credits reduce the total amount due on your invoices. A credit applies
+until you spend it in full or it expires.
 
-Credits are applied in the form of a promotion code. Once a promotion code is applied, it will be used to cover the total amount due on invoices. After a promotion is applied to an invoice, the available credit amount is subtracted by the amount of credit used on the invoice which is considered the "spend" of a coupon. 
+Credits come in the form of a promotion code. When you apply a code, the
+credit goes to your account balance and covers the amount due on your
+invoices. Each time credit covers part of an invoice, your available amount
+drops by that much.
+
+## Applying a Promotion Code
+
+Apply a code from Billing > Credits: enter the code and submit. Codes are
+case-sensitive, so type it exactly as you received it.
+
+## Where Credit Appears
+
+Credit goes to your account balance and comes off your next invoice
+automatically. You won't see an immediate refund or a separate charge, so a
+code you redeem today might not change anything visible until Amezmo generates
+your next monthly invoice. See [Hourly billing](hourly.md) for when invoices
+go out.
+
+To review the promotions you've redeemed, open Billing > Credits. Each one
+lists its date, code, amount and expiration.
+
+## Why a Code Won't Apply
+
+Codes are case-sensitive, so check the spelling and remove any stray spaces
+first. If a code reports that it can't be redeemed, it probably expired or you
+already used it, so [contact support](../support/index.md) if you think it
+should still work. You can't redeem a code that you generated yourself.
 
 ## Balances
-Credit are applied to your account balance. You may see your account balance by going from Profile > Billing.
 
-## Applying Credits
-If you have a promotion code, you may apply the code to your account from Billing > Credits. 
+Credit goes to your account balance. You can also fund your balance directly
+with [Advanced Pay](advanced-pay.md).

@@ -1,7 +1,7 @@
 # Changing the default deployment branch
 
-You can change the default automatic deployment [branch](/docs/git/branches) at anytime. Your default
-branch is used for [automatic deployments](/docs/deployments).
+You can change the default automatic deployment [branch](../git/branches.md) at anytime. Your default
+branch is used for [automatic deployments](../deployments/index.md).
 
 ## How to change the default branch
 
@@ -9,15 +9,14 @@ branch is used for [automatic deployments](/docs/deployments).
 2. Choose the name of your application.
 3. Above the horizontal tab navigation menu, click the Production **or** Staging tab.
 4. In the horizontal tab navigation menu, choose the **Git** tab.
-5. Find the **Git repository details**, island and click &nbsp;<i style="color:#586f90" class="fas fa-ellipsis-h"></i>&nbsp;&nbsp;
-<i style="color:#586f90" class="fas fa-small fa-chevron-right"></i> **Change repository**
+5. Find the **Git repository details** island and click the more options menu (**⋯**), then **Change repository**
 6. Edit the "Automatic deployment branch" form field in the modal and confirm by clicking Save.
 
- <img class="img-enlargable" src="https://s3.us-east-2.amazonaws.com/static.amezmo.net/change-automatic-deployment-branch.png" alt="Change repository modal with the Automatic deployment branch field" />
+![Change repository modal with the Automatic deployment branch field](https://s3.us-east-2.amazonaws.com/static.amezmo.net/change-automatic-deployment-branch.png){.img-enlargable}
 
 
 After making changes to your Git repository settings, a new deployment will begin.
 
 ## Resources
 
-- [Deployments with Git](/docs/git)
+- [Deployments with Git](../git/index.md)

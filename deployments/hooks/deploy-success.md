@@ -5,5 +5,5 @@ This is the last hook that runs.
 The exit status of this script is ignored.
 
 Relative to your application root directory, the
-[full path](/docs/deployments/hooks#hook-files)
+[full path](index.md#hook-files)
 of this hook is `.amezmo/deploy.success`

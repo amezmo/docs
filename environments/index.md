@@ -1,10 +1,10 @@
 # Multiple Environments
 
-In the context of your application, Amezmo makes a distinction between Staging and Production. This multi-environment
-setup lets you make configuration changes and deployments, among other things, without affecting
-your production application. When you launch an instance, a Production environment is created by 
-default.
+Amezmo separates your app into Staging and Production. This lets you make
+configuration changes and deploy without affecting production. When you launch
+an instance, Amezmo creates a Production environment by default.
 
-- [HTTP authentication](/docs/environments/password-protection): Require a username and password to access application.
-- [Maintenance Mode](/docs/environments/maintenance-mode): Take your application offline directly from your dashboard.
-- [Trusted IP Addresses](/docs/environments/trusted-ip-addresses): Restrict access to your application to a set of a trusted IP addresses.
+- [HTTP authentication](password-protection.md): Require a username and password to access your application.
+- [Maintenance Mode](maintenance-mode.md): Take your application offline directly from your dashboard.
+- [Trusted IP Addresses](trusted-ip-addresses.md): Restrict access to your application to a set of trusted IP addresses.
+- [Cloning](cloning.md): Copy an environment or a database between environments.

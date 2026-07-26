@@ -1,10 +1,29 @@
-# How secrets work
+# How Secrets Work
 
-Secrets are client-side encrypted variables that are automatically injected into deployments hooks. Commonly used to
-store access keys and other sensitive strings such as API keys, and license keys that are not checked into source code.
-The primary use case for secrets is for accessing a sensitive values during the deployment process.
+Secrets are environment variables that Amezmo encrypts in your browser before it
+saves them, so the plaintext value never reaches Amezmo. Use them for API keys,
+license keys and other sensitive strings you don't want in source control or in
+your ``.env``.
 
-Secrets are encrypted within the Amezmo dashboard on the client-side. Upon saving a secret, the encrypted value is sent
-to Amezmo. Amezmo never stores the unencrypted value. Secrets are decrypted in-memory using the private key that
-exists in your instance in your home directory. Amezmo doesn’t have access to the private key directly.
-Upon terminating an instance, the private key is destroyed and it is never recycled.
+When you save a secret, your browser seals the value with your instance's public
+key and sends only the sealed value. Your instance decrypts it in memory using a
+private key in the instance's home directory, which Amezmo can't read.
+When you terminate an instance, that private key is destroyed and never reused.
+
+## When Secret Changes Apply
+
+Secrets are read during deployment, not while your app is running. Adding,
+changing or deleting a secret takes effect on your next deployment, so trigger a
+deployment to apply it. This is different from
+[environment variables](../configuration/dotenv.md), which apply as soon as you
+save them.
+
+There is no edit action for a secret. To change one, delete it and add it again
+with the new value, then deploy.
+
+## Secrets and the .env File
+
+Secrets are not written to your ``.env`` file. Amezmo injects them into your
+[deployment hooks](../deployments/hooks/index.md), so a hook script can read a
+secret while it runs. Your running app reads its values from ``.env``, which is
+a separate place. See [environment variables](../configuration/dotenv.md).

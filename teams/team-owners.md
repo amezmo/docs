@@ -1,7 +1,7 @@
 # Team Owners
 
 As a team owner you may invite
-[role-based team members](/docs/teams/team-member-roles), revoke team member access, and
+[role-based team members](team-member-roles.md), revoke team member access, and
 view security logs of actions that team members' have taken.
 
 Team owners have the most power and may revoke team members' access.

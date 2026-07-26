@@ -5,7 +5,7 @@ this with the Advanced instance type. See below for some resources for getting s
 
 ## Solr API
 
-From your [SSH](/docs/instances/ssh) session, you can check which cores are created with
+From your [SSH](../instances/ssh.md) session, you can check which cores are created with
 this command
 
 {title="Check Solr cores"}
@@ -17,5 +17,5 @@ curl http://localhost:8983/solr/drupal/schema
 
 ## Resources
 
-- [Solr configuration](/docs/solr/configuration)
+- [Solr configuration](configuration.md)
 - [Solr Reference](https://solr.apache.org/guide/solr/latest/configuration-guide/config-api.html)

@@ -5,7 +5,7 @@ Team member roles limit what a team member may do. Amezmo provides two different
 
 ## Administrator
 
-Allows for complete management of instances. Similar to the permissions and capabilities that the Team Owner
+Allows for complete management of instances. Similar to the permissions and capabilities that the [Team Owner](team-owners.md)
 has except this role cannot manage billing, view security logs, or manage the team.
 
 ## Developer

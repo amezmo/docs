@@ -4,7 +4,7 @@ Amezmo will run a set of scripts for you before, during, and after your deployme
 These scripts are expected to be located in the `.amezmo` directory of your applications root directory.
 The scripts are executed as a shell script using Bash.
 A set of environment variables are given to the script, for your reference.
-For example, the file [after.pull](/docs/deployments/hooks/after-pull)
+For example, the file [after.pull](after-pull.md)
 is executed for the event After Pull.
 
 ## Hook files
@@ -60,19 +60,19 @@ For files, these are the permissions.
 
 ## Hook list
 
-- [before.pull](/docs/deployments/hooks/before-pull)
-- [after.pull](/docs/deployments/hooks/after-pull)
-- [after.extract](/docs/deployments/hooks/after-extract)
-- [before.deploy](/docs/deployments/hooks/before-deploy)
-- [after.deploy](/docs/deployments/hooks/after-deploy)
-- [deploy.success](/docs/deployments/hooks/deploy-success)
-- [deploy.failure](/docs/deployments/hooks/deploy-failure)
+- [before.pull](before-pull.md)
+- [after.pull](after-pull.md)
+- [after.extract](after-extract.md)
+- [before.deploy](before-deploy.md)
+- [after.deploy](after-deploy.md)
+- [deploy.success](deploy-success.md)
+- [deploy.failure](deploy-failure.md)
 
 ## Environment File
 
-Your [most recent .env file](/docs/configuration/dotenv), which is the one that you see in your
+Your [most recent .env file](../../configuration/dotenv.md), which is the one that you see in your
 Amezmo Dashboard under the Configuration tab, is placed into the
-newly created [deployment directory](/docs/deployments/directories)
+newly created [deployment directory](../directories.md)
 immediately completion of git pull.
 
 This allows your hooks to use the contents of
@@ -81,7 +81,7 @@ To accomplish this, simply edit your hook file to load it before doing anything 
 
 ## Secrets
 
-[Encrypted environment variables](/docs/secrets) are injected into the hooks environment
+[Encrypted environment variables](../../secrets/index.md) are injected into the hooks environment
 and exist in memory only.
 You may access them inside your hook file using the bash syntax
 for variables such as `$MY_SECRET_VARIABLE_NAME`.
@@ -91,7 +91,7 @@ Secrets will never be written to disk and only decrypted to execute hooks.
 
 Your hook script has access to the following pre-defined environment variables.
 In addition to these environment variables, Amezmo injects your secret variables as well. For more
-information about secrets, see the [Secrets Overview](/docs/secrets) page.
+information about secrets, see the [Secrets Overview](../../secrets/index.md) page.
 
 Variable   | Description
 -----------|------------
@@ -99,15 +99,15 @@ APPLICATION_ROOT      | This is where your code is located on the server in the 
 COMMIT_ID             | Git commit hash of the currently executing deployment
 NODE_PATH             | The path to the global node.js package binaries
 COMPOSER_MEMORY_LIMIT | set to `-1`
-PERSISTENT_STORAGE_DIRECTORY   | Path to the [persistent storage](/docs/configuration/storage) directory
+PERSISTENT_STORAGE_DIRECTORY   | Path to the [persistent storage](../../configuration/storage.md) directory
 APP_DOMAIN           | Internal domain name for the environment
 REPO_NAME            | The name of the repository currently being deployed
 DEPLOY_BRANCH        | The name of the branch currently being deployed
-TARGET_HOOK          | The name of hook being executed. This is one of the values listed in the [Hook list](/docs/deployments/hooks/#hook-list)
+TARGET_HOOK          | The name of hook being executed. This is one of the values listed in the [Hook list](#hook-list)
 RELEASE_NUMBER       | The generated release number. The value is in the form of `deployment_${sequence_number}.${short_commit_id}`
 DEPLOYMENT_DIRECTORY | The fully qualified path to the current in progress deployment.
 APP_TYPE             | The application type ID such as `drupal`, `laravel`, or `crafctms`
-ENVIRONMENT_NAME     | The name of the [application environment](/docs/environments)
+ENVIRONMENT_NAME     | The name of the [application environment](../../environments/index.md)
 
 ## Hook Monitoring
 

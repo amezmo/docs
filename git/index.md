@@ -1,17 +1,19 @@
 # Deployments with Git
 
-Amezmo is a Git-first deployment platform that supports GitHub, GitLab, and BitBucket 
-with automatic deployments and a suite of
-[deployments hooks](/docs/deployments/hooks). 
-Each time you push, Amezmo will start a new deployment. Optionally,
-you may disable automatic deployments and deploy branches of your choice.
+Amezmo is a Git-first deployment platform that supports GitHub, GitLab and
+BitBucket, with automatic deployments and a set of
+[deployment hooks](../deployments/hooks/index.md). Each time you push, Amezmo
+starts a new deployment. You can also turn off automatic deployments and deploy
+the branches you choose.
 
-- [Branches](/docs/git/branches)
-- [Git providers](/docs/git/providers)
-- [Repos](/docs/git/repos)
-- [Tag-based deployments](/docs/git/tag-based-deployments)
+- [Branches](branches.md)
+- [Git providers](providers.md)
+- [Repos](repos.md)
+- [Tag-based deployments](tag-based-deployments.md)
+- [Troubleshooting](troubleshooting.md)
 
 ## Automation
-[Learn more](/docs/deployments/automatic-composer-installs) about automatically
-installing composer packages and running migrations without having to write a custom
+
+[Learn more](../deployments/automatic-composer-installs.md) about installing
+Composer packages and running migrations automatically, without a custom
 script.

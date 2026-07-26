@@ -1,10 +1,12 @@
 # Pricing and Billing
 
-On Amezmo, you only pay for what you use. This means that every instance you launch is billed on a per-hour basis.
-Although pricing on the [pricing page](/pricing) is listed per month, the underlying billing basis is hourly.
-Hourly pricing allows you to be billed at the same time every month and to be charged only once for every instance
-that you've launched during the prior month.
+On Amezmo you pay only for what you use, so every instance you launch is billed
+by the hour. The [pricing page](/pricing) lists prices per month, but the
+underlying basis is hourly. That way your card is charged at the same time each
+month, once for every instance you ran during the prior month.
 
-
-- [Hourly billing](/docs/billing/hourly)
-- [Evaluation period](/docs/billing/evaluation-period)
+- [Hourly billing](hourly.md)
+- [Payment methods](payment-methods.md)
+- [Advanced Pay](advanced-pay.md)
+- [Credits](credits.md)
+- [Evaluation period](evaluation-period.md)
