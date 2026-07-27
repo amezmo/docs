@@ -21,6 +21,7 @@ Every directory has an `index.md` that acts as its landing page and links out to
 - **No YAML front matter.** Each page starts directly with a single `#` H1 title, followed by prose. Use `##`/`###` for sections.
 - **Internal links are relative, `.md`-suffixed paths** — so they work in the GitHub file browser and don't hard-code the `/docs/` mount point; the site renderer rewrites them to the published URL. From `deployments/directories.md`, link a sibling as `releases.md` and another section as `../instances/scaling.md`. Link a directory's landing page via its `index.md` (e.g. `../api/index.md`). Section anchors use `#`, e.g. `../deployments/directories.md#successful-deployments`. Point at the target's real file path; do **not** use `/docs/`-absolute or extensionless links.
 - **External links use full `https://` URLs.**
+- **Horizontal rules (`---`) are for genuine thematic breaks only.** Headings organize the page and the heading underline is a CSS border, not an `<hr>`. So don't put a `---` between sections or use one as a decorative divider. The heading already marks the break, and an `<hr>` there is redundant (it also announces a "separator" to screen readers). Reach for `---` only for the uncommon case of a topic shift within a section that doesn't merit its own heading. A useful test: if the new content belongs in "On this page," it's a heading, not a rule. If a page wants several rules, restructure it with headings instead.
 
 ### API reference pages (`api/`)
 
