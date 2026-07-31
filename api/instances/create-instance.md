@@ -31,7 +31,7 @@ app_type | string | body | One of 'laravel', 'octane', 'other', 'symfony', 'craf
 
 {title="POST /v1/instances"}
 ```bash
-curl https://api.amezmo.com/v1/instances -X POST -H 'Authorization: Bearer {api_key}' \
+curl https://api.amezmo.com/v1/instances -X POST -H "Authorization: Bearer $AMEZMO_API_KEY" \
     --data runtime=php
     --data instance_type=business
     --data region=lb2-us

@@ -1,15 +1,29 @@
-
 # List regions
+
+{.lead}
+List every **region** where you can launch an instance. Each region has an id
+you pass to [Create an instance](../instances/create-instance.md), along with
+its name and ISO country code.
 
 `GET` /v1/regions
 
+## Code samples for "List regions"
 
-## Response
+### Request example
 
-`200 OK`
+{title="GET /v1/regions"}
+```bash
+curl https://api.amezmo.com/v1/regions \
+    -H "Authorization: Bearer $AMEZMO_API_KEY"
+```
+
+### Response
+
+The response is an array of regions. Retrieve one region with
+[Get a region](get-region.md).
 
 {title="200 OK"}
-```bash
+```javascript
 [
     {
         "id": "lb2-us",

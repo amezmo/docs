@@ -18,7 +18,7 @@ worker_id     | string | uri   | The worker ID
 ```bash
 curl --request POST \
     --url https://api.amezmo.com/v1/instances/{instance_id}/workers/{worker_id}/restart \
-    --header 'Authorization: Bearer {api_key}'
+    --header "Authorization: Bearer $AMEZMO_API_KEY"
 ```
 
 ## Response

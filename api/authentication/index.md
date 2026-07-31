@@ -1,10 +1,20 @@
 # API Authentication
 
-In order to access the Amezmo API, you must authenticate your requests using your API key. You may find your API key in the dashboard at Profile > API keys.
+The Amezmo API authenticates each request with your API key. Your API key is in
+the dashboard under **Profile > API keys**.
 
-Use the following Authorization HTTP header with requests to the Amezmo API.
+The examples store the key in an `AMEZMO_API_KEY` environment variable, so you
+set it once and reuse it:
+
+{title="Set your API key"}
+```bash
+export AMEZMO_API_KEY="your-api-key"
+```
+
+You send the key as a Bearer token in the `Authorization` header. The double
+quotes let the shell substitute your key:
 
 {title="Authorization header"}
 ```bash
-Authorization: Bearer {api_key}
+-H "Authorization: Bearer $AMEZMO_API_KEY"
 ```

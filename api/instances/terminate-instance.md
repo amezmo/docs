@@ -15,7 +15,7 @@ instance_id   |  string | uri  | The instance id
 {title="DELETE /v1/instances/{instance_id}"}
 ```bash
 curl https://api.amezmo.com/v1/instances/1087 -X DELETE \
-    -H 'Authorization: Bearer {api_key}' \
+    -H "Authorization: Bearer $AMEZMO_API_KEY" \
 ```
 
 ## Response

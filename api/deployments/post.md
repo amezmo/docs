@@ -45,7 +45,7 @@ tag            | string | body | The git tag
 ```curl
 curl --request POST \
     --url https://api.amezmo.com/v1/instances/{instance_id}/deployments \
-    --header 'Authorization: Bearer {api_key}' \
+    --header "Authorization: Bearer $AMEZMO_API_KEY" \
     --header 'Content-Type: multipart/form-data' \
     --form environment=production \
     --form archive=@{archive} \
