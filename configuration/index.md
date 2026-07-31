@@ -1,11 +1,13 @@
 # Configuration
 
-Amezmo automates configuration for
-your application based on your framework.
-When [connecting a git repo](../git/index.md),
-you can choose your application type.
+{.lead}
+Amezmo **configures** your application automatically based on its framework.
+When you [connect a git repo](../git/index.md), you choose your application
+type, and Amezmo applies the web server and runtime settings that match it.
 
 ## Supported PHP Frameworks
+
+Amezmo detects and configures these frameworks:
 
 - Backdrop
 - Bedrock
@@ -15,27 +17,27 @@ you can choose your application type.
 - Laravel Octane
 - PHP
 - Symfony
-- Wordpress
+- WordPress
 
 ## Public Document Root
 
-The [webroot](public-directory.md), or public document
-root is a directory within your application in which
-files within it are served directly by the [web server](../nginx/index.md).
-This usually has your `index.php` file and static assets.
+The [public document root](public-directory.md) is the directory the
+[web server](../nginx/index.md) serves files from directly. It holds your
+`index.php` file and static assets. Amezmo sets it from your framework, and you
+can change it.
 
 ## Environment Variables
 
-Amezmo generates your server [environment variables](dotenv.md) automatically.
+Amezmo generates your [environment variables](dotenv.md) automatically and
+writes them to a `.env` file when you launch an instance.
 
 ## Logging
 
-You can use the persistent storage on your instance
-for [logging](logging.md)
+Your instance keeps a directory for [log files](logging.md) that sits outside
+the release tree, so your logs stay available across deployments.
 
 ## Persistent Storage
-Keep your user uploaded content available between
-[deployments](../deployments/index.md) by configuring your PHP app
-to write to a [persistent storage directory](storage.md).
-Amezmo has a set of recommendations on how to configure
-your application settings for best performance.
+
+A [persistent storage directory](storage.md) keeps user uploaded content
+available across [deployments](../deployments/index.md). You configure your PHP
+application to read and write files there.

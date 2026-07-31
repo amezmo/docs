@@ -1,21 +1,31 @@
-
 # Get an instance
+
+{.lead}
+Retrieve a single **instance** by its id, including its runtime configuration
+and every environment attached to it.
 
 `GET` /v1/instances/{instance_id}
 
+## Parameters for "Get an instance"
 
-## Parameters
-Parameter     |  Type | In    | Description     
-------------- | ------|------ |------------------
-instance_id   |  string | uri  | The instance id of the environment
+Parameter | Type | In | Description
+--------- | ---- | -- | -----------
+instance_id | string | uri | **Required** The instance id
 
+## Code samples for "Get an instance"
 
-## Response
+### Request example
 
-`200 OK`
+{title="GET /v1/instances/{instance_id}"}
+```bash
+curl https://api.amezmo.com/v1/instances/1 \
+    -H "Authorization: Bearer $AMEZMO_API_KEY"
+```
+
+### Response
 
 {title="200 OK"}
-```bash
+```javascript
 {
     "id": 1,
     "name": "engage-plugandplay-564192df9c",
@@ -42,7 +52,7 @@ instance_id   |  string | uri  | The instance id of the environment
     "state": "Launching",
     "trusted_ssh_ips": [],
     "created_at": "2021-10-27T22:20:29.000000Z",
-    "region": "x-us",
+    "region": "lb2-us",
     "environments": [
         {
             "id": 1,

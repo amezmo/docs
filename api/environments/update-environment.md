@@ -1,49 +1,51 @@
-
 # Update an environment
 
-{title="PATCH /v1/instances/{instance_id}/environments/{name}/production"}
-```bash
-PATCH /v1/instances/{instance_id}/environments/{name}/production
-```
+{.lead}
+Update the settings of an **environment** on an instance, such as auto-deploy
+patterns, SSH access and the New Relic license key.
 
-## Parameters
-Parameter     |  Type | In    | Description     
-------------- | ------|------ |------------------
-instance_id    |  string | uri  | The instance id of the environment
-name          |  string | uri | The name of the environment. See [environments](list-environments.md)
-auto_deploy_tag_patterns | array | body | An array of regular expressions to match a git tag
-auto_deploy_branch_patterns | array | body | An array of regular expressions to match a git branch.
+`PATCH` /v1/instances/{instance_id}/environments/{name}
+
+## Parameters for "Update an environment"
+
+Parameter | Type | In | Description
+--------- | ---- | -- | -----------
+instance_id | string | uri | **Required** The instance id
+name | string | uri | **Required** The environment name. See [List environments](list-environments.md)
+auto_deploy_tag_patterns | array | body | Regular expressions that match a git tag
+auto_deploy_branch_patterns | array | body | Regular expressions that match a git branch
 newrelic_license_key | string | body | [New Relic API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
-ssh_enabled | bool | body | 
-trusted_ssh_ips | array | body | an array of IPv4 addresses
+ssh_enabled | boolean | body | Enables or disables SSH access for the environment
+trusted_ssh_ips | array | body | An array of IPv4 addresses allowed to connect over SSH
 
+When you update `newrelic_license_key`, the change takes effect on the next
+[deployment](../deployments/index.md). A `null` value disables the New Relic APM
+integration. Amezmo encrypts the key at rest, decrypts it at instance creation
+and stores it in the `newrelic.ini` PHP configuration file. You can read the
+stored value with `php --ri newrelic | grep newrelic.license`.
 
-When updating `newrelic_license_key`, the change takes effect on the next [deployment](../deployments/index.md). Providing a `null` value disables 
-the New Relic APM integration. When you provide your New Relic API key, Amezmo encrypts the value at rest. The value is decrypted upon instance creation and is stored in the `newrelic.ini` PHP configuration file. You may see the value by running `php --ri newrelic | grep newrelic.license`
+Amezmo supports New Relic only on Advanced instances. See
+[instance types](../instances/list-instance-types.md).
 
-Note that New Relic is only supported with Advanced instances. See [instance types](../instances/list-instance-types.md).
+When you set `ssh_enabled` to `false`, Amezmo resets `trusted_ssh_ips` to an
+empty array.
 
-When patching `ssh_enabled` to be false, `trusted_ssh_ips` is reset to an empty array.
+## Code samples for "Update an environment"
 
+### Request example
 
-## Code samples
-
-{title="cURL request example"}
+{title="PATCH /v1/instances/{instance_id}/environments/{name}"}
 ```bash
-curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production -X PATCH \
-    -H 'Authorization: Bearer {api_key}' \
+curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production \
+    -X PATCH \
+    -H "Authorization: Bearer $AMEZMO_API_KEY" \
     --data auto_deploy_tag_patterns[]='v\d+\.\d+\.\d+$'
 ```
 
-## Response
-
-{title="Response status"}
-```bash
-200 OK
-```
+### Response
 
 {title="200 OK"}
-```bash
+```javascript
 {
     "id": 1608,
     "log_export_schedule": null,
@@ -56,9 +58,9 @@ curl https://api.amezmo.com/v1/instances/{instance_id}/environments/production -
         "192.168.222.6"
     ],
     "maintenance_mode_enabled_at": null,
-    "ssh_host": "b9cb804b63.x.vioengine.com",
+    "ssh_host": "b9cb804b63.lb2.example.com",
     "ssh_port": 14462,
-    "app_domain": "b9cb804b63.x.vioengine.com",
+    "app_domain": "b9cb804b63.lb2.example.com",
     "current_deployment_id": 10840,
     "container_root_directory": "/webroot",
     "app_type": "laravel",

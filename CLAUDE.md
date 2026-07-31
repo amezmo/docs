@@ -32,7 +32,7 @@ API endpoint docs follow a fixed layout — replicate it exactly for new endpoin
 4. A `## Code samples for "<action>"` section with a `### Request example` and `### Response`.
 5. Fenced code blocks are preceded by a Leanpub-style title annotation on its own line, e.g. `{title="POST /v1/instances"}` above a ```` ```bash ```` request or `{title="201 Created"}` above a ```` ```javascript ```` JSON response. Keep this annotation — it is part of the site's rendering.
 
-The API base URL in examples is `https://api.amezmo.com` and auth is `-H 'Authorization: Bearer {api_key}'`.
+The API base URL in examples is `https://api.amezmo.com`. Authenticate with a Bearer token from an `AMEZMO_API_KEY` environment variable, double-quoted so the shell expands it: `-H "Authorization: Bearer $AMEZMO_API_KEY"`. The `api/authentication/index.md` and `api/endpoints.md` pages show the `export` step.
 
 ### API changelog (`api/changelog.md`)
 
