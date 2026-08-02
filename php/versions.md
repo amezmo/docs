@@ -1,7 +1,7 @@
 # PHP Versions
 
 You choose a PHP version when you launch an instance, and you can change it
-later. The version applies to both FPM and the PHP command line, so your web
+later. The version applies to both FastCGI Process Manager (<abbr title="FastCGI Process Manager">FPM</abbr>) and the PHP command line, so your web
 requests and your scripts run the same PHP.
 
 ## Available Versions

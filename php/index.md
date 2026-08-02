@@ -1,6 +1,6 @@
 # PHP
 
-PHP on Amezmo comes with FPM and the PHP command line. The common extensions you
+PHP on Amezmo comes with FastCGI Process Manager (<abbr title="FastCGI Process Manager">FPM</abbr>) and the PHP command line. The common extensions you
 expect are installed by default, so you can focus on your code, not
 configuration.
 

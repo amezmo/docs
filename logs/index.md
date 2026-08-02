@@ -13,7 +13,7 @@ lists them on the Logs tab. To set your framework up to write there, see
 Amezmo also surfaces the server logs for your stack:
 
 - Nginx error log
-- PHP-FPM log
+- PHP-<abbr title="FastCGI Process Manager">FPM</abbr> (FastCGI Process Manager) log
 - MySQL error log, if your instance runs MySQL
 
 Which logs appear depends on what your instance runs.

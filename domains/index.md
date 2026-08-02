@@ -23,7 +23,7 @@ minutes.
 Point your domain at your instance with one of these records:
 
 - An A record to your instance's public IP address.
-- A CNAME record to your [development subdomain](development-subdomain.md).
+- A Canonical Name (<abbr title="Canonical Name">CNAME</abbr>) record to your [development subdomain](development-subdomain.md).
 
 The Domains tab shows the exact IP address and subdomain to use. A root domain
 usually can't use a CNAME, so use the A record for the root and a CNAME for

@@ -4,8 +4,8 @@ From the Overview tab, you can enable or disable SSH access to your instance
 with the green toggle. When SSH is off, your instance does not respond to SSH
 requests.
 
-Once SSH is on, see [connecting over SSH](ssh.md) for the login command and SFTP
-details.
+Once SSH is on, see [connecting over SSH](ssh.md) for the login command and SSH File Transfer Protocol
+(<abbr title="SSH File Transfer Protocol">SFTP</abbr>) details.
 
 ![Instance Overview tab showing the SSH access toggle and the list of added public keys.](https://s3.us-east-2.amazonaws.com/static.amezmo.net/SSHKeyList.png){.img-enlargable}
 

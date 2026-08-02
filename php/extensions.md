@@ -31,6 +31,6 @@ platform can provision extra extensions for your instance.
 
 ## New Relic
 
-New Relic APM isn't a PHP extension you install. It's a feature of
+New Relic Application Performance Monitoring (<abbr title="Application Performance Monitoring">APM</abbr>) isn't a PHP extension you install. It's a feature of
 dedicated-memory plans. On a qualifying plan, turn it on by setting a
 ``newrelic_license_key`` environment variable with your New Relic license key.

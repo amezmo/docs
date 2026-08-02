@@ -20,6 +20,9 @@ $ ssh -i <path to your private key> -p $PORT deployer@$DOMAIN.lb2.amezmo.co
 
 ## SFTP Command
 
+Transfer files to and from your instance over SSH File Transfer Protocol
+(<abbr title="SSH File Transfer Protocol">SFTP</abbr>).
+
 {title="SFTP command"}
 ```bash
 $ sftp -i <path to your private key> -P $PORT deployer@$DOMAIN.lb3.amezmo.co

@@ -41,7 +41,7 @@ from  `/webroot/storage/public` to `/webroot/current/public`.
 See the [public directory documentation](public-directory.md) for more details.
 
 When uploading files from your PHP app, the default owner and group is `www-data`. At this time,
-Amezmo has chosen not to modify the default PHP FPM configuration in an effort to run
+Amezmo has chosen not to modify the default PHP FastCGI Process Manager (<abbr title="FastCGI Process Manager">FPM</abbr>) configuration in an effort to run
 the FPM daemon as a non-shell capable access user. We recommend the following file system permissions when
 writing and uploading new files to your instance.
 
