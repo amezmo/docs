@@ -2,9 +2,10 @@
 
 {.lead}
 **Nginx** runs in front of every application on Amezmo and serves it in
-production from the first deploy. It terminates TLS, serves static files
+production from the first deploy. It terminates Transport Layer Security
+(<abbr title="Transport Layer Security">TLS</abbr>), serves static files
 directly from your public document root and passes dynamic requests to
-PHP-FPM. You adjust the parts that vary per application through the pages below.
+PHP-<abbr title="FastCGI Process Manager">FPM</abbr> (FastCGI Process Manager). You adjust the parts that vary per application through the pages below.
 
 - [Configuration](config.md) documents the directives Amezmo generates and the
   values you can override.

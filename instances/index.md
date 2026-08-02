@@ -33,7 +33,7 @@ For pricing and features, see the [pricing](/pricing) page.
 - Nginx
 - Redis
 - Node.js, [NPM](../npm/index.md) and Yarn
-- Optimized PHP-FPM
+- Optimized PHP-<abbr title="FastCGI Process Manager">FPM</abbr> (FastCGI Process Manager)
 - Composer and [Composer 2](../php/composer.md)
 - [Development subdomain](../domains/development-subdomain.md)
 - Staging environments

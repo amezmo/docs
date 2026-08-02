@@ -19,8 +19,8 @@ ssh_enabled | boolean | body | Enables or disables SSH access for the environmen
 trusted_ssh_ips | array | body | An array of IPv4 addresses allowed to connect over SSH
 
 When you update `newrelic_license_key`, the change takes effect on the next
-[deployment](../deployments/index.md). A `null` value disables the New Relic APM
-integration. Amezmo encrypts the key at rest, decrypts it at instance creation
+[deployment](../deployments/index.md). A `null` value disables the New Relic Application Performance Monitoring
+(<abbr title="Application Performance Monitoring">APM</abbr>) integration. Amezmo encrypts the key at rest, decrypts it at instance creation
 and stores it in the `newrelic.ini` PHP configuration file. You can read the
 stored value with `php --ri newrelic | grep newrelic.license`.
 

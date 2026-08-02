@@ -3,7 +3,7 @@
 Amezmo caches your PHP script output based on a set of caching patterns that you must provided from the settings tab
 under Caching. See below for sample caching URL patterns.
 
-Caching conditions operate on the Request-URI, not the URL. For example, if our domain is `example.com`,
+Caching conditions operate on the Request-<abbr title="Uniform Resource Identifier">URI</abbr> (Uniform Resource Identifier), not the URL. For example, if our domain is `example.com`,
 Caching URI patterns target everything after the `.com`
 
 The examples below are regular expression based an exact match. Matching happens per repository/environment
