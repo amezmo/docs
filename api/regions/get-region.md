@@ -6,13 +6,13 @@ Use it to confirm a region before you launch an instance there.
 
 `GET` /v1/regions/{region_id}
 
-## Parameters for "Get a region"
+## Parameters
 
-Parameter | Type | In | Description
---------- | ---- | -- | -----------
-region_id | string | uri | **Required** The region id. See [List regions](list-regions.md)
+Parameter | Type   | In  | Required | Description
+--------- | ------ | --- | -------- | --------------------------------------------------
+region_id | string | uri | Yes      | The region id. See [List regions](list-regions.md)
 
-## Code samples for "Get a region"
+## Code samples
 
 ### Request example
 

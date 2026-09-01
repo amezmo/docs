@@ -14,18 +14,66 @@ For pricing and features, see the [pricing](/pricing) page.
 
 ## Managing Instances
 
-- [Scaling](scaling.md)
-- [Pausing](pausing.md)
-- [Terminating](terminating.md)
-- [Sharing](sharing.md)
-- [Enable or disable SSH](enable-or-disable-ssh.md)
-- [SSH access](ssh.md)
-- [SSH troubleshooting](ssh-troubleshooting.md)
-- [Trusted IP addresses](trusted-ip-addresses.md)
-- [Ports and IP addresses](ports-and-ip-addresses.md)
-- [Instance limits](limits.md)
-- [Regions](regions.md)
-- [Troubleshooting](troubleshooting.md)
+### Scaling
+
+[Scale an instance](scaling.md) up when you need more memory or computing
+power, or back down afterward.
+
+### Pausing
+
+[Pausing](pausing.md) takes an instance offline without deleting it. It shuts
+down and stops accepting requests, and you can start it again.
+
+### Terminating
+
+[Terminating](terminating.md) removes an application from Amezmo permanently.
+Pause instead if you only need it offline for a while.
+
+### Sharing
+
+[Sharing](sharing.md) joins your instance to another instance's private network
+and gives it an address inside that network.
+
+### Enable or Disable SSH
+
+Toggle [SSH access](enable-or-disable-ssh.md) from the Overview tab. With it
+off, the instance doesn't answer SSH at all.
+
+### SSH Access
+
+[SSH](ssh.md) runs through a secure entry-point host that routes you from the
+load balancer to your instance on a pre-allocated port.
+
+### SSH Troubleshooting
+
+[SSH troubleshooting](ssh-troubleshooting.md) covers connection failures,
+particularly "Permission denied (publickey)".
+
+### Trusted IP Addresses
+
+Restrict which machines can open an SSH connection with
+[trusted IP addresses](trusted-ip-addresses.md). These apply to SSH only, not to
+web traffic.
+
+### Ports and IP Addresses
+
+Amezmo leaves the [default ports](ports-and-ip-addresses.md) in place for Nginx,
+MySQL, and Redis.
+
+### Instance Limits
+
+Your account can run a [set number of applications](limits.md) at once. The
+limit starts low on a new account and rises as the account establishes itself.
+
+### Regions
+
+Your [region](regions.md) sets where the application runs. Amezmo defaults to
+North America and you can change it on the launch screen.
+
+### Troubleshooting
+
+[Instance troubleshooting](troubleshooting.md) covers a launch that is refused
+or seems to stall.
 
 ## Features
 

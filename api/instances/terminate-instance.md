@@ -6,9 +6,9 @@ Queues an instance for termination. The `state` property on the instance is upda
 API requests for this instance will respond with 404 not found.
  
 ## Parameters
-Parameter     |  Type | In     | Description     
---------------|------|----------|------------------
-instance_id   |  string | uri  | The instance id
+Parameter   | Type   | In  | Required | Description
+----------- | ------ | --- | -------- | ---------------
+instance_id | string | uri | No       | The instance id
 
 ## Code samples
 

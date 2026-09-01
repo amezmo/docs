@@ -4,10 +4,10 @@
 `GET` /v1/instances/{instance_id}/workers/{worker_id}
 
 ## Parameters
-Parameter     |  Type | In     | Description     
---------------|------|---------|------------------
-instance_id   |  string | uri  | The instance ID
-worker_id     | string | uri   | The worker ID
+Parameter   | Type   | In  | Required | Description
+----------- | ------ | --- | -------- | ---------------
+instance_id | string | uri | No       | The instance ID
+worker_id   | string | uri | No       | The worker ID
 
 
 ## Response
