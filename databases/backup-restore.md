@@ -2,7 +2,7 @@
 
 Amezmo takes logical backups of your MySQL database, the kind you'd get from
 ``mysqldump``: a file of SQL statements you can restore anywhere. Use a backup
-to copy production to your machine, to archive or to move data between
+to copy production to your machine, to archive, or to move data between
 environments.
 
 ## On-Demand Backups

@@ -8,7 +8,7 @@ action in the dashboard runs in the context of one environment.
 
 Everything you need to run a production PHP app is set up by default, with
 little or no custom configuration. Amezmo includes framework-specific
-configuration for CraftCMS, Laravel and Yii.
+configuration for CraftCMS, Laravel, and Yii.
 
 For pricing and features, see the [pricing](/pricing) page.
 

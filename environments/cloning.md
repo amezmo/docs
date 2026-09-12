@@ -9,10 +9,10 @@ On Advanced instances you can clone a full environment from the instance Actions
 menu. Pick the environment to copy from, give the new environment a unique name,
 and choose its branch. Amezmo copies:
 
-- The Git connection, deploy key and chosen branch.
+- The Git connection, deploy key, and chosen branch.
 - The environment variables.
 - The database, including schema and data.
-- Deployment settings, health checks, alerts and trusted IP addresses.
+- Deployment settings, health checks, alerts, and trusted IP addresses.
 
 The new environment then runs a deployment. Cloning a full environment is only
 available on Advanced instances.

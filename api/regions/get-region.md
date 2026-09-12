@@ -1,7 +1,7 @@
 # Get a region
 
 {.lead}
-Retrieve a single **region** by its id, including its name and ISO country code.
+Get a single **region** by its id, including its name and ISO country code.
 Use it to confirm a region before you launch an instance there.
 
 `GET` /v1/regions/{region_id}

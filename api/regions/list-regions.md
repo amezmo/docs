@@ -19,7 +19,7 @@ curl https://api.amezmo.com/v1/regions \
 
 ### Response
 
-The response is an array of regions. Retrieve one region with
+The response is an array of regions. To get a single region, see
 [Get a region](get-region.md).
 
 {title="200 OK"}

@@ -1,11 +1,11 @@
 # Payment Methods
 
 Manage the cards on your account from Billing > Payment methods. You can add a
-card, choose your default and remove cards you no longer use.
+card, choose your default, and remove cards you no longer use.
 
 ## Adding a Card
 
-Open Billing > Payment methods, enter your card details and save. Your first
+Open Billing > Payment methods, enter your card details, and save. Your first
 card becomes your default automatically. Amezmo charges the default card for
 your monthly [hourly usage](hourly.md).
 
@@ -21,7 +21,7 @@ add the new card and set it as the default first, then remove the old one.
 
 ## Fixing a Past-Due or Failed Payment
 
-A charge can fail for a few reasons, like an expired card, insufficient funds
+A charge can fail for a few reasons, like an expired card, insufficient funds,
 or a charge your bank blocked. When that happens, your account becomes past
 due and the dashboard shows a banner asking you to update your billing
 details.
@@ -33,7 +33,7 @@ there's no separate pay button. Once a retry succeeds, the past-due state
 clears on its own. If the same card keeps failing, add a different card
 instead of retrying it.
 
-While your account is past due you can't launch, start or resize
+While your account is past due you can't launch, start, or resize
 [instances](../instances/index.md), and Amezmo blocks API access.
 
 > [!WARNING]

@@ -22,7 +22,7 @@ your next monthly invoice. See [Hourly billing](hourly.md) for when invoices
 go out.
 
 To review the promotions you've redeemed, open Billing > Credits. Each one
-lists its date, code, amount and expiration.
+lists its date, code, amount, and expiration.
 
 ## Why a Code Won't Apply
 

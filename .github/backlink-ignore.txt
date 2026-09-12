@@ -9,9 +9,18 @@
 /docs/api/changelog -> /docs/api/deployments/post
 /docs/api/changelog -> /docs/api/environments/get-environment
 /docs/api/changelog -> /docs/api/environments/update-environment
+/docs/api/changelog -> /docs/api/cron/create-cron-entry
+/docs/api/changelog -> /docs/api/cron/get-cron-entry
+/docs/api/changelog -> /docs/api/cron/list-cron-entries
+/docs/api/changelog -> /docs/api/cron/update-cron-entry
+/docs/api/changelog -> /docs/api/errors
 
 # API endpoints cross-link the lookup endpoints they depend on (see the API
-# convention in CLAUDE.md); those lookups don't link back to every caller.
+# convention in CLAUDE.md); those lookups don't link back to every caller. The
+# errors reference is cited the same way: by everything, citing nothing back.
+/docs/api/endpoints -> /docs/api/errors
+/docs/api/cron/create-cron-entry -> /docs/api/errors
+/docs/api/cron/update-cron-entry -> /docs/api/errors
 /docs/api/environments/update-environment -> /docs/api/environments/list-environments
 /docs/api/environments/update-environment -> /docs/api/instances/list-instance-types
 /docs/api/instances/create-instance -> /docs/api/instances/list-instance-types
@@ -40,6 +49,7 @@
 /docs/billing/payment-methods -> /docs/billing/advanced-pay
 /docs/php/versions -> /docs/how-to-guides/changing-php-versions
 /docs/php/composer -> /docs/instances/ssh
+/docs/cron/custom-expressions -> /docs/instances/ssh
 
 # Nginx location-blocks references the domain routing/rules and http-auth pages;
 # those describe separate features and don't need to point back.
@@ -65,6 +75,7 @@
 /docs/configuration/logging -> /docs/deployments/directories
 /docs/npm/package-caching -> /docs/deployments/directories
 /docs/workers/reloading -> /docs/deployments/directories
+/docs/cron/editing-entries -> /docs/deployments/directories
 /docs/deployments/directories -> /docs/deployments/hooks/deploy-success
 /docs/configuration/dotenv -> /docs/deployments/releases
 /docs/deployments/hooks/before-pull -> /docs/deployments/releases

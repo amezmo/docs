@@ -3,7 +3,7 @@
 {.lead}
 A **wildcard SSL certificate** secures a domain and all of its direct
 subdomains with one certificate, so `*.example.com` covers `app.example.com`,
-`api.example.com` and every other subdomain at that level. Amezmo issues
+`api.example.com`, and every other subdomain at that level. Amezmo issues
 wildcard certificates from Let's Encrypt, the same authority it uses for
 [standard certificates](ssl-certificates.md).
 

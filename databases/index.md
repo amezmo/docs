@@ -1,7 +1,7 @@
 # Databases
 
 Amezmo runs a dedicated MySQL server (5.7 or 8.0) for instances launched with
-database support. From the dashboard you can back up, restore and check the
+database support. From the dashboard you can back up, restore, and check the
 status of your database, and any instance shared with the database instance can
 reach it. Your MySQL server is never reachable from the public internet.
 
@@ -15,7 +15,7 @@ Back up, restore, and check its status from the dashboard.
 ### Redis
 
 [Redis](redis.md) is available if you chose it at instance creation, reachable
-from your shared instances and never exposed to the internet. Data is not
+from your shared instances, and never exposed to the internet. Data is not
 persisted, so treat it as an in-memory cache.
 
 ### Remote Access
