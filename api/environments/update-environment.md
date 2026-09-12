@@ -2,25 +2,25 @@
 
 {.lead}
 Update the settings of an **environment** on an instance, such as auto-deploy
-patterns, SSH access and the New Relic license key.
+patterns, SSH access, and the New Relic license key.
 
 `PATCH` /v1/instances/{instance_id}/environments/{name}
 
-## Parameters for "Update an environment"
+## Parameters
 
-Parameter | Type | In | Description
---------- | ---- | -- | -----------
-instance_id | string | uri | **Required** The instance id
-name | string | uri | **Required** The environment name. See [List environments](list-environments.md)
-auto_deploy_tag_patterns | array | body | Regular expressions that match a git tag
-auto_deploy_branch_patterns | array | body | Regular expressions that match a git branch
-newrelic_license_key | string | body | [New Relic API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
-ssh_enabled | boolean | body | Enables or disables SSH access for the environment
-trusted_ssh_ips | array | body | An array of IPv4 addresses allowed to connect over SSH
+Parameter                   | Type    | In   | Required | Description
+--------------------------- | ------- | ---- | -------- | ---------------------------------------------------------------------------------------
+instance_id                 | string  | uri  | Yes      | The instance id
+name                        | string  | uri  | Yes      | The environment name. See [List environments](list-environments.md)
+auto_deploy_tag_patterns    | array   | body | No       | Regular expressions that match a git tag
+auto_deploy_branch_patterns | array   | body | No       | Regular expressions that match a git branch
+newrelic_license_key        | string  | body | No       | [New Relic API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
+ssh_enabled                 | boolean | body | No       | Enables or disables SSH access for the environment
+trusted_ssh_ips             | array   | body | No       | An array of IPv4 addresses allowed to connect over SSH
 
 When you update `newrelic_license_key`, the change takes effect on the next
 [deployment](../deployments/index.md). A `null` value disables the New Relic Application Performance Monitoring
-(<abbr title="Application Performance Monitoring">APM</abbr>) integration. Amezmo encrypts the key at rest, decrypts it at instance creation
+(<abbr title="Application Performance Monitoring">APM</abbr>) integration. Amezmo encrypts the key at rest, decrypts it at instance creation,
 and stores it in the `newrelic.ini` PHP configuration file. You can read the
 stored value with `php --ri newrelic | grep newrelic.license`.
 
@@ -30,7 +30,7 @@ Amezmo supports New Relic only on Advanced instances. See
 When you set `ssh_enabled` to `false`, Amezmo resets `trusted_ssh_ips` to an
 empty array.
 
-## Code samples for "Update an environment"
+## Code samples
 
 ### Request example
 

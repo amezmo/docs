@@ -7,9 +7,9 @@ GET /v1/instances
 ```
 
 ## Parameters
-Parameter        |  Type   | In     | Description     
----------------- | --------|------- |------------------
-instance_type    |  string | query  | [instance type](list-instance-types.md) filter
+Parameter     | Type   | In    | Required | Description
+------------- | ------ | ----- | -------- | ----------------------------------------------
+instance_type | string | query | No       | [instance type](list-instance-types.md) filter
 
 ## Response
 

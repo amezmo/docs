@@ -12,7 +12,7 @@ process. See
 2. Open the create-rule form and enter the path.
 3. Choose the Websocket action.
 
-The path accepts letters, digits, ``_``, ``-`` and ``*``, with no slashes.
+The path accepts letters, digits, ``_``, ``-``, and ``*``, with no slashes.
 Amezmo adds the leading slash for you.
 
 To remove a rule, delete it from the domain's rules table.

@@ -4,10 +4,10 @@
 `GET` /v1/instances/{instance_id}/environments/{name}
 
 ## Parameters
-Parameter     |  Type | In    | Description     
-------------- | ------|------ |------------------
-instance_id   |  string | uri  | The instance id of the environment
-name          |  string | uri | The name of the environment
+Parameter   | Type   | In  | Required | Description
+----------- | ------ | --- | -------- | ----------------------------------
+instance_id | string | uri | No       | The instance id of the environment
+name        | string | uri | No       | The name of the environment
 
 
 ## Response

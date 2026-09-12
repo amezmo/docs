@@ -1,6 +1,6 @@
 # Metrics
 
-The Metrics tab shows how your environment is performing: CPU, memory and HTTP
+The Metrics tab shows how your environment is performing: CPU, memory, and HTTP
 request stats for the environment you're viewing.
 
 ## CPU

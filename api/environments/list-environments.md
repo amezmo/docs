@@ -4,9 +4,9 @@
 `GET` /v1/instances/{instance_id}/environments
 
 ## Parameters
-Parameter     |  Type | In    | Description     
-------------- | ------|------ |------------------
-instance_id    |  string | uri  | The instance id
+Parameter   | Type   | In  | Required | Description
+----------- | ------ | --- | -------- | ---------------
+instance_id | string | uri | No       | The instance id
 
 ## Response
 

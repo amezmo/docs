@@ -30,18 +30,18 @@ any existing `.env` file your archive may have.
 
 ## Deployment directories
 
-The deployment directory section describes the layout for zero-downtime deployments
-[Learn more](directories.md).
+The [deployment directory layout](directories.md) describes how zero-downtime
+deployments are arranged on disk.
 
 ## Hooks
 
 Amezmo's extensible deployment systems provides you the capability to run your own code at
-any step of the deployment process. [Learn more](hooks/index.md).
+any step of the deployment process. See [deployment hooks](hooks/index.md).
 
 ## Releases
 
 After a successful deployment, then the deployment is considered a release. You may rollback to a previous
-release at anytime. [Learn more](releases.md).
+release at anytime. See [releases](releases.md).
 
 ## Fault tolerance
 

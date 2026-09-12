@@ -10,4 +10,4 @@ The following table maps common services to port numbers.
 | Redis   | 6379 |
 | MySQL   | 3306 |
 | Nginx   | 80, 443 |
-| SSH     | [Learn more](enable-or-disable-ssh.md#ssh-port) |
+| SSH     | [See your SSH port](enable-or-disable-ssh.md#ssh-port) |

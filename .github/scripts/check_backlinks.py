@@ -13,7 +13,7 @@ is also how .github/backlink-ignore.txt entries are matched.
 
 Excluded:
   - index/landing pages (index.md) -- their nav is one-directional by design
-  - non-published files (CLAUDE.md, anything under .github/)
+  - non-published files (CLAUDE.md, README.md, anything under .github/)
   - pairs listed in .github/backlink-ignore.txt (known-intentional one-ways)
 
 Exit code is always 0.
@@ -28,6 +28,11 @@ LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
 EXTERNAL = ("http://", "https://", "mailto:", "//")
 
 
+# Repo meta files, not published doc pages: skipped as both link sources
+# and link targets.
+META_FILES = {"CLAUDE.md", "README.md"}
+
+
 def doc_files(root):
     files = set()
     for dirpath, _dirs, names in os.walk(root):
@@ -35,7 +40,7 @@ def doc_files(root):
         if ".git" in parts or ".github" in parts:
             continue
         for name in names:
-            if name.endswith(".md") and name != "CLAUDE.md":
+            if name.endswith(".md") and name not in META_FILES:
                 files.add(os.path.relpath(os.path.join(dirpath, name), root))
     return files
 

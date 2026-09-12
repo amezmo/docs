@@ -1,18 +1,18 @@
 # Get an instance
 
 {.lead}
-Retrieve a single **instance** by its id, including its runtime configuration
+Get a single **instance** by its id, including its runtime configuration
 and every environment attached to it.
 
 `GET` /v1/instances/{instance_id}
 
-## Parameters for "Get an instance"
+## Parameters
 
-Parameter | Type | In | Description
---------- | ---- | -- | -----------
-instance_id | string | uri | **Required** The instance id
+Parameter   | Type   | In  | Required | Description
+----------- | ------ | --- | -------- | ---------------
+instance_id | string | uri | Yes      | The instance id
 
-## Code samples for "Get an instance"
+## Code samples
 
 ### Request example
 

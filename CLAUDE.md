@@ -16,6 +16,29 @@ Each top-level directory is a product area (`instances/`, `databases/`, `deploym
 
 Every directory has an `index.md` that acts as its landing page and links out to the child pages in that section. When you add a new page, add a link to it from the section's `index.md` (and, for top-level sections, keep the root `index.md` and `how-to-guides/index.md` in sync where relevant) — pages are not auto-discovered by a nav generator.
 
+### Landing Page Section Index
+
+A landing page's index of its child pages is a run of `###` sub-sections, one per child, not a bullet list of bare links:
+
+```markdown
+## In This Section
+
+### Backup and Restore
+
+Amezmo takes logical `mysqldump`-style [backups](backup-restore.md) you can
+restore anywhere: copy production to your machine, archive it, or move data
+between environments.
+```
+
+Rules for that block:
+
+- **Give it a parent `## In This Section`** when the index sits above the page's first `##`. Without one the page jumps `#` to `###`, which is a skipped heading level. Where the list already sits under a heading of its own (`## Core Resources`, `## Managing Instances`), keep that heading and put the `###`s under it.
+- **Heading text is plain, never a link.** The site's heading renderer keeps heading text outside the permalink anchor on purpose, because Safari Reader Mode discards any heading whose entire content is a single link. Put the link in the excerpt prose instead.
+- **One or two sentences per child, written from that page's actual content**, not a restatement of its title. Say what the reader gets, so the excerpt earns the space the bare link used to occupy.
+- **Link text describes the destination** (`[Encrypt your backups](encryption.md)`, not `[here](encryption.md)`), per WCAG 2.2 SC 2.4.4.
+
+This applies to a section's own child pages. **Leave "See Also" and "Resources" lists as bullet lists**: cross-references to other sections, marketing guides, YouTube, or the dashboard are not sub-sections of the page, and promoting them to headings puts them in the page outline and the "On this page" TOC as though they were.
+
 ## Conventions (match these when editing or adding pages)
 
 - **No YAML front matter.** Each page starts directly with a single `#` H1 title, followed by prose. Use `##`/`###` for sections.
@@ -28,15 +51,26 @@ Every directory has an `index.md` that acts as its landing page and links out to
 API endpoint docs follow a fixed layout — replicate it exactly for new endpoints:
 1. `#` H1 with the human-readable action name (e.g. `# Create an instance`).
 2. The method and path on one line using inline code for the verb: `` `POST` /v1/instances ``.
-3. A `## Parameters for "<action>"` section with a Markdown table: `Parameter | Type | In | Description`. Mark required params with `**Required**` in the Description cell, and cross-link related endpoints (e.g. from `api/instances/create-instance.md`, `See [Regions](../regions/list-regions.md)`).
-4. A `## Code samples for "<action>"` section with a `### Request example` and `### Response`.
+3. A `## Parameters` section with a Markdown table: `Parameter | Type | In | Required | Description`. Requiredness is a property of the parameter, like Type and In, so it gets its own column (`Yes`, `No`, or `Conditional`) rather than a `**Required**` marker inside the Description cell. Bold there is presentational: screen readers do not announce `<strong>`, so the markup carries nothing, and it leaves "optional" implied by absence. Use `Conditional` when a parameter is required only in some cases, and say which in the Description. Cross-link related endpoints (e.g. from `api/instances/create-instance.md`, `See [Regions](../regions/list-regions.md)`).
+4. A `## Code samples` section with a `### Request example` and `### Response`.
 5. Fenced code blocks are preceded by a Leanpub-style title annotation on its own line, e.g. `{title="POST /v1/instances"}` above a ```` ```bash ```` request or `{title="201 Created"}` above a ```` ```javascript ```` JSON response. Keep this annotation — it is part of the site's rendering.
+
+Do **not** repeat the endpoint name in these headings (`## Parameters for "Create an instance"`). That convention comes from GitHub's REST reference, where one page carries about twenty endpoints and the quoted name says which one's parameters you are reading. Each page here documents a single endpoint, so the H1, the `<title>`, the breadcrumb, and the left rail already name it. Repeating it makes headings less distinguishing under WCAG 2.2 SC 2.4.6, puts the page title twice into "On this page", and produces anchors like `#parameters-for-create-an-instance` instead of `#parameters`.
 
 The API base URL in examples is `https://api.amezmo.com`. Authenticate with a Bearer token from an `AMEZMO_API_KEY` environment variable, double-quoted so the shell expands it: `-H "Authorization: Bearer $AMEZMO_API_KEY"`. The `api/authentication/index.md` and `api/endpoints.md` pages show the `export` step.
 
 ### API changelog (`api/changelog.md`)
 
-Group entries by date with a `##` heading (`## YYYY-MM-DD`, newest first). Under each date, label changes with a **bold type line** — `**Added**`, `**Changed**`, `**Deprecated**`, `**Removed**`, `**Fixed**`, or `**Breaking**` — over a bullet list. Use bold labels, **not** `###` sub-headings: repeated `### Added` headings collide into meaningless `#added-1` anchors and clutter the on-page TOC. Keep breaking changes under their own `**Breaking**` label so readers can scan for them.
+Group entries by date with a `##` heading (`## YYYY-MM-DD`, newest first). Under each date, label changes with a **description list**: the type on its own line (`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, or `Breaking`), then each change on a following `: ` line. Keep breaking changes under their own `Breaking` term so readers can scan for them.
+
+```markdown
+## 2022-12-12
+
+Added
+: `current_deployment` to [Get Environment](environments/get-environment.md)
+```
+
+The type is a label for the changes under it, so it wants markup that says so. A `dt`/`dd` pair carries that relationship (WCAG 2.2 SC 1.3.1) where a bold paragraph only implies it. Do **not** use `###` sub-headings here: repeated `### Added` headings collide into meaningless `#added-1` anchors and put four identical entries in the on-page TOC.
 
 ## Required CommonMark extensions
 
