@@ -4,10 +4,20 @@ PHP on Amezmo comes with FastCGI Process Manager (<abbr title="FastCGI Process M
 expect are installed by default, so you can focus on your code, not
 configuration.
 
-- [PHP versions](versions.md)
-- [Extensions](extensions.md)
-- [Composer](composer.md)
+## In This Section
 
-You pick your PHP version at launch and can change it later. The version applies
-to both FPM and the command line. See [PHP versions](versions.md) for the list
-of versions and how to change them.
+### PHP Versions
+
+Choose a [PHP version](versions.md) at launch and change it later. It applies to
+both FPM and the command line, so your web requests and scripts run the same
+PHP.
+
+### Extensions
+
+The [common extensions](extensions.md) ship installed, so most applications run
+without extra setup. There is no per-application install step.
+
+### Composer
+
+Every PHP instance has [both Composer versions installed](composer.md), as the
+`composer` and `composer2` commands, for use in deployment hooks or over SSH.

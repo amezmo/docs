@@ -7,7 +7,7 @@ its name and ISO country code.
 
 `GET` /v1/regions
 
-## Code samples for "List regions"
+## Code samples
 
 ### Request example
 

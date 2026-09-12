@@ -5,7 +5,7 @@ your automatic deployments.
 
 ## How to change the default Composer version
 
-1. Open the Amezmo dashboard at [https://www.amezmo.com/sites](/sites)
+1. Open the [Amezmo dashboard](/sites)
 2. Choose the name of the application.
 3. Above the horizontal tab navigation menu, click the Production **or** Staging tab.
 4. In the horizontal tab navigation menu, choose the **Deployments** tab.
@@ -17,5 +17,6 @@ your automatic deployments.
 9. Click **Save**
 
 
-After changing the default Composer version, [composer](../deployments/automatic-composer-installs.md), the version you selected is available
-in your [deployment hooks](../deployments/hooks/index.md).
+After you change it, the version you selected is used for
+[automatic Composer installs](../deployments/automatic-composer-installs.md)
+and is available in your [deployment hooks](../deployments/hooks/index.md).

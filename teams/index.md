@@ -9,5 +9,14 @@ without logging out. Administrators and Team owners may launch instances under t
 Each team you create has its own payment method.
 Instances that are launched from within a team will be billed to the default payment method for the team.
 
-- [Team owners](team-owners.md)
-- [Member roles](team-member-roles.md)
+## In This Section
+
+### Team Owners
+
+A [team owner](team-owners.md) invites and revokes members and reads the
+security log of what members have done.
+
+### Member Roles
+
+Every member has a [role](team-member-roles.md) that limits what they can do in
+the dashboard and the API.

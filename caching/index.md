@@ -44,7 +44,15 @@ Your blog posts probably don't change often, so there's no reason
 to have PHP regenerate the page for each requests.
 
 
-## See also
+## In This Section
 
-- [Purging cached pages](purging.md)
-- [URL Patterns](patterns.md)
+### Cache Purging
+
+Cached pages are purged automatically after a successful deployment.
+[Cache purging](purging.md) covers when that happens.
+
+### URL Patterns
+
+Amezmo caches PHP output according to patterns you set on the Caching tab.
+[Caching patterns](patterns.md) shows how the conditions match against the
+request URI.

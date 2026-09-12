@@ -5,7 +5,7 @@ branch is used for [automatic deployments](../deployments/index.md).
 
 ## How to change the default branch
 
-1. Open the Amezmo dashboard at [https://www.amezmo.com/sites](/sites)
+1. Open the [Amezmo dashboard](/sites)
 2. Choose the name of your application.
 3. Above the horizontal tab navigation menu, click the Production **or** Staging tab.
 4. In the horizontal tab navigation menu, choose the **Git** tab.

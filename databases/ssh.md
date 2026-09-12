@@ -26,8 +26,8 @@ port in the command to something else, such as 3307.
 ## Requirements
 
 Before you can reach your MySQL database over SSH, upload your public SSH key to
-your instance. [Learn more](../instances/ssh.md) about accessing your instance's
-resources through SSH.
+your instance. Read more about [accessing your instance's resources through
+SSH](../instances/ssh.md).
 
 ## See Also
 

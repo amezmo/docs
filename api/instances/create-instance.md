@@ -3,38 +3,40 @@
 
 `POST` /v1/instances
 
-## Parameters for "Create an instance"
+## Parameters
 
-Parameter     |  Type   | In    | Description
----------------| --------|------ |------------------
-runtime        | string     | body  | **Required** One of `php`
-instance_type  | string     | body  | **Required**  One of `hobby`, `developer`, `business`. See [Instance types](list-instance-types.md)
-region         | string     | body  | **Required**  The region id. See [Regions](../regions/list-regions.md)
-name           | string     | body | The identifier for this instance.
-domain         | string     | body | An initial domain name for the production environment
-php            | dictionary | body | PHP configuration. Only valid if `runtime` is `php`
-php.version           | string     | php | The PHP version for the instance
-php.composer_version  | string | php | The default [composer](https://getcomposer.org) version. Either `1` or `2`
-mysql          | dictionary | body | MySQL configuration
-mysql.version  | string  | mysql | `5.7` or `8`
-mysql.enabled  | boolean | mysql | Enables or disables the MySQL server for this instance.
-mysql.database    | dictionary | mysql | Initial database configuration
-mysql.database.name | string | mysql.database | Initial database name
-mysql.database.user | string | mysql.database | Initial database user
-mysql.database.password | string | mysql.database | Initial database password
-app_type | string | body | One of 'laravel', 'octane', 'other', 'symfony', 'craftcms', 'drupal', 'wordpress', 'bedrock'
+Parameter               | Type       | In             | Required | Description
+----------------------- | ---------- | -------------- | -------- | --------------------------------------------------------------------------------------------
+runtime                 | string     | body           | Yes      | One of `php`
+instance_type           | string     | body           | Yes      | One of `hobby`, `developer`, `business`. See [Instance types](list-instance-types.md)
+region                  | string     | body           | Yes      | The region id. See [Regions](../regions/list-regions.md)
+name                    | string     | body           | Yes      | The identifier for this instance. Up to 32 characters. A unique suffix is appended, so the created instance is named `<name>-<id>`
+domain                  | string     | body           | No       | An initial domain name for the production environment
+php                     | dictionary | body           | No       | PHP configuration. Only valid if `runtime` is `php`
+php.version             | string     | php            | No       | The PHP version for the instance
+php.composer_version    | string     | php            | No       | The default [composer](https://getcomposer.org) version. Either `1` or `2`
+mysql                   | dictionary | body           | No       | MySQL configuration
+mysql.version           | string     | mysql          | No       | `5.7` or `8.0`
+mysql.enabled           | boolean    | mysql          | No       | Enables or disables the MySQL server for this instance.
+mysql.database          | dictionary | mysql          | No       | Initial database configuration
+mysql.database.name     | string     | mysql.database | No       | Initial database name
+mysql.database.user     | string     | mysql.database | No       | Initial database user
+mysql.database.password | string     | mysql.database | No       | Initial database password
+app_type                | string     | body           | No       | One of `laravel`, `octane`, `other`, `symfony`, `craftcms`, `drupal`, `wordpress`, `bedrock`, `backdrop`
 
-## Code samples for "Create an instance"
+## Code samples
 
 
 ### Request example
 
 {title="POST /v1/instances"}
 ```bash
-curl https://api.amezmo.com/v1/instances -X POST -H "Authorization: Bearer $AMEZMO_API_KEY" \
-    --data runtime=php
-    --data instance_type=business
-    --data region=lb2-us
+curl https://api.amezmo.com/v1/instances -X POST \
+    -H "Authorization: Bearer $AMEZMO_API_KEY" \
+    --data name=storefront \
+    --data runtime=php \
+    --data instance_type=business \
+    --data region=lb2-us \
     --data app_type=other
 ```
 
@@ -45,7 +47,7 @@ curl https://api.amezmo.com/v1/instances -X POST -H "Authorization: Bearer $AMEZ
 ```javascript
 {
     "id": 1,
-    "name": "engage-plugandplay-564192df9c",
+    "name": "storefront-564192df9c",
     "runtime_description": "PHP",
     "instance_type": "business",
     "description": null,

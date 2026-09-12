@@ -24,23 +24,23 @@ and we'll customize your image to install any custom packages with
 ## Amezmo PHP Hosting Components for Your Applications
 
 Get details about setting up your PHP applications and server infrastructure on Amezmo. Learn about
-automated deployments, and more. For specific questions that are not answered here, we encourage you to join us on [Slack](/goslack).
+automated deployments, and more. For specific questions that are not answered here, we encourage you to join us on [Slack](https://www.amezmo.com/goslack).
 
 ### Instances
 
 Launch a dedicated service instance, or a full stack instance. Scale up or down at anytime.
-[Learn more](instances/index.md).
+Read more [about instances](instances/index.md).
 
 ### Databases
 
 Run a fully managed dedicated instance of MySQL on Amezmo. Launch a database instance
 into your private network and let your other instances connect to it.
-[Learn more](databases/index.md).
+Read more [about databases](databases/index.md).
 
 ### Deployments
 
 Automatically deploy your PHP application with zero-downtime using Git.
-[Learn more](deployments/index.md).
+Read more [about deployments](deployments/index.md).
 
 ## See Also
 

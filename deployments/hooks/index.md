@@ -60,13 +60,45 @@ For files, these are the permissions.
 
 ## Hook list
 
-- [before.pull](before-pull.md)
-- [after.pull](after-pull.md)
-- [after.extract](after-extract.md)
-- [before.deploy](before-deploy.md)
-- [after.deploy](after-deploy.md)
-- [deploy.success](deploy-success.md)
-- [deploy.failure](deploy-failure.md)
+The hooks run in the order below. Where a hook's exit status is honored, a
+non-zero status fails the deployment.
+
+### `before.pull`
+
+Runs [before Amezmo fetches](before-pull.md) from your Git provider. Its exit
+status is ignored.
+
+### `after.pull`
+
+Runs [after the fetch](after-pull.md). This is where you install Composer and
+NPM dependencies. A non-zero exit status fails the deployment.
+
+### `after.extract`
+
+Runs after Amezmo extracts the archive from an
+[API deployment](after-extract.md), so it applies to `.zip` deploys rather than
+Git ones. A non-zero exit status fails the deployment.
+
+### `before.deploy`
+
+Runs [before your web server directory is updated](before-deploy.md), the last
+point to act on the release before it goes live. A non-zero exit status fails
+the deployment.
+
+### `after.deploy`
+
+Runs [once the web server directory points at the new release](after-deploy.md),
+so your code is already live. Its exit status is ignored.
+
+### `deploy.success`
+
+The [last hook to run](deploy-success.md), after a successful deployment. Its
+exit status is ignored.
+
+### `deploy.failure`
+
+Runs when [any hook or the deployment itself](deploy-failure.md) returns a
+non-zero exit status.
 
 ## Environment File
 

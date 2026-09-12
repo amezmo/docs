@@ -4,7 +4,7 @@ You may remove a domain name if you no longer need it, or if you've migrated the
 
 ## How to delete a domain name
 
-1. Open the Amezmo dashboard at [https://www.amezmo.com/sites](/sites)
+1. Open the [Amezmo dashboard](/sites)
 2. Choose the name of the application.
 3. Above the horizontal tab navigation menu, click the Production **or** Staging tab.
 4. In the horizontal tab navigation menu, choose the **Domains** tab.

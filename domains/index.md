@@ -5,12 +5,41 @@ you launch an instance, you provide a fully qualified domain name, and you can
 add more domains at any time. Each instance also gets an
 [Amezmo development subdomain](development-subdomain.md).
 
-- [Development subdomain](development-subdomain.md)
-- [SSL certificates](ssl-certificates.md)
-- [Wildcard SSL certificates](wildcard-ssl-certificates.md)
-- [Domain routing](routing.md)
-- [Redirects](redirects.md)
-- [Rules](rules.md)
+## In This Section
+
+### Development Subdomains
+
+Every instance gets its own [development subdomain](development-subdomain.md)
+on `amezmo.co`, served over HTTPS with a free
+[SSL certificate](ssl-certificates.md) like any custom domain. Use it for
+testing, or as your application's primary domain.
+
+### SSL Certificates
+
+Amezmo issues a [free Let's Encrypt certificate](ssl-certificates.md) for every
+domain once it validates, and renews it for as long as the domain stays on the
+instance.
+
+### Wildcard SSL Certificates
+
+A [wildcard certificate](wildcard-ssl-certificates.md) covers a domain and all
+of its direct subdomains at once, so `*.example.com` secures `app.example.com`
+and `api.example.com` together.
+
+### Domain Routing
+
+Domains reach your Nginx server by default.
+[Domain routing](routing.md) covers pointing one at a worker process instead.
+
+### Domain Redirects
+
+A [redirect](redirects.md) sends visitors from one domain to another on the same
+instance. Both domains have to be added and validated first.
+
+### Domain Rules
+
+A [domain rule](rules.md) attaches an action to a path on a validated domain,
+such as marking a path for WebSocket connections.
 
 ## Validating a Domain
 
