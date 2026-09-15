@@ -17,7 +17,17 @@ Every request carries a Bearer token. [API authentication](authentication/index.
 covers where to find your key and how the examples store it in an
 `AMEZMO_API_KEY` environment variable.
 
+### Errors
+
+Every failure returns the same JSON body. [Errors](errors.md) documents that
+envelope, the error types worth branching on, and the codes behind them.
+
 ## Core Resources
+
+### Accounts
+
+The user behind your API key. [Account endpoints](accounts/index.md) get the
+current user.
 
 ### Workers
 
@@ -32,14 +42,19 @@ types, and terminate an instance.
 ### Environments
 
 An environment ties an instance to a Git repository and its deployment rules.
-[Environment endpoints](environments/index.md) read and update those, including
-automatic deployment settings.
+[Environment endpoints](environments/index.md) list, get, and update those,
+including automatic deployment settings.
 
 ### Deployments
 
 Deploy without Git by supplying a `.zip` archive of your source.
-[Deployment endpoints](deployments/index.md) create, read, and cancel
+[Deployment endpoints](deployments/index.md) create, get, and cancel
 deployments in both staging and production.
+
+### Cron
+
+List, get, create, and update the [cron entries](cron/index.md) on an
+instance.
 
 ### Regions
 

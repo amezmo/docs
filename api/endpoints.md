@@ -27,6 +27,26 @@ so you set it once instead of pasting it into every command:
 export AMEZMO_API_KEY="your-api-key"
 ```
 
+## Errors
+
+A failing request returns a JSON body with the same fields every time: a `type`
+to branch on, a specific `code`, a human `message`, and a `request_id` to quote
+when you report a problem. See [Errors](errors.md).
+
+{title="404 Not Found"}
+```javascript
+{
+    "http_status": 404,
+    "type": "invalid_request_error",
+    "code": "unknown_resource_error",
+    "message": "The requested resource does not exist or you do not have permission to access it.",
+    "errors": {},
+    "doc_url": "https://www.amezmo.com/docs/api",
+    "request_id": "req_01HZX9C4Q2",
+    "error": null
+}
+```
+
 ## Example Request
 
 This request lists the regions where you can launch an instance. The double

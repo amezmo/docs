@@ -2,11 +2,11 @@
 
 A location block is an Nginx ``location`` directive scoped to your app. Amezmo
 generates a default set based on your app type (Laravel, Craft, WordPress,
-Drupal or plain PHP), and you can edit them or add your own from the Nginx tab.
+Drupal, or plain PHP), and you can edit them or add your own from the Nginx tab.
 
 ## Editing a Block
 
-You can edit the body of a block, add a block or delete one. The ``location``
+You can edit the body of a block, add a block, or delete one. The ``location``
 line itself is fixed, so to change the match you delete the block and add a new
 one. When you add a block, put the body on its own line after the opening ``{``.
 
@@ -39,6 +39,6 @@ To route a whole domain to a worker process instead, see
 ## Coming from .htaccess
 
 Amezmo runs Nginx, not Apache, so it ignores ``.htaccess`` files. Move your
-rewrite, redirect, deny and expires rules into location blocks or your custom
+rewrite, redirect, deny, and expires rules into location blocks or your custom
 [Nginx configuration](config.md). For password protection, use
 [HTTP authentication](http-authentication.md).

@@ -1,7 +1,7 @@
 # Get an instance
 
 {.lead}
-Retrieve a single **instance** by its id, including its runtime configuration
+Get a single **instance** by its id, including its runtime configuration
 and every environment attached to it.
 
 `GET` /v1/instances/{instance_id}

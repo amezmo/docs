@@ -7,33 +7,40 @@ that is required to execute your task, and the logging of the task output so you
 see the results in your Amezmo dashboard.
 Crons are executed from your applications [current release](../deployments/directories.md) directory.
 
-## Schedules
-A cron schedule represents when the task will be executed. You may use an alias for the following cron expressions.
+## In This Section
 
-`@minutely`
-: Execute the task once every minute.
+### Cron Schedules
 
-`@hourly`
-: Execute the task once every hour.
+An alias such as `@daily` or a five-field expression decides when an entry
+runs. [Cron schedules](schedules.md) lists every alias with the expression it
+resolves to, in the dashboard and over the API.
 
-`@monthly`
-: Execute the task once every month.
+### Custom Cron Expressions
 
-`@weekly`
-: Execute the task once every week.
+When no alias fits, write a five-field expression instead.
+[Custom cron expressions](custom-expressions.md) covers the field order and the
+operators, a table of ready-made schedules, and the syntax that saves but never
+runs on your instance.
 
-`@yearly`
-: Execute the task once every year.
+### Editing a Cron Entry
 
-For advanced use cases,
-Amezmo supports [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07).
+Change an entry's script or its schedule after you create it, from the dashboard
+or the API. [Editing a cron entry](editing-entries.md) covers what you can change,
+why the name is fixed, and when the change reaches your instance.
 
 ## Scripts
 
 A cron *script* is a bash script where you define your task logic. In this script, you may call into other
-services such as PHP, Node.js and anything you'd normally do from the command line. Scripts run on your instance and in the current working
+services such as PHP, Node.js, and anything you'd normally do from the command line. Scripts run on your instance and in the current working
 directory as your most recent [release](../deployments/releases.md).
 
 ## Best practices
 It's best to use a Cron job as a means to invoke another script. Don't put any logic into your Cron job. Keep your business logic in your [git](../git/index.md) repository so that any updates won't require an update to your Cron job as well.
 
+That pays off when a task changes: you deploy the new logic instead of
+[editing the cron entry](editing-entries.md).
+
+## API
+
+The Amezmo API lists, gets, creates, and updates your cron entries. See
+[Cron endpoints](../api/cron/index.md).

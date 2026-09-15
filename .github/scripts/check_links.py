@@ -22,6 +22,16 @@ LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
 EXTERNAL = ("http://", "https://", "mailto:", "//")
 
 
+# Repo meta files, not published doc pages: excluded as link sources and
+# link targets for the doc-page check.
+META_FILES = {"CLAUDE.md", "README.md"}
+
+# Meta files whose own outgoing links are still checked. They may point at
+# any existing repo file, not only published .md pages. CLAUDE.md is not
+# here: its links are illustrative examples, not real paths.
+CHECKED_META_FILES = {"README.md"}
+
+
 def doc_files(root):
     files = set()
     for dirpath, _dirs, names in os.walk(root):
@@ -29,7 +39,7 @@ def doc_files(root):
         if ".git" in parts or ".github" in parts:
             continue
         for name in names:
-            if name.endswith(".md") and name != "CLAUDE.md":
+            if name.endswith(".md") and name not in META_FILES:
                 files.add(os.path.relpath(os.path.join(dirpath, name), root))
     return files
 
@@ -51,6 +61,21 @@ def main():
                     path = url.split("#", 1)[0]
                     target = os.path.normpath(os.path.join(os.path.dirname(rel), path))
                     if not path.endswith(".md") or target not in files:
+                        broken.append((rel, lineno, url))
+
+    for rel in sorted(CHECKED_META_FILES):
+        full = os.path.join(ROOT, rel)
+        if not os.path.isfile(full):
+            continue
+        with open(full, encoding="utf-8") as handle:
+            for lineno, line in enumerate(handle, 1):
+                for match in LINK_RE.finditer(line):
+                    url = match.group(1)
+                    if not is_internal(url):
+                        continue
+                    path = url.split("#", 1)[0]
+                    target = os.path.normpath(os.path.join(os.path.dirname(rel), path))
+                    if path and not os.path.isfile(os.path.join(ROOT, target)):
                         broken.append((rel, lineno, url))
 
     if broken:

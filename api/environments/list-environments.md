@@ -6,7 +6,7 @@
 ## Parameters
 Parameter   | Type   | In  | Required | Description
 ----------- | ------ | --- | -------- | ---------------
-instance_id | string | uri | No       | The instance id
+instance_id | string | uri | Yes      | The instance id
 
 ## Response
 

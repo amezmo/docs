@@ -6,8 +6,8 @@
 ## Parameters
 Parameter   | Type   | In  | Required | Description
 ----------- | ------ | --- | -------- | ----------------------------------
-instance_id | string | uri | No       | The instance id of the environment
-name        | string | uri | No       | The name of the environment
+instance_id | string | uri | Yes      | The instance id of the environment
+name        | string | uri | Yes      | The name of the environment
 
 
 ## Response

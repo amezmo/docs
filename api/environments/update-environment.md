@@ -2,7 +2,7 @@
 
 {.lead}
 Update the settings of an **environment** on an instance, such as auto-deploy
-patterns, SSH access and the New Relic license key.
+patterns, SSH access, and the New Relic license key.
 
 `PATCH` /v1/instances/{instance_id}/environments/{name}
 
@@ -20,7 +20,7 @@ trusted_ssh_ips             | array   | body | No       | An array of IPv4 addre
 
 When you update `newrelic_license_key`, the change takes effect on the next
 [deployment](../deployments/index.md). A `null` value disables the New Relic Application Performance Monitoring
-(<abbr title="Application Performance Monitoring">APM</abbr>) integration. Amezmo encrypts the key at rest, decrypts it at instance creation
+(<abbr title="Application Performance Monitoring">APM</abbr>) integration. Amezmo encrypts the key at rest, decrypts it at instance creation,
 and stores it in the `newrelic.ini` PHP configuration file. You can read the
 stored value with `php --ri newrelic | grep newrelic.license`.
 
