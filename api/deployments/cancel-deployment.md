@@ -9,8 +9,8 @@ POST /v1/instances/{instance_id}/deployments/{deployment_id}/cancel
 
 Parameter     | Type   | In  | Required | Description
 ------------- | ------ | --- | -------- | ----------------------------------
-instance_id   | string | uri | No       | The instance id of the environment
-deployment_id | string | uri | No       | The deployment ID
+instance_id   | string | uri | Yes      | The instance id of the environment
+deployment_id | string | uri | Yes      | The deployment ID
 
 ## Response
 

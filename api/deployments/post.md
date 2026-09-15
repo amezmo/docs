@@ -31,7 +31,7 @@ Parameter   | Type   | In     | Required    | Description
 api_key     | string | header | Yes         | Your [API key](../authentication/index.md).
 environment | string | body   | Yes         | The [environment](../environments/index.md) name for this deployment. This can be `production` or `staging`.
 instance_id | string | uri    | Yes         | The ID of the instance that this deployment will be executed on.
-archive     | body   | uri    | Yes         | The archive file that contains the source code of your application. This can be a zip or a tar archive. The maximum size of an archive file is 512MB.
+archive     | file   | body   | Yes         | The archive file that contains the source code of your application. This can be a zip or a tar archive. The maximum size of an archive file is 512MB.
 repo_owner  | string | body   | Conditional | The repository owner. Required if `repo_name` is provided.
 repo_name   | string | body   | Conditional | The repository name. Required if `repo_owner` is provided.
 branch      | string | body   | No          | The name of the branch

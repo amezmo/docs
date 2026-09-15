@@ -26,21 +26,12 @@ Read the current values first with
 [Get a cron entry](get-cron-entry.md), so a partial update starts from what is
 actually on the instance.
 
-`expression` accepts a five-field POSIX cron expression or one of the aliases
-below. Not every expression the API accepts runs on a Linux instance: see
-[custom cron expressions](../../cron/custom-expressions.md) for the extensions to
-avoid.
-
-Alias              | Expression    | Runs
------------------- | ------------- | -------------------------
-`@minutely`        | `* * * * *`   | Every minute
-`@every_5_minutes` | `*/5 * * * *` | Every five minutes
-`@hourly`          | `0 * * * *`   | At the top of every hour
-`@daily`           | `0 0 * * *`   | Every day at midnight
-`@weekly`          | `0 0 * * 0`   | Every Sunday at midnight
-`@monthly`         | `0 0 1 * *`   | On the first of every month
-`@yearly`          | `0 0 1 1 *`   | On January 1
-`@annually`        | `0 0 1 1 *`   | On January 1
+`expression` accepts a five-field POSIX cron expression or one of the
+[schedule aliases](../../cron/schedules.md), such as `@minutely` or
+`@every_5_minutes`. Not every expression the API accepts runs on a Linux
+instance: see
+[custom cron expressions](../../cron/custom-expressions.md) for the extensions
+to avoid.
 
 The response reports the resolved five-field `expression` along with the
 matching `expression_alias`, so an alias you send back comes out as both.

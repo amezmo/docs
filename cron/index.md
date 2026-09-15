@@ -9,6 +9,12 @@ Crons are executed from your applications [current release](../deployments/direc
 
 ## In This Section
 
+### Cron Schedules
+
+An alias such as `@daily` or a five-field expression decides when an entry
+runs. [Cron schedules](schedules.md) lists every alias with the expression it
+resolves to, in the dashboard and over the API.
+
 ### Custom Cron Expressions
 
 When no alias fits, write a five-field expression instead.
@@ -21,29 +27,6 @@ runs on your instance.
 Change an entry's script or its schedule after you create it, from the dashboard
 or the API. [Editing a cron entry](editing-entries.md) covers what you can change,
 why the name is fixed, and when the change reaches your instance.
-
-## Schedules
-A cron schedule represents when the task will be executed. You may use an alias for the following cron expressions.
-
-`@minutely`
-: Execute the task once every minute.
-
-`@hourly`
-: Execute the task once every hour.
-
-`@monthly`
-: Execute the task once every month.
-
-`@weekly`
-: Execute the task once every week.
-
-`@yearly`
-: Execute the task once every year.
-
-For advanced use cases,
-Amezmo supports [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07).
-See [custom cron expressions](custom-expressions.md) for the field order, the
-operators and the extensions to avoid.
 
 ## Scripts
 

@@ -7,8 +7,8 @@
 ## Parameters
 Parameter   | Type   | In  | Required | Description
 ----------- | ------ | --- | -------- | ---------------
-instance_id | string | uri | No       | The instance ID
-worker_id   | string | uri | No       | The worker ID
+instance_id | string | uri | Yes      | The instance ID
+worker_id   | string | uri | Yes      | The worker ID
 
 
 

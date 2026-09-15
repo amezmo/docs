@@ -1,7 +1,7 @@
 # Custom cron expressions
 
 {.lead}
-When none of the [schedule aliases](index.md#schedules) fits, write a five-field
+When none of the [schedule aliases](schedules.md) fits, write a five-field
 cron expression instead. This page covers the syntax Amezmo accepts, the parts
 of it that look valid but never run, and a set of expressions you can copy.
 
@@ -39,14 +39,14 @@ in a step, so write `1-5` rather than `MON-FRI/1`.
 : Every value of the field. `* * * * *` is every minute of every day.
 
 `,`
-: A list. `0 8,12,18 * * *` runs at 08:00, 12:00 and 18:00.
+: A list. `0 8,12,18 * * *` runs at 08:00, 12:00, and 18:00.
 
 `-`
 : A range. `0 9-17 * * *` runs hourly from 09:00 through 17:00, inclusive.
 
 `/`
-: A step through a range. `*/15 * * * *` runs at minutes 0, 15, 30 and 45.
-`0 9-17/2 * * *` runs at 09:00, 11:00, 13:00, 15:00 and 17:00.
+: A step through a range. `*/15 * * * *` runs at minutes 0, 15, 30, and 45.
+`0 9-17/2 * * *` runs at 09:00, 11:00, 13:00, 15:00, and 17:00.
 
 A step counts from the start of its range, not from the current time. `*/40` in
 the minute field fires at minute 0 and minute 40, then waits 20 minutes, because

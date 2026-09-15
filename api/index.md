@@ -24,6 +24,11 @@ envelope, the error types worth branching on, and the codes behind them.
 
 ## Core Resources
 
+### Accounts
+
+The user behind your API key. [Account endpoints](accounts/index.md) get the
+current user.
+
 ### Workers
 
 Start, stop, and restart [worker processes](workers/index.md) through the API.

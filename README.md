@@ -1,11 +1,10 @@
 # Amezmo Documentation
 
 [![Docs lint](https://github.com/amezmo/docs/actions/workflows/docs-lint.yml/badge.svg)](https://github.com/amezmo/docs/actions/workflows/docs-lint.yml)
-[![Pages](https://img.shields.io/badge/pages-146-blue)](https://www.amezmo.com/docs/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/amezmo/docs/pulls)
 
-The source for the [Amezmo](https://www.amezmo.com) docs: 146 pages on
-zero-downtime PHP hosting, from your first `git push` to tuning Nginx, OPcache
+The source for the [Amezmo](https://www.amezmo.com) docs: everything on
+zero-downtime PHP hosting, from your first `git push` to tuning Nginx, OPcache,
 and Redis on a production instance. Published at
 [amezmo.com/docs](https://www.amezmo.com/docs/).
 
@@ -41,7 +40,7 @@ Good first contributions:
 Read the
 [contributor rulebook](CLAUDE.md)
 before a larger change. It covers page layout, the API reference format, the
-changelog format and the house writing style. It's written for Claude Code, and
+changelog format, and the house writing style. It's written for Claude Code, and
 it's the same rulebook a human needs.
 
 ## Local Checks
@@ -90,8 +89,8 @@ auto-discovered by a nav generator.
 | [Instances](instances/index.md) | Dedicated and full-stack servers, scaling, private networking |
 | [Deployments](deployments/index.md) | Atomic zero-downtime releases, hooks, instant rollbacks |
 | [Databases](databases/index.md) | Managed MySQL, backups, restores between environments |
-| [REST API](api/index.md) | 32 endpoint pages for automating the dashboard |
-| [How-to guides](how-to-guides/index.md) | Laravel, Craft CMS, Drupal and friends |
+| [REST API](api/index.md) | Endpoint reference for automating the dashboard |
+| [How-to guides](how-to-guides/index.md) | Laravel, Craft CMS, Drupal, and friends |
 | [Domains](domains/index.md), [Cron](cron/index.md), [Workers](workers/index.md) | The rest of the platform surface |
 
 ## Contributors

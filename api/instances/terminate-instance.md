@@ -8,7 +8,7 @@ API requests for this instance will respond with 404 not found.
 ## Parameters
 Parameter   | Type   | In  | Required | Description
 ----------- | ------ | --- | -------- | ---------------
-instance_id | string | uri | No       | The instance id
+instance_id | string | uri | Yes      | The instance id
 
 ## Code samples
 
