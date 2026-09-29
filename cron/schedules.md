@@ -20,7 +20,10 @@ Alias              | Expression    | Runs
 `@annually`        | `0 0 1 1 *`   | On January 1
 
 `@yearly` and `@annually` resolve to the same expression, so pick either.
-The dashboard's schedule dropdown offers the same aliases.
+The dashboard's schedule dropdown offers the same aliases, both when you
+[create an entry](creating-entries.md) and when you edit one. Whichever you
+pick, the runs it produces append to the entry's
+[log file](viewing-logs.md).
 
 ## Custom Expressions
 
