@@ -22,9 +22,10 @@ IMG_SRC_RE = re.compile(r"""<img\b[^>]*\bsrc\s*=\s*["']([^"']*)["']""", re.IGNOR
 
 def doc_files(root):
     files = set()
-    for dirpath, dirnames, names in os.walk(root):
-        if ".git" in dirpath.split(os.sep):
-            continue
+    for dirpath, dirs, names in os.walk(root):
+        # Hidden directories (.git, .github, .claude, ...) never hold
+        # published pages.
+        dirs[:] = [d for d in dirs if not d.startswith(".")]
         for name in names:
             if name.endswith(".md"):
                 files.add(os.path.relpath(os.path.join(dirpath, name), root))

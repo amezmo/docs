@@ -13,7 +13,8 @@ is also how .github/backlink-ignore.txt entries are matched.
 
 Excluded:
   - index/landing pages (index.md) -- their nav is one-directional by design
-  - non-published files (CLAUDE.md, README.md, anything under .github/)
+  - non-published files (CLAUDE.md, README.md, anything in a hidden
+    directory such as .github/ or .claude/)
   - pairs listed in .github/backlink-ignore.txt (known-intentional one-ways)
 
 Exit code is always 0.
@@ -35,10 +36,10 @@ META_FILES = {"CLAUDE.md", "README.md"}
 
 def doc_files(root):
     files = set()
-    for dirpath, _dirs, names in os.walk(root):
-        parts = dirpath.split(os.sep)
-        if ".git" in parts or ".github" in parts:
-            continue
+    for dirpath, dirs, names in os.walk(root):
+        # Hidden directories (.git, .github, .claude, ...) never hold
+        # published pages.
+        dirs[:] = [d for d in dirs if not d.startswith(".")]
         for name in names:
             if name.endswith(".md") and name not in META_FILES:
                 files.add(os.path.relpath(os.path.join(dirpath, name), root))
