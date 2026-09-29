@@ -9,6 +9,12 @@ Crons are executed from your applications [current release](../deployments/direc
 
 ## In This Section
 
+### Creating a Cron Entry
+
+Name an entry, pick its schedule, and write the script it runs.
+[Creating a cron entry](creating-entries.md) covers the naming rules, the
+environment an entry belongs to, and the small environment the script runs in.
+
 ### Cron Schedules
 
 An alias such as `@daily` or a five-field expression decides when an entry
@@ -27,6 +33,13 @@ runs on your instance.
 Change an entry's script or its schedule after you create it, from the dashboard
 or the API. [Editing a cron entry](editing-entries.md) covers what you can change,
 why the name is fixed, and when the change reaches your instance.
+
+### Viewing Cron Logs
+
+Every run appends its output to the entry's own log file.
+[Viewing cron logs](viewing-logs.md) covers where that file lives, how much of
+it the dashboard shows, how to download or export it, and what an empty log
+usually means.
 
 ## Scripts
 

@@ -50,6 +50,7 @@
 /docs/php/versions -> /docs/how-to-guides/changing-php-versions
 /docs/php/composer -> /docs/instances/ssh
 /docs/cron/custom-expressions -> /docs/instances/ssh
+/docs/cron/viewing-logs -> /docs/instances/ssh
 
 # Nginx location-blocks references the domain routing/rules and http-auth pages;
 # those describe separate features and don't need to point back.
@@ -76,6 +77,7 @@
 /docs/npm/package-caching -> /docs/deployments/directories
 /docs/workers/reloading -> /docs/deployments/directories
 /docs/cron/editing-entries -> /docs/deployments/directories
+/docs/cron/creating-entries -> /docs/deployments/directories
 /docs/deployments/directories -> /docs/deployments/hooks/deploy-success
 /docs/configuration/dotenv -> /docs/deployments/releases
 /docs/deployments/hooks/before-pull -> /docs/deployments/releases

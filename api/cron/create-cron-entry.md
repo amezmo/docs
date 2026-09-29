@@ -47,7 +47,9 @@ code `cron_entry_exists`. An environment your instance does not have returns
 cron returns `422` with `feature_not_supported`. See [Errors](../errors.md)
 for the shape of all three.
 
-Delete a cron entry from the dashboard, under **Cron** on your instance.
+To create the same entry from the dashboard instead, see
+[creating a cron entry](../../cron/creating-entries.md). Delete a cron entry
+from the dashboard too, under **Cron** on your instance.
 
 ## Code samples
 

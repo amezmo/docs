@@ -137,7 +137,8 @@ run already underway finishes on the old schedule's terms. See
 
 ## Checking your work
 
-The entry page streams the task's log, so the fastest way to confirm an
-expression is to save it, wait for the first window, and watch the log. Give a
-new script a frequent schedule such as `@minutely` while you're testing it, then
-switch to the real one.
+The entry page shows the end of the task's
+[log file](viewing-logs.md), so the fastest way to confirm an expression is to
+save it, wait for the first window, and reload the page. Give a
+[new entry](creating-entries.md) a frequent schedule such as `@minutely` while
+you're testing it, then switch to the real one.

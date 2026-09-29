@@ -10,8 +10,9 @@ Open your instance, go to **Cron**, and open the entry you want to change. Click
 **Edit** in the entry header, or pick **Edit** from the entry's menu in the cron
 list.
 
-The edit form is the same one you used to create the entry. Change the schedule,
-the script, or both, then click **Save**.
+The edit form is the same one you
+[used to create the entry](creating-entries.md). Change the schedule, the
+script, or both, then click **Save**.
 
 ## What you can change
 
@@ -54,8 +55,9 @@ run after the update lands uses the new one.
 
 > [!NOTE]
 > Editing the schedule doesn't run the task. If you want to confirm a new script
-> works, give it a frequent schedule such as `@minutely`, watch the log on the
-> entry page, then set the schedule you actually want.
+> works, give it a frequent schedule such as `@minutely`,
+> [watch the log](viewing-logs.md) on the entry page, then set the schedule you
+> actually want.
 
 ## Editing over the API
 

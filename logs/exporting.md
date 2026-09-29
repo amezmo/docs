@@ -36,3 +36,5 @@ export schedule.
 ## See Also
 
 - [Logs](index.md)
+- [Viewing cron logs](../cron/viewing-logs.md), which export the same way from
+  the cron entry's page
