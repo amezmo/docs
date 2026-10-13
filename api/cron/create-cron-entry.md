@@ -43,7 +43,7 @@ The response carries the entry immediately, including the `id` you use with
 
 A name already taken in the same environment returns `409 Conflict` with the
 code `cron_entry_exists`. An environment your instance does not have returns
-`422` with `business_logic_error`. An instance whose type does not include
+`404` with `unknown_resource_error`. An instance whose type does not include
 cron returns `422` with `feature_not_supported`. See [Errors](../errors.md)
 for the shape of all three.
 
