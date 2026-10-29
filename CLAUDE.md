@@ -89,6 +89,7 @@ CI runs `.github/workflows/docs-lint.yml` on every push and PR. Run these locall
 - Reciprocal backlinks: `python3 .github/scripts/check_backlinks.py` (warn-only)
 - Spelling: `codespell --config .codespellrc`
 - Images use absolute URLs: `python3 .github/scripts/check_image_paths.py`
+- Lexical report: `python3 .github/scripts/lexical_report.py` (report-only). Counts function words and content words in the prose and prints lexical density, the top words of each kind, and the function-word share per section. The function-word list lives in the script. In CI it also reports auxiliary and lexical verb distributions using spaCy, installed into a virtual environment from a hashed lock. Edit the top-level pins in `.github/scripts/lexical-requirements.in`, then regenerate `.github/scripts/lexical-requirements.txt` with the `uv pip compile` command at its top. CI fails if the two drift (`check_lexical_lock.py`). Locally, without spaCy, the verb sections are skipped.
 
 **Internal links are reciprocal.** If a content page links to another content page, the target should link back with a contextual link. Index and landing pages (`index.md`) are exempt, since their nav is one-directional by design.
 

@@ -1,0 +1,8 @@
+# Top-level dependencies of the verb analysis in lexical_report.py. CI installs
+# them into a virtual environment from the hashed lock file generated from this
+# one, lexical-requirements.txt. Edit this file, then regenerate the lock with
+# the command at the top of lexical-requirements.txt. You don't need either
+# locally: without spaCy the report skips the verb sections.
+spacy==3.8.16
+# The model's spaCy range is >=3.8.0,<3.9.0, so bump the two together.
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl#sha256=1932429db727d4bff3deed6b34cfc05df17794f4a52eeb26cf8928f7c1a0fb85
