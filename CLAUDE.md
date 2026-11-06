@@ -14,7 +14,7 @@ To preview a page, open the `.md` file in an editor's Markdown preview (VS Code 
 
 Each top-level directory is a product area (`instances/`, `databases/`, `deployments/`, `domains/`, `environments/`, `secrets/`, `workers/`, `configuration/`, `php/`, `nginx/`, `caching/`, `solr/`, `teams/`, `billing/`, `policies/`, `how-to-guides/`, `api/`, ...). `index.md` at the repo root is the docs home page.
 
-Every directory has an `index.md` that acts as its landing page and links out to the child pages in that section. When you add a new page, add a link to it from the section's `index.md` (and, for top-level sections, keep the root `index.md` and `how-to-guides/index.md` in sync where relevant) — pages are not auto-discovered by a nav generator.
+Every directory has an `index.md` that acts as its landing page and links out to the child pages in that section. When you add a new page, add a link to it from the section's `index.md` (and, for top-level sections, keep the root `index.md` in sync where relevant). Pages are not auto-discovered by a nav generator, with one exception: a section index that uses the `{{< section >}}` directive (see "Generated Index" below) lists its children from the dashboard's menu tree and needs no entry.
 
 ### Landing Page Section Index
 
@@ -36,6 +36,23 @@ Rules for that block:
 - **Heading text is plain, never a link.** The site's heading renderer keeps heading text outside the permalink anchor on purpose, because Safari Reader Mode discards any heading whose entire content is a single link. Put the link in the excerpt prose instead.
 - **One or two sentences per child, written from that page's actual content**, not a restatement of its title. Say what the reader gets, so the excerpt earns the space the bare link used to occupy.
 - **Link text describes the destination** (`[Encrypt your backups](encryption.md)`, not `[here](encryption.md)`), per WCAG 2.2 SC 2.4.4.
+
+#### Generated Index: the `{{< section >}}` Directive
+
+Where a landing page wants a plain list of its child pages and no excerpts, write the directive on a line of its own instead of a hand-written bullet list:
+
+```markdown
+## In This Section
+
+{{< section >}}
+```
+
+The site replaces it with a bullet list of links to every direct child of the page, in menu order, labeled with the menu names. The list comes from the dashboard's documentation tree (`DocumentationMenuService.php`), the same source as the left rail, so it is complete by construction and a new page appears in it as soon as the page is registered. It is the Hugo `section` shortcode the Grafana docs use, without its parameters.
+
+- **Spell it exactly `{{< section >}}`**, spaces included, as the only text in its paragraph. Without the spaces `<section>` is an HTML tag and the directive is not recognized. Inside a sentence, inline code, or a fenced block it stays literal.
+- **GitHub and editor previews show the literal directive**, not the list. Only the site expands it.
+- **Don't pair it with a hand-written index of the same children** on one page. Pick the `###` excerpt run when each child deserves a sentence, and the directive when the names say enough (`how-to-guides/index.md`).
+- A bullet list needs no parent heading for the outline, so `## In This Section` is optional above the directive. Use it when the page has other `##` sections, so the list gets an entry in "On this page".
 
 This applies to a section's own child pages. **Leave "See Also" and "Resources" lists as bullet lists**: cross-references to other sections, marketing guides, YouTube, or the dashboard are not sub-sections of the page, and promoting them to headings puts them in the page outline and the "On this page" TOC as though they were.
 
@@ -79,17 +96,19 @@ Pages are rendered by the site's **league/commonmark** parser (configured in the
 - **`AttributesExtension`** — the `{.img-enlargable}` on images (enables the click-to-enlarge lightbox) and the `{title="..."}` code-block captions.
 - **`DescriptionListExtension`** — definition lists written as a term line followed by a `: definition` line (used in `databases/index.md`, `cron/index.md`, `environments/trusted-ip-addresses.md`).
 
+The `{{< section >}}` directive is expanded by the dashboard app's `App\Markdown\SectionIndexExpander`, which the docs controllers add to the environment per page. A dashboard build without it renders the directive as literal text.
+
 Also assumed: raw-HTML passthrough for `<details>`/`<summary>` collapsibles (FAQs and long reference blocks), and a **custom GitHub-alert parser**. Write callouts using GitHub alert syntax — `> [!NOTE]` (also `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]`, `[!CAUTION]`) on the blockquote's first line, with the content on the following `>` lines. Use these instead of a bold `**Note**:` prefix; the alert type renders its own label.
 
 ## Validation and the backlink rule
 
-CI runs `.github/workflows/docs-lint.yml` on every push and PR. Run these locally from the repo root before proposing changes:
+CI runs `.github/workflows/docs-lint.yml` on every PR and on every push to `master`. To run it by hand on a branch, for example to get the lexical report with spaCy, use `gh workflow run docs-lint.yml --ref <branch>`. Run these locally from the repo root before proposing changes:
 
 - Internal links resolve: `python3 .github/scripts/check_links.py` (fails the build)
 - Reciprocal backlinks: `python3 .github/scripts/check_backlinks.py` (warn-only)
 - Spelling: `codespell --config .codespellrc`
 - Images use absolute URLs: `python3 .github/scripts/check_image_paths.py`
-- Lexical report: `python3 .github/scripts/lexical_report.py` (report-only). Counts function words and content words in the prose and prints lexical density, the top words of each kind, and the function-word share per section. The function-word list lives in the script. In CI it also reports auxiliary and lexical verb distributions using spaCy, installed into a virtual environment from a hashed lock. Edit the top-level pins in `.github/scripts/lexical-requirements.in`, then regenerate `.github/scripts/lexical-requirements.txt` with the `uv pip compile` command at its top. CI fails if the two drift (`check_lexical_lock.py`). Locally, without spaCy, the verb sections are skipped.
+- Lexical report: `python3 .github/scripts/lexical_report.py` (report-only). Counts function words and content words in the prose and prints lexical density, the top words of each kind, and the function-word share per section. The function-word list lives in the script. In CI it also reports auxiliary and lexical verb distributions using spaCy, installed into a virtual environment from a hashed lock. Edit the top-level pins in `.github/scripts/lexical-requirements.in`, then regenerate `.github/scripts/lexical-requirements.txt` with the `uv pip compile` command at its top. CI fails if the two drift (`check_lexical_lock.py`). Locally, without spaCy, the verb sections are skipped. Pass file paths to report on those files instead of the published pages; CI does this for `README.md`, which the default run excludes.
 
 **Internal links are reciprocal.** If a content page links to another content page, the target should link back with a contextual link. Index and landing pages (`index.md`) are exempt, since their nav is one-directional by design.
 

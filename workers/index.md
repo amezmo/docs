@@ -7,6 +7,10 @@ Common use cases for workers are background processing queues, email queues, and
 For PHP applications, Amezmo can automatically create the queue command for
 [Laravel queues](https://laravel.com/docs/queues)
 
+## In This Section
+
+{{< section >}}
+
 ## Managing workers
 Amezmo logs worker output to a standard location in your container. This is located in `/backups/logs`.
 Of course, the exact log path will be different for each of your workers, but you can always view the exact path

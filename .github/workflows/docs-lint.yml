@@ -4,6 +4,9 @@ on:
   push:
     branches: [master]
   pull_request:
+  # Run by hand from the Actions tab or `gh workflow run docs-lint.yml`, for
+  # example to get the lexical report with spaCy without pushing a commit.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,7 +16,7 @@ jobs:
     name: Internal links
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Check that internal /docs links resolve
         run: python3 .github/scripts/check_links.py
 
@@ -21,7 +24,7 @@ jobs:
     name: Spelling
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Install codespell
         run: sudo apt-get update && sudo apt-get install -y codespell
       - name: Run codespell
@@ -31,7 +34,7 @@ jobs:
     name: Image paths
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Check that all Markdown images use absolute URLs
         run: python3 .github/scripts/check_image_paths.py
 
@@ -39,7 +42,7 @@ jobs:
     name: Backlinks (warn-only)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Report one-directional internal links (never fails)
         run: python3 .github/scripts/check_backlinks.py
 
@@ -47,7 +50,7 @@ jobs:
     name: Lexical report (report-only)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
@@ -62,3 +65,5 @@ jobs:
             --require-hashes --no-deps -r .github/scripts/lexical-requirements.txt
       - name: Count function, content, auxiliary, and lexical verb words (never fails)
         run: '"$RUNNER_TEMP/lexical-venv/bin/python" .github/scripts/lexical_report.py'
+      - name: Report on README.md, which the run above excludes (never fails)
+        run: '"$RUNNER_TEMP/lexical-venv/bin/python" .github/scripts/lexical_report.py README.md'

@@ -15,6 +15,9 @@ lemma so "run", "runs", and "running" count together:
     "have created", "don't")
   - lexical verbs: tokens tagged VERB ("deploy", "create", "run")
 
+The parser gives the "to" of an infinitive ("to deploy") the aux label as
+well. It is a particle, not a verb, so it is left out.
+
 be/have/do used as the main verb ("is ready", "has a database") fall in
 neither and get a line of their own. The parser is what makes that split:
 en_core_web_sm tags every form of be/have/do as AUX whatever its role.
@@ -30,8 +33,16 @@ separate entries.
 Excluded, same as check_links.py: the CLAUDE.md/README.md meta files and
 anything in a hidden directory such as .github/ or .claude/.
 
-Exit code is always 0.
+Usage:
+  lexical_report.py              # every published page
+  lexical_report.py README.md    # only the given files, excluded or not
+
+CI runs it both ways, so README.md gets a report of its own without its words
+counting toward the published prose.
+
+Exit code is 0, except for a path argument that is not a file.
 """
+import argparse
 import os
 import re
 import sys
@@ -42,6 +53,8 @@ META_FILES = {"CLAUDE.md", "README.md"}
 TOP_N = 25
 SPACY_MODEL = "en_core_web_sm"
 AUX_DEPS = {"aux", "auxpass"}
+# Part of speech of the infinitive marker "to", which shares the aux label.
+INFINITIVE_MARKER_POS = "PART"
 
 # Closed-class words by category. A word belongs to one category only.
 FUNCTION_WORDS = {
@@ -75,7 +88,7 @@ CATEGORY_OF = {w: cat for cat, words in FUNCTION_WORDS.items() for w in words.sp
 # Applied in order: each pattern removes markup or keeps only its visible text.
 STRIP = [
     (re.compile(r"^(```|~~~).*?^\1", re.M | re.S), " "),   # fenced code
-    (re.compile(r"`[^`\n]*`"), " "),                       # inline code
+    (re.compile(r"(`+)[^\n]*?\1"), " "),                   # inline code
     (re.compile(r"<!--.*?-->", re.S), " "),
     (re.compile(r"<[^>]+>"), " "),                         # HTML tags
     (re.compile(r"\{[^}\n]*\}"), " "),                     # {title=...}, {.img-enlargable}
@@ -125,6 +138,14 @@ def blocks(text):
                     yield cell
 
 
+def repo_file(arg):
+    """Parse a path argument into a path relative to the repo root."""
+    path = os.path.abspath(arg)
+    if not os.path.isfile(path):
+        raise argparse.ArgumentTypeError(f"not a file: {arg}")
+    return os.path.relpath(path, ROOT)
+
+
 def load_parser():
     try:
         import spacy
@@ -157,12 +178,17 @@ def write_distribution(sm, heading, counter, limit=None):
 
 
 def main():
+    args = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    args.add_argument("files", nargs="*", type=repo_file,
+                      help="report on these files instead of every published page")
+    given = args.parse_args().files
     nlp = load_parser()
     function, content = Counter(), Counter()
     auxiliary, lexical, main_primary = Counter(), Counter(), Counter()
     modal_lemmas = set()
     sections = {}  # section -> [all words, function words]
-    files = doc_files(ROOT)
+    files = given or doc_files(ROOT)
+    scope = ", ".join(given) or "published docs"
     for rel in files:
         with open(os.path.join(ROOT, rel), encoding="utf-8") as fh:
             text = prose(fh.read())
@@ -178,6 +204,8 @@ def main():
         for doc in nlp.pipe(blocks(text)):
             for tok in doc:
                 lemma = tok.lemma_.lower()
+                if tok.pos_ == INFINITIVE_MARKER_POS:
+                    continue
                 if tok.dep_ in AUX_DEPS:
                     auxiliary[lemma] += 1
                     if tok.tag_ == "MD":
@@ -235,7 +263,7 @@ def main():
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as sm:
-            sm.write("### Lexical report (report-only)\n\n")
+            sm.write(f"### Lexical report: {scope} (report-only)\n\n")
             sm.write("".join(f"- {line}\n" for line in lines + verb_lines))
             sm.write("\n| Function word | Count | | Content word | Count |\n"
                      "|---|---|---|---|---|\n")

@@ -11,6 +11,10 @@ advancing to the next step in the pipeline. In the case of a negative
 success condition evaluation, your deployment pipeline safely terminates leaving
 your active, or live site unaffected.
 
+## In This Section
+
+{{< section >}}
+
 ## Deployment pipeline success criteria
 
 You can keep your production site highly available to your users or
