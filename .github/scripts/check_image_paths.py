@@ -6,6 +6,10 @@ repo. A bare or local path -- e.g. ![x](/assets/foo.png), a relative path, or a
 raw <img src="/assets/..."> -- won't resolve on the published site, so this gate
 rejects any image whose URL is not an absolute http(s):// URL.
 
+README.md is exempt. GitHub renders it and the site never does, so its images
+are relative paths into the repo (.github/assets/), which resolve on every
+branch and fork. check_links.py verifies that those paths exist.
+
 Exits non-zero and prints every offending reference, so it can gate CI.
 """
 import os
@@ -19,6 +23,9 @@ MD_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(\s*([^)\s]+)")
 # Raw HTML image  <img ... src="url">
 IMG_SRC_RE = re.compile(r"""<img\b[^>]*\bsrc\s*=\s*["']([^"']*)["']""", re.IGNORECASE)
 
+# Rendered by GitHub only, never published, so relative image paths are fine.
+GITHUB_ONLY_FILES = {"README.md"}
+
 
 def doc_files(root):
     files = set()
@@ -27,7 +34,7 @@ def doc_files(root):
         # published pages.
         dirs[:] = [d for d in dirs if not d.startswith(".")]
         for name in names:
-            if name.endswith(".md"):
+            if name.endswith(".md") and name not in GITHUB_ONLY_FILES:
                 files.add(os.path.relpath(os.path.join(dirpath, name), root))
     return files
 

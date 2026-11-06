@@ -33,8 +33,13 @@ written from the page's content. The heading text is plain, never a link;
 the link goes in the excerpt prose. Keep the entries in reading order: this
 order should match the menu order you register in step 4.
 
-For top-level sections, check whether the root `index.md` or
-`how-to-guides/index.md` should also point at the page.
+Skip the entry when the section index lists its children with the
+`{{< section >}}` directive (`how-to-guides/index.md`, `deployments/index.md`,
+`workers/index.md`). The site builds that list from the menu tree, so the page
+appears in it once you register it in step 4.
+
+For top-level sections, check whether the root `index.md` should also point
+at the page.
 
 ## 3. Make Content Links Reciprocal
 
@@ -97,8 +102,9 @@ $ codespell --config .codespellrc
 ## Checklist
 
 - [ ] Page written per CLAUDE.md conventions
-- [ ] `###` excerpt entry in the section's `index.md`
-- [ ] Root `index.md` / `how-to-guides/index.md` updated if relevant
+- [ ] `###` excerpt entry in the section's `index.md`, unless that index uses
+      `{{< section >}}`
+- [ ] Root `index.md` updated if relevant
 - [ ] Backlinks reciprocal, or the one-way recorded in
       `.github/backlink-ignore.txt`
 - [ ] `DocumentationCategory` entry added in `DocumentationMenuService.php`,

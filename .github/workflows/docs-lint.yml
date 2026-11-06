@@ -62,3 +62,5 @@ jobs:
             --require-hashes --no-deps -r .github/scripts/lexical-requirements.txt
       - name: Count function, content, auxiliary, and lexical verb words (never fails)
         run: '"$RUNNER_TEMP/lexical-venv/bin/python" .github/scripts/lexical_report.py'
+      - name: Report on README.md, which the run above excludes (never fails)
+        run: '"$RUNNER_TEMP/lexical-venv/bin/python" .github/scripts/lexical_report.py README.md'

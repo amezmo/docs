@@ -30,8 +30,16 @@ separate entries.
 Excluded, same as check_links.py: the CLAUDE.md/README.md meta files and
 anything in a hidden directory such as .github/ or .claude/.
 
-Exit code is always 0.
+Usage:
+  lexical_report.py              # every published page
+  lexical_report.py README.md    # only the given files, excluded or not
+
+CI runs it both ways, so README.md gets a report of its own without its words
+counting toward the published prose.
+
+Exit code is 0, except for a path argument that is not a file.
 """
+import argparse
 import os
 import re
 import sys
@@ -75,7 +83,7 @@ CATEGORY_OF = {w: cat for cat, words in FUNCTION_WORDS.items() for w in words.sp
 # Applied in order: each pattern removes markup or keeps only its visible text.
 STRIP = [
     (re.compile(r"^(```|~~~).*?^\1", re.M | re.S), " "),   # fenced code
-    (re.compile(r"`[^`\n]*`"), " "),                       # inline code
+    (re.compile(r"(`+)[^\n]*?\1"), " "),                   # inline code
     (re.compile(r"<!--.*?-->", re.S), " "),
     (re.compile(r"<[^>]+>"), " "),                         # HTML tags
     (re.compile(r"\{[^}\n]*\}"), " "),                     # {title=...}, {.img-enlargable}
@@ -125,6 +133,14 @@ def blocks(text):
                     yield cell
 
 
+def repo_file(arg):
+    """Parse a path argument into a path relative to the repo root."""
+    path = os.path.abspath(arg)
+    if not os.path.isfile(path):
+        raise argparse.ArgumentTypeError(f"not a file: {arg}")
+    return os.path.relpath(path, ROOT)
+
+
 def load_parser():
     try:
         import spacy
@@ -157,12 +173,17 @@ def write_distribution(sm, heading, counter, limit=None):
 
 
 def main():
+    args = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    args.add_argument("files", nargs="*", type=repo_file,
+                      help="report on these files instead of every published page")
+    given = args.parse_args().files
     nlp = load_parser()
     function, content = Counter(), Counter()
     auxiliary, lexical, main_primary = Counter(), Counter(), Counter()
     modal_lemmas = set()
     sections = {}  # section -> [all words, function words]
-    files = doc_files(ROOT)
+    files = given or doc_files(ROOT)
+    scope = ", ".join(given) or "published docs"
     for rel in files:
         with open(os.path.join(ROOT, rel), encoding="utf-8") as fh:
             text = prose(fh.read())
@@ -235,7 +256,7 @@ def main():
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as sm:
-            sm.write("### Lexical report (report-only)\n\n")
+            sm.write(f"### Lexical report: {scope} (report-only)\n\n")
             sm.write("".join(f"- {line}\n" for line in lines + verb_lines))
             sm.write("\n| Function word | Count | | Content word | Count |\n"
                      "|---|---|---|---|---|\n")

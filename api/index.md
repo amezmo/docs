@@ -22,6 +22,11 @@ covers where to find your key and how the examples store it in an
 Every failure returns the same JSON body. [Errors](errors.md) documents that
 envelope, the error types worth branching on, and the codes behind them.
 
+### Changelog
+
+The [API changelog](changelog.md) lists changes to the API by date, newest
+first, with breaking changes under their own label.
+
 ## Core Resources
 
 ### Accounts
