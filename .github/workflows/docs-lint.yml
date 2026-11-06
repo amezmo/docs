@@ -4,6 +4,9 @@ on:
   push:
     branches: [master]
   pull_request:
+  # Run by hand from the Actions tab or `gh workflow run docs-lint.yml`, for
+  # example to get the lexical report with spaCy without pushing a commit.
+  workflow_dispatch:
 
 permissions:
   contents: read

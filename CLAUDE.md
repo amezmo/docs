@@ -102,7 +102,7 @@ Also assumed: raw-HTML passthrough for `<details>`/`<summary>` collapsibles (FAQ
 
 ## Validation and the backlink rule
 
-CI runs `.github/workflows/docs-lint.yml` on every push and PR. Run these locally from the repo root before proposing changes:
+CI runs `.github/workflows/docs-lint.yml` on every PR and on every push to `master`. To run it by hand on a branch, for example to get the lexical report with spaCy, use `gh workflow run docs-lint.yml --ref <branch>`. Run these locally from the repo root before proposing changes:
 
 - Internal links resolve: `python3 .github/scripts/check_links.py` (fails the build)
 - Reciprocal backlinks: `python3 .github/scripts/check_backlinks.py` (warn-only)
