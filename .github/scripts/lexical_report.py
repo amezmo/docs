@@ -15,6 +15,9 @@ lemma so "run", "runs", and "running" count together:
     "have created", "don't")
   - lexical verbs: tokens tagged VERB ("deploy", "create", "run")
 
+The parser gives the "to" of an infinitive ("to deploy") the aux label as
+well. It is a particle, not a verb, so it is left out.
+
 be/have/do used as the main verb ("is ready", "has a database") fall in
 neither and get a line of their own. The parser is what makes that split:
 en_core_web_sm tags every form of be/have/do as AUX whatever its role.
@@ -50,6 +53,8 @@ META_FILES = {"CLAUDE.md", "README.md"}
 TOP_N = 25
 SPACY_MODEL = "en_core_web_sm"
 AUX_DEPS = {"aux", "auxpass"}
+# Part of speech of the infinitive marker "to", which shares the aux label.
+INFINITIVE_MARKER_POS = "PART"
 
 # Closed-class words by category. A word belongs to one category only.
 FUNCTION_WORDS = {
@@ -199,6 +204,8 @@ def main():
         for doc in nlp.pipe(blocks(text)):
             for tok in doc:
                 lemma = tok.lemma_.lower()
+                if tok.pos_ == INFINITIVE_MARKER_POS:
+                    continue
                 if tok.dep_ in AUX_DEPS:
                     auxiliary[lemma] += 1
                     if tok.tag_ == "MD":
