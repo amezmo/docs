@@ -28,7 +28,7 @@ lists its date, code, amount, and expiration.
 
 Codes are case-sensitive, so check the spelling and remove any stray spaces
 first. If a code reports that it can't be redeemed, it probably expired or you
-already used it, so [contact support](../support/index.md) if you think it
+already used it, so [contact support](../support.md) if you think it
 should still work. You can't redeem a code that you generated yourself.
 
 ## Balances

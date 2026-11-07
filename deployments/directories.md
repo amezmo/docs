@@ -71,4 +71,4 @@ When a deployment step fails, the process will be aborted. This means that your
 
 
 ## Resources
-- [Storage directory](../storage/index.md)
+- [Storage directory](../storage.md)

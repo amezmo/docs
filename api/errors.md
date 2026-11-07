@@ -92,5 +92,5 @@ $ curl -s https://api.amezmo.com/v1/instances/{instance_id}/cron/412 \
 ## Reporting a problem
 
 `request_id` identifies one request on Amezmo's side. Include it when you write
-to [support](../support/index.md), along with the endpoint and roughly when you
+to [support](../support.md), along with the endpoint and roughly when you
 called it.

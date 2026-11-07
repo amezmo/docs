@@ -96,3 +96,11 @@
 
 # SSH troubleshooting points at the MySQL-over-SSH page for the tunnel use case.
 /docs/instances/ssh-troubleshooting -> /docs/databases/ssh
+
+# Support and the storage overview are landing pages reached from many places.
+# They were section index pages (exempt by design) until 2026-11-07, when the
+# childless sections became top-level markdown files; the links stay one-way.
+/docs/api/errors -> /docs/support
+/docs/billing/credits -> /docs/support
+/docs/deployments/directories -> /docs/storage
+/docs/storage -> /docs/how-to-guides/setting-up-the-storage-directory
