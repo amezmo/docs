@@ -8,6 +8,11 @@
 The automatic deployment branch is the branch that triggers a new
 [deployment](../deployments/index.md) when you push commits to it. You choose
 this branch when you import the repository, and you can change it at any time.
+For GitHub, see
+[Automated GitHub deployments on push](../deployments/automated-github-deployments-on-push.md).
+
+To deploy a different branch once without changing this setting, start a
+[manual deployment](../deployments/manual-deployments.md).
 
 Instead of a fixed branch, you can also deploy from matching
 [Git tags](tag-based-deployments.md).

@@ -11,6 +11,9 @@ See the [Amezmo GitHub Actions](https://github.com/amezmo/github-actions-demo) d
 repository for a guide to Deploying PHP applications
 with [GitHub actions](https://www.amezmo.com/laravel-hosting-guides/deploying-laravel-with-github-actions).
 
+To deploy a branch of a connected Git repository from the dashboard instead, see
+[manual deployments](../../deployments/manual-deployments.md).
+
 Deployments with an [archive file](../../how-to-guides/creating-zip-files-for-api-deployments.md) work exactly
 like regular Git deployments.
 

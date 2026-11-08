@@ -53,6 +53,9 @@ Each action below lives on the Git tab. Use the smallest one that fits:
 If a deploy reports "To deploy, please complete the Git wizard," the wizard
 isn't finished. Reopen the Git tab and complete every step.
 
+If the wizard is finished and a push to GitHub still doesn't deploy, see
+[When a push doesn't deploy](../deployments/automated-github-deployments-on-push.md#when-a-push-doesnt-deploy).
+
 ## Deploy Keys
 
 Amezmo uses one SSH deploy key per repository for read access to your code. The

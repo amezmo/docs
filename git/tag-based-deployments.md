@@ -21,5 +21,6 @@ tag patterns, see the `auto_deploy_tag_patterns` property within the [Get an env
 
 
 ## Resources
+- [Automated GitHub deployments on push](../deployments/automated-github-deployments-on-push.md)
 - [List environments](../api/environments/list-environments.md)
 - [`auto_deploy_tag_patterns`](../api/environments/update-environment.md#parameters)
