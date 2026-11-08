@@ -32,3 +32,4 @@ GitLab and Bitbucket connect through standard OAuth.
 - [Repos](repos.md)
 - [Branches](branches.md)
 - [Deployment triggers](../deployments/triggers.md)
+- [Automated GitHub deployments on push](../deployments/automated-github-deployments-on-push.md)

@@ -33,6 +33,11 @@
 /docs/git/tag-based-deployments -> /docs/api/environments/list-environments
 /docs/git/tag-based-deployments -> /docs/api/environments/update-environment
 
+# The push-deployment page cites the endpoint that sets branch patterns, and the
+# manual-deployment page cites rollbacks as the way back to older code.
+/docs/deployments/automated-github-deployments-on-push -> /docs/api/environments/update-environment
+/docs/deployments/manual-deployments -> /docs/deployments/releases
+
 # Deliberately one-way (backlink pass): a migrations how-to shouldn't cite the
 # composer-installs concept, and one composer backlink is enough.
 /docs/deployments/automatic-composer-installs -> /docs/how-to-guides/disable-automatic-laravel-migrations
